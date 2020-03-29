@@ -1,0 +1,130 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/lk-banner
+include ../blocks/mixins/modal
+include ../blocks/mixins/rating-set
+include ../blocks/mixins/checkbox-item
+
+block title
+    title Унция — Личный кабинет - Карта Унция
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            },
+            {
+                link: 'lk-personal-data.html',
+                title: 'Личный кабинет'
+            }
+        ], 'Teatester')
+        h1.h1.page__title Teatester
+        .page__content
+            .container
+                .lk
+                    .lk__menu
+                        include ../blocks/side-menu
+                    .lk__content
+                        include ../blocks/lk-teatester-list
+    +modal({
+        align: 'center',
+        id: 'teatester',
+        initBtn: '.js-edit-teatester',
+        fields: 'wide',
+        maxWidth: 'none'
+    })
+        h1.h1.modal__title Новая запись
+        form.form.form_type_modal.teatester-new
+            .form__block.form__block_distribute_between
+                .form__item.teatester-new__name
+                    .input.input--view--big.input--width--available 
+                        input.input__control(placeholder="Поиск по названию")
+                .form__item
+                    .drop.drop_width_m.drop_view_default.js-drop
+                        .drop__btn
+                            .drop__label-text Основные ноты
+                            .drop__qty
+                            .drop__arrow
+                        .drop__content
+                            .drop__box
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-1',
+                                        label: 'Нота 1'
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-2',
+                                        label: 'Нота 2',
+                                        checked: true
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-3',
+                                        label: 'Нота 3',
+                                        checked: true
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-4',
+                                        label: 'Нота 4'
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-5',
+                                        label: 'Нота 5',
+                                        checked: true
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-6',
+                                        label: 'Нота 6'
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-7',
+                                        label: 'Нота 7'
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-8',
+                                        label: 'Нота 8',
+                                        checked: true
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-9',
+                                        label: 'Нота 9',
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-10',
+                                        label: 'Нота 10',
+                                    })
+                                .teatester-new__note
+                                    +checkbox-item({
+                                        id: 'tea-11',
+                                        label: 'Нота 11',
+                                        checked: true
+                                    })
+                .form__item.teatester-new__circle
+                    .icon-plus.icon-plus--layout--vertical
+                        .icon-plus__icon
+                            img(src="../images/static/tea-circle.png", alt="")
+                        .icon-plus__block.indent-t--2xs
+                            .link-2 Увеличить
+
+            .form__block.form__block_distribute_between
+                .form__item.teatester-new__rating
+                    .form__label Ваша оценка
+                    .form__input
+                        +rating-set()
+                .form__item.teatester-new__comment
+                    .form__label Ваш комментарий
+                    .form__input
+                        .input.input--width--available
+                            textarea.input__control
+            .form__block.form__block_distribute_center
+                button.button.button--view--dark Сохранить

@@ -1,0 +1,157 @@
+@import 'colors';
+@import '../mixins';
+.h0 {
+    color: $color-base-1;
+    font-family: "Blacker Display", serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 60px;
+    & em {
+        font-style: italic;
+    }
+    @include sm-block {
+        font-size: 35px;
+        line-height: 1;
+    }
+}
+
+.h1 {
+    font-family: "Blacker Display", serif;
+    font-weight: 300;
+    color: inherit;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+    & em {
+        font-style: italic;
+    }
+    @include md-block {
+        font-size: 35px;
+    }
+    @include sm-block {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+.h2 {
+    color: inherit;
+    font-family: "Blacker Display", serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 32px;
+    margin: 0;
+    @include md-block {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    @include sm-block {
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+
+.h3 {
+    color: inherit;
+    font-family: "Blacker Display", serif;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 36px;
+    margin: 0;
+    @include md-block {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    @include sm-block {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.h4 {
+    @include h4();
+}
+
+.h5,
+.h5-b,
+.link {
+    color: inherit;
+    @include view-link();
+}
+
+.h5 {
+    margin: 0;
+    &-b {
+        font-weight: bold;
+    }
+}
+
+.link {
+    text-decoration: none;
+    &--view {
+        &--strong {
+            font-weight: 700;
+        }
+        &--white {
+            color: #fff;
+        }
+        &--ghost {
+            color: #a5a5a5;
+            text-decoration: none;
+        }
+        &--dark {
+            color: #27160E;
+        }
+    }
+}
+
+p,
+.text {
+    color: inherit;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 0;
+}
+
+.em {
+    opacity: 0.5;
+    color: $color-base-1;
+    font-family: "Blacker Display", serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    font-style: italic;
+}
+
+.cap {
+    color: #170000;
+    font-family: "Blacker Display", serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.link-2 {
+    color: #a5a5a5;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    display: inline-block;
+    &--dark {
+        color: #543019
+    }
+    &--view {
+        &--dashed {
+            text-decoration: underline;
+            text-decoration-style: dashed!important;
+            cursor: pointer;
+        }
+    }
+}
+
+.innerlink {
+    color: inherit;
+    text-decoration: underline;
+}

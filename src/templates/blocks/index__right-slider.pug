@@ -1,0 +1,45 @@
+include mixins/slide-right
+.swiper-container.index-slider.index-slider--right
+    .index-slider__title Выбор покупателей. Топ-5
+    .swiper-wrapper
+        .swiper-slide.index-slider__right-slide
+            +slide-right({
+                number: '1',
+                imgBack: 'Back.png',
+                imgFront: 'Front.png',
+                title: 'Ува Оранж Пеко',
+                category: 'Чёрный чай',
+            })
+        .swiper-slide.index-slider__right-slide
+            +slide-right({
+                number: '2',
+                imgBack: 'Back2.png',
+                imgFront: 'Front2.png',
+                title: 'Тайму Шань Бай Хоу',
+                category: 'Зелёный чай',
+            })
+        .swiper-slide.index-slider__right-slide
+            +slide-right({
+                number: '3',
+                imgBack: 'Back.png',
+                imgFront: 'Front.png',
+                title: 'Ува Оранж Пеко',
+                category: 'Чёрный чай',
+            })
+        .swiper-slide.index-slider__right-slide
+            +slide-right({
+                number: '4',
+                imgBack: 'Back2.png',
+                imgFront: 'Front2.png',
+                title: 'Тайму Шань Бай Хоу',
+                category: 'Зелёный чай',
+            })
+        .swiper-slide.index-slider__right-slide
+            +slide-right({
+                number: '5',
+                imgBack: 'Back.png',
+                imgFront: 'Front.png',
+                title: 'Ува Оранж Пеко',
+                category: 'Чёрный чай',
+            })
+    .swiper-pagination

@@ -1,0 +1,142 @@
+.bonus-card {
+    &__row {
+        @include row-flex();
+        padding-bottom: 28px;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            left: 20px;
+            right: 20px;
+            bottom: -1px;
+            position: absolute;
+            background-color: #E1E1E1;
+        }
+    }
+    &__left {
+        @include col();
+        @include size(5);
+        @include size-md(6);
+        border-top: 1px solid #E1E1E1;
+        padding: 55px 0 0 110px;
+        @include md-block {
+            padding-left: 62px;
+            padding-top: 35px;
+        }
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__text {
+        width: 430px;
+        @include md-block {
+            width: auto;
+        }
+    }
+    &__cards {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        position: relative;
+        transform: translateY(-36px);
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 137px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #E2E2E2;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-65%);
+            animation: shadow 6s infinite ease-in-out;
+            filter: blur(5px);
+        }
+        @include md-block {
+            transform: translateY(0);
+        }
+    }
+    &__sample {
+        position: absolute;
+        animation: bonus-cards 6s infinite ease-in-out;
+        &:nth-of-type(1) {
+            z-index: 4;
+            top: 0;
+            left: 24px;
+            animation: bonus-cards-1 6s infinite ease-in-out;
+            animation-delay: 0;
+        }
+        &:nth-of-type(2) {
+            z-index: 3;
+            top: 2px;
+            left: 124px;
+            animation-delay: .2s;
+            animation: bonus-cards-2 6s infinite ease-in-out;
+        }
+        &:nth-of-type(3) {
+            z-index: 2;
+            top: 18px;
+            left: 200px;
+            animation-delay: .4s;
+            animation: bonus-cards-3 6s infinite ease-in-out;
+        }
+    }
+    &__right {
+        @include col();
+        @include size(3);
+        @include size-md(5);
+        @include shift-md-left(1);
+        border-top: 1px solid #E1E1E1;
+        padding: 100px 0 0;
+        @include md-block {
+            border: 0;
+            padding: 0;
+            margin-top: 35px;
+        }
+    }
+}
+
+@keyframes bonus-cards-1 {
+    from,
+    to {
+        transform: translateY(4%) rotate(-11deg);
+    }
+    50% {
+        transform: translateY(0) rotate(-7deg);
+    }
+}
+
+@keyframes bonus-cards-2 {
+    from,
+    to {
+        transform: translateY(4%) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0) rotate(5deg);
+    }
+}
+
+@keyframes bonus-cards-3 {
+    from,
+    to {
+        transform: translateY(4%) rotate(20deg);
+    }
+    50% {
+        transform: translateY(0) rotate(15deg);
+    }
+}
+
+@keyframes shadow {
+    from,
+    to {
+        width: 137px;
+        background-color: #E2E2E2;
+    }
+    50% {
+        width: 200px;
+        background-color: #f2f2f2;
+    }
+}

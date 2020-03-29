@@ -1,0 +1,42 @@
+.auth {
+    &__grid {
+        @include row-flex();
+    }
+    &__login {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include shift-left(1);
+        @include shift-md-left(0);
+    }
+    &__reg-block {
+        @include col();
+        @include shift-right(1);
+        width: 440px;
+        @include size-md(5);
+        @include shift-md-left(1);
+        margin-left: auto;
+        border: 1px solid #e1e1e1;
+        padding: 50px 70px 60px 40px;
+        align-self: flex-start;
+        @include md-block {
+            padding: 40px 20px 50px 40px;
+        }
+    }
+    &__social-list {
+        @include unlist();
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__social-item {
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    &__social-icon {
+        width: 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

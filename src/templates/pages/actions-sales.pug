@@ -1,0 +1,72 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/action-slide
+
+block title
+    title Унция — Акции
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Акции')
+        h1.h1.page__title Акции
+        .page__content
+            .container
+                .actions
+                    .actions__inner
+                        .actions__header.indent-b--l
+                            h2.h3 Каждую неделю новый сорт чая, на который мы снижаем цену на 20%
+                        .actions__tabs.indent-b--xl
+                            .tabs
+                                .tabs__list(role="tablist")
+                                    a.tabs__tab.link.is-active(href="actions-sales.html") Скидки и подарки
+                                    a.tabs__tab.link(href="actions-card.html") Карта «Унция»
+                        .actions__list
+                            .actions__item
+                                +action-slide({
+                                    image: 'action-1.png',
+                                    title: 'Год чёрного чая',
+                                    desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                    slide: true
+                                })
+                            .actions__item
+                                +action-slide({
+                                    image: 'action-2.png',
+                                    title: 'Ирландский чай',
+                                    desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                    slide: true
+                                })
+                            .actions__item
+                                +action-slide({
+                                    image: 'action-3.png',
+                                    title: 'Зеленый чай вкуснее весной',
+                                    desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                    slide: true
+                                })
+                            .actions__item
+                                 +action-slide({
+                                    image: 'action-1.png',
+                                    title: 'Год чёрного чая',
+                                    desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                    slide: true
+                                })
+                            .actions__item
+                                +action-slide({
+                                    image: 'action-3.png',
+                                    title: 'Зеленый чай вкуснее весной',
+                                    desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                    slide: true
+                                })
+                            .actions__item
+                                +action-slide({
+                                    image: 'action-2.png',
+                                    title: 'Ирландский чай',
+                                    desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                    slide: true
+                                })
+                
+                                

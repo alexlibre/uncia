@@ -1,0 +1,31 @@
+.index-ingredients {
+    padding: 120px 0 140px;
+    @include md-block {
+        display: none;
+    }
+    &__title {
+        margin-bottom: 60px;
+        &>* {
+            background-color: #FAFAFA !important;
+        }
+    }
+    &__desc {
+        max-width: 900px;
+        margin: 0 auto 140px;
+        text-align: center;
+    }
+    &__list {
+        @include unlist();
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        min-width: 260px;
+        margin: 0 40px;
+        cursor: pointer;
+    }
+    &__image {
+        width: 185px;
+        height: 185px;
+    }
+}

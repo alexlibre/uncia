@@ -1,0 +1,36 @@
+extends ../index-inner
+include ../blocks/mixins/taste-item
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/catalog-banner
+include ../blocks/mixins/catalog
+
+block title
+    title Унция — Подборки - Детали
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            },
+            {
+                link: 'compilation.html',
+                title: 'Подборки'
+            }
+        ], 'Чай со слоном')
+        h1.h1.page__title Чай со слоном
+        .page__content
+            .tastes.indent-b--s
+                //- .container
+                .compilations
+                    .compilations-history__desc
+                        p.compilations-history__years 17
+                        p.compilations-history__text.h3 17 лет мы занимаемся чаем. Из самых популярных запросов мы составили тематические подборки. Ищите и находите нужный чай для разных ситуаций.
+                    +catalog-banner({
+                        image: 'comps.jpg',
+                    })
+                    +catalog({
+                        indentClass: 'indent-b--3xl',
+                        number: 10
+                    })

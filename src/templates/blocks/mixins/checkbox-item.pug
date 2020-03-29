@@ -1,0 +1,5 @@
+mixin checkbox-item(data)
+    label.checkbox(for= data.id class= data.view === 'dark'? 'checkbox--view--dark': 'checkbox--view--default' class= data.additionalClasses)
+        input.checkbox__control(type="checkbox" id= data.id checked= data.checked)
+        .checkbox__box
+        span.checkbox__text.text= data.label

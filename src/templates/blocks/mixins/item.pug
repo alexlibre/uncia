@@ -1,0 +1,13 @@
+mixin item(data)
+    .item
+        .item__image
+            img(src="../images/content/" + data.image)
+        .item__content
+            h3.h3= data.title
+            p.item__category= data.category
+            p.item__price.h4
+                span.item__price-value= data.priceValue
+                span.item__price-measure= data.priceMeasure
+                span.item__tip ?
+                    .item__tip-block.tip
+                        .tip__content= data.tipText

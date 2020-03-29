@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/open-sans-v17-latin_cyrillic-300.woff2") format('woff2'), url("../fonts/open-sans-v17-latin_cyrillic-300.woff") format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/open-sans-v17-latin_cyrillic-regular.woff2") format('woff2'), url("../fonts/open-sans-v17-latin_cyrillic-regular.woff") format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v17-latin_cyrillic-700.woff2") format('woff2'), url("../fonts/open-sans-v17-latin_cyrillic-700.woff") format('woff');
+}
+@font-face {
+  font-family: 'Blacker Display';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/BlackerDisplay.woff2") format('woff2'), url("../fonts/BlackerDisplay.woff") format('woff');
+}
+@font-face {
+  font-family: 'ArtScript';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/artscript.woff2") format('woff2'), url("../fonts/artscript.woff") format('font-woff');
+  // unicode-range: U+007E, U+0025, U+0030-0039;
+}

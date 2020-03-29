@@ -1,0 +1,58 @@
+.teatester-review {
+    &__id {
+        display: flex;
+        align-items: center;
+        @include md-block {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__img {
+        flex-shrink: 0;
+        height: 145px;
+        width: 145px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 34px;
+        & img {
+            display: block;
+            pointer-events: none;
+        }
+        @include md-block {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    &__name {
+        word-wrap: break-word;
+        margin-top: 15px;
+    }
+    &__content {
+        margin-top: 50px;
+        position: relative;
+        @include md-block {
+            margin-top: 30px;
+        }
+        &:before {
+            content: '';
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODUiIGhlaWdodD0iNzYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTM5IDMuMDI3YTMxLjcwMyAzMS43MDMgMCAwMC03LjM0MyA3LjMzIDQyLjU5IDQyLjU5IDAgMDAtNS4wNTkgOS4yNCA1MS4wMyA1MS4wMyAwIDAwLTIuODU1IDEwLjExOGMtLjU5OSAzLjQ1Mi0uODk4IDYuNzE4LS44OTggOS43OTkgMCA4LjcxIDMuNTM2IDE2Ljk5NSAxMC42MDcgMjQuODU1TDExLjc0OSA3NmMtMy40ODEtMi4yMy02LjMxLTUuNjAzLTguNDg1LTEwLjExN0MxLjA4OCA2MS4zNjggMCA1NS42MDYgMCA0OC41OTVjMC01LjczNiAxLjAwNi0xMC45OTMgMy4wMTktMTUuNzczIDIuMDEyLTQuNzggNC43MzItOS4xODggOC4xNTktMTMuMjI1IDMuNDI3LTQuMDM2IDcuMzctNy42NzQgMTEuODMtMTAuOTE0QzI3LjQ2OCA1LjQ0MyAzMi4xNDYgMi41NSAzNy4wNDIgMEwzOSAzLjAyN3pNODUgMy4wMjdhMzEuNzAzIDMxLjcwMyAwIDAwLTcuMzQzIDcuMzMgNDIuNTkgNDIuNTkgMCAwMC01LjA1OSA5LjI0IDUxLjAzIDUxLjAzIDAgMDAtMi44NTUgMTAuMTE4Yy0uNTk5IDMuNDUyLS44OTggNi43MTgtLjg5OCA5Ljc5OSAwIDguNzEgMy41MzYgMTYuOTk1IDEwLjYwNyAyNC44NTVMNTcuNzQ5IDc2Yy0zLjQ4MS0yLjIzLTYuMzEtNS42MDMtOC40ODUtMTAuMTE3QzQ3LjA4OCA2MS4zNjggNDYgNTUuNjA2IDQ2IDQ4LjU5NWMwLTUuNzM2IDEuMDA2LTEwLjk5MyAzLjAxOS0xNS43NzMgMi4wMTItNC43OCA0LjczMi05LjE4OCA4LjE1OS0xMy4yMjUgMy40MjctNC4wMzYgNy4zNy03LjY3NCAxMS44My0xMC45MTRDNzMuNDY4IDUuNDQzIDc4LjE0NiAyLjU1IDgzLjA0MiAwTDg1IDMuMDI3eiIgZmlsbD0iI0VFRSIvPjwvc3ZnPg==);
+            width: 85px;
+            height: 76px;
+            display: block;
+            position: absolute;
+            top: -25px;
+            left: -51px;
+            z-index: 1;
+            @include md-block {
+                top: -17px;
+                left: -23px;
+            }
+        }
+    }
+    &__text {
+        max-height: 154px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+}

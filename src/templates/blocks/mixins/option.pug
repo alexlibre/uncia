@@ -1,0 +1,14 @@
+mixin option(data)
+    .option(class= data.indentClass? data.indentClass: '')
+        if data.small === true
+            if data.href
+                a.option__value.h4(href= data.href)= data.value
+            else 
+                p.option__value.h4(href= data.href)= data.value
+        else 
+
+            if data.href
+                a.option__value.h3(href= data.href)= data.value
+            else 
+                p.option__value.h3(href= data.href)= data.value
+        p.option__label.link.link--view--ghost= data.label

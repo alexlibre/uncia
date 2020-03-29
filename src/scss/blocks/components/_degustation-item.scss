@@ -1,0 +1,69 @@
+.degustation-item {
+    &__header {
+        height: 226px;
+        color: #fff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 110px;
+    }
+    &__image {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        max-width: 284px;
+    }
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0 0 110px;
+        height: 145px;
+        position: relative;
+    }
+    &__when {
+        margin-bottom: 24px;
+    }
+    &__vacant {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        right: 70px;
+        bottom: 0;
+        z-index: 2;
+    }
+    &__vacant-val {
+        font-family: 'ArtScript', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 200px;
+        line-height: .45;
+        height: 85px;
+        color: #543019;
+        position: relative;
+        margin: 8px 0;
+        overflow: hidden;
+    }
+    &__vacant-free {
+        color: #a5a5a5;
+        margin-bottom: 16px;
+    }
+    &__btn {
+        background-color: #552F1D;
+        padding-left: 56px;
+        padding-right: 56px;
+    }
+}

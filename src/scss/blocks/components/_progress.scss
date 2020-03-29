@@ -1,0 +1,45 @@
+.progress {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__bar {
+        width: 170px;
+        height: 2px;
+        background-color: #e1e1e1;
+        position: relative;
+    }
+    &__fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #543019;
+        &_range {
+            &_3-10 {
+                $min: 3;
+                $max: 10;
+                &.progress__value {
+                    @for $i from $min through $max {
+                        $width: ($i / $max * 100%);
+                        &_#{$i} {
+                            width: $width;
+                        }
+                    }
+                }
+            }
+            &_1-9 {
+                $min: 1;
+                $max: 9;
+                &.progress__value {
+                    @for $i from $min through $max {
+                        $width: ($i / $max * 100%);
+                        &_#{$i} {
+                            width: $width;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

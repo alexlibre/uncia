@@ -1,0 +1,21 @@
+.health {
+
+  &__grid {
+    @include row-flex();
+    padding-top: 40px;
+  }
+
+  &__grid-item {
+    @include col();
+  }
+
+  &__features {
+    @include size(7);
+  }
+
+  &__content {
+    @include size(5);
+    align-self: flex-end;
+  }
+
+}

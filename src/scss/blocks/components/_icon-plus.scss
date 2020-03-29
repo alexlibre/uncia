@@ -1,0 +1,48 @@
+.icon-plus {
+  display: flex;
+  align-items: center;
+
+  &--layout--vertical {
+    flex-direction: column;
+  }
+
+  &--vertical-align {
+    &--bottom {
+      align-items: flex-end;
+    }
+    &--top {
+      align-items: flex-start;
+    }
+    &--baseline {
+      align-items: baseline;
+    }
+    &--unset {
+      align-items: unset;
+    }
+  }
+
+  &--distribute {
+    &--between {
+      justify-content: space-between;
+    }
+    &--center {
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+  }
+
+  &__block {
+    // flex: 1;
+
+    &_width {
+
+      &_available {
+        flex: 1;
+      }
+    }
+  }
+}

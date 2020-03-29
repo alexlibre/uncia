@@ -1,0 +1,19 @@
+.delivery-item {
+    &__inner {
+        padding: 24px 5px 20px 30px;
+        color: #170000;
+    }
+    &__checkbox {
+        margin-right: 16px;
+    }
+    &__content {
+        padding-left: 37px;
+    }
+    &__title {}
+    &__ready {
+        margin-bottom: 5px;
+    }
+    &__phone {
+        color: #A5A5A5;
+    }
+}

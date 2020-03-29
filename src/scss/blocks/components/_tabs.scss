@@ -1,0 +1,160 @@
+.tabs {
+    $c: &;
+    &__inner {
+        width: 100%
+    }
+    &__list {
+        @include unlist();
+        display: flex;
+    }
+    &__tab {
+        padding: 0 40px;
+        position: relative;
+        cursor: pointer;
+        margin-left: -1px;
+        line-height: 62px;
+        white-space: nowrap;
+        z-index: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            box-shadow: inset 0 0 0 1px #E1E1E1;
+            transition: box-shadow .4s ease;
+            z-index: -1;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #543019;
+            transform: scaleX(0);
+            transition: transform .4s cubic-bezier(0, 0, 0.12, 1);
+            z-index: -1;
+        }
+        &.is-active {
+            &:before {
+                box-shadow: inset 0 0 0 0 transparent;
+            }
+            &:after {
+                left: 1px;
+            }
+        }
+        &.is-active,
+        &:hover {
+            &:after {
+                transform: scaleX(1);
+            }
+        }
+        &:first-of-type {
+            margin-left: 0;
+            &.active {
+                &:after {
+                    left: 0;
+                }
+            }
+        }
+        &_view {
+            &_underlink {
+                padding: 0;
+                position: relative;
+                cursor: pointer;
+                margin-left: -1px;
+                line-height: 62px;
+                white-space: nowrap;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    display: block;
+                    border-bottom: 1px solid #e1e1e1;
+                    box-shadow: none;
+                    transition: border .4s ease;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #543019;
+                    transform: scaleX(0);
+                    transition: transform .4s cubic-bezier(0, 0, 0.12, 1);
+                }
+                &.is-active {
+                    &:before {
+                        border-bottom: 1px solid transparent
+                    }
+                    &:after {
+                        left: 1px;
+                    }
+                }
+                &.is-active,
+                &:hover {
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+                &:first-of-type {
+                    margin-left: 0;
+                    &.active {
+                        &:after {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__panel {
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        transition: max-height .4s ease 0;
+        overflow: hidden;
+        &.is-active {
+            visibility: visible;
+            position: static;
+            opacity: 1;
+        }
+    }
+    &_view {
+        &_default {
+            & #{$c}__tab {
+                flex: 0 0 auto
+            }
+        }
+        &_full {
+            & #{$c}__tab {
+                flex: 1 0 auto;
+                padding: 0;
+                text-align: center;
+            }
+        }
+        &_wrap {
+            & #{$c}__list {
+                @include md-block {
+                    flex-wrap: wrap;
+                }
+            }
+            & #{$c}__tab {
+                @include md-block {
+                    flex: 0 0 50%;
+                }
+            }
+        }
+    }
+}

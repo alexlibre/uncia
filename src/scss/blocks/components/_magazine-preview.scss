@@ -1,0 +1,52 @@
+.magazine-preview {
+  width: 290px;
+  height: 370px;
+  border: 1px solid #D1CCCC;
+
+  &__image {
+    width: 216px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -50px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__num {
+    font-family: 'ArtScript', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 70px;
+    text-align: center;
+    color: #F4F4F4;
+    position: relative;
+    z-index: -1;
+    bottom: -20px;
+  }
+
+  &__title {
+    white-space: nowrap;
+    margin-bottom: 9px;
+  }
+
+  &__num2 {
+    white-space: nowrap;
+    margin-bottom: 9px;
+    background-color: #fff;
+    padding: 0 40px;
+  }
+}

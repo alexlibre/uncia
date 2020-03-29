@@ -1,0 +1,211 @@
+include ../mixins/footer__menu-group
+include ../mixins/modal
+include ../mixins/item
+include ../mixins/input
+include ../mixins/checkbox
+
+footer.footer
+    section.footer__block-1
+        .container
+            nav.footer__product-menu
+                .footer__menu-col
+                    +menu-group([
+                        'Черный чай',
+                        'Зеленый чай',
+                        'Зеленый связанный чай',
+                        'Белый чай',
+                        'Желтый чай',
+                        'Улун',
+                        'Пу Эр',
+                        'Мате',
+                        'Ройбуш',
+                        'Фруктовый и травяной чай',
+                        'Зеленый чай с добавками',
+                        'Черный чай с добавками',
+                        'Год Чёрного Чая',
+                        'Чай в пирамидках'], 'Черный чай')
+                .footer__menu-col
+                    +menu-group([
+                        'Ароматизированный кофе',
+                        'Плантационный кофе',
+                        'Эспрессо - смеси',
+                        'Кофе в капсулах'], 'Кофе')
+                    +menu-group([
+                        'Аксессуары',
+                        'Ёмкости для хранения чая и кофе',
+                        'Посуда для чайных церемоний',
+                        'Сита',
+                        'Турки, кофеварки',
+                        'Чайники',
+                        'Чайные пары, кружки, чашки',
+                        'Этническая посуда'], 'Посуда')
+                .footer__menu-col
+                    +menu-group([
+                        'Джемы, варенья и сиропы',
+                        'Сахар и конфеты',
+                        'Мёд',
+                        'Нуга',
+                        'Орехи и фрукты в шоколаде',
+                        'Восточные сладости',
+                        'Мармелад',
+                        'Шоколад'], 'Сладости')
+                    +menu-group([
+                        'Корзины, сундуки, шкатулки, поддоны',
+                        'Коробки',
+                        'Пакеты'], 'Упаковка')
+                .footer__menu-col
+                    +menu-group([
+                        'Весенние Подарки',
+                        'Комплимент',
+                        'Мини - презент',
+                        'Подарок',
+                        'Статусный подарок',
+                        'Свадьба',
+                        'Учителям'], 'Подарки')
+    section.footer__block-2
+        .container
+            .footer__subscript
+                .footer__subscript-desc
+                    h2.h2.footer__subscript-title Будьте в курсе
+                    p.footer__subscript-text Подпишитесь на последние обновления и узнавайте о новинках и специальных предложениях первыми
+                .footer__subscript-form
+                    form.form
+                        .form__item
+                            span.input.input--view--dark.input--width--available
+                                input.input__control(type="email")
+                            button.button.button--view--dark.js-subscribe-btn(type="submit" data-id="subscribe") Отправить
+                        .form__item
+                            +checkbox({
+                                id: 'footer-subscribes',
+                                text: 'Cогласие на обработку персональных данных.',
+                                classes: 'checkbox--view--dark',
+                                checked: true
+                            })
+                ul.footer__social
+                    li.footer__social-item
+                        a.footer__social-link
+                            .icon-plus
+                                .icon-plus__icon.indent-r--s
+                                    .footer__social-icon
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2698 14c.7654 0 .7654-1.0889.7654-1.5556 0-.7777.7655-1.5555 1.531-1.5555.7654 0 2.0667 1.3222 3.0618 2.3333.7655.7778.7655.7778 1.531.7778h2.2953s1.5309-.0778 1.5309-1.5556c0-.4666-.5347-1.3222-2.2953-3.111-1.5309-1.5556-2.2964-.7778 0-3.889 1.3779-1.9433 2.4495-3.6555 2.2953-4.1222C22.8321.8567 18.9293.0778 18.3935.779c-1.5309 2.3322-1.8371 2.8767-2.2964 3.8878C15.3316 6.2234 15.254 7 14.5662 7c-.6889 0-.7655-1.4778-.7655-2.3333 0-2.5667.3827-4.3556-.7655-4.6667h-2.2964C9.5141 0 8.4424.7789 8.4424.7789s-.9174.7767-.7654.7767c.2296 0 1.5309-.31 1.5309.7777V3.889S9.2079 7 8.4424 7C7.677 7 6.146 3.8889 4.6162 1.5556c-.537-.9323-.7666-.7767-1.531-.7767H.7878c-.7643 0-.8409.5433-.7643.7767 1.531 3.8888 2.6026 6.3 5.5114 9.4111 2.678 2.8 4.4386 2.9555 5.9706 3.0333h.7644z" fill="#fff"/></svg>
+                                .icon-plus__block
+                                    .footer__social-name.h4 Vkontakte
+                    li.footer__social-item
+                        a.footer__social-link
+                            .icon-plus
+                                .icon-plus__icon.indent-r--s
+                                    .footer__social-icon
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 7.7713H7.2538V5.2804c0-.9355.612-1.1536 1.0423-1.1536h2.6436V.0145L7.2989 0C3.2572 0 2.3374 3.0672 2.3374 5.03v2.7413H0v4.2376h2.3374V24h4.9164V12.0089h3.3174L11 7.7713z" fill="#fff"/></svg>
+                                .icon-plus__block
+                                    .footer__social-name.h4 Facebook
+
+    section.footer__block-3
+        .container
+            nav.footer__menu
+                .footer__menu-col
+                    +menu-group([
+                        'Магазины',
+                        'Офисы'], 'Контакты')
+                .footer__menu-col
+                    +menu-group([
+                        'Блог',
+                        'Вакансии',
+                        'Чайный лист',
+                        'Библиотека',
+                        'О нас'], 'Читать')
+                .footer__menu-col
+                    +menu-group([
+                        'Поставщикам',
+                        'Франчайзинг',
+                        'Корпоративные подарки'], 'Бизнесу')
+                .footer__menu-col
+                    +menu-group([
+                        'Доставка и оплата',
+                        'Скидки и акции'], 'Клиентам')
+                        a.footer__link.footer__sign-in-btn
+                            .icon-plus
+                                .icon-plus__icon.indent-r--xs
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19"><path fill="none" stroke="#542f1d" stroke-miterlimit="50" stroke-width="1.5" d="M1 8.77h18.856M16 9V4.04C16 2.363 14.627 1 12.932 1H8.067C6.373 1 5 2.362 5 4.04V9"/><g><path fill="none" stroke="#542f1d" stroke-miterlimit="50" stroke-width="1.5" d="M16 12c0 3.313-2.462 6-5.5 6S5 15.313 5 12"/></g></svg>
+                                .icon-plus__block Войти
+
+
+    section.footer__block-4
+        .container
+            .footer__additional
+
+                .footer__contacts
+                    a.footer__phone(href='tel:88005552835') 8 800 555-28-35
+                    p.footer__schedule Звонок по России бесплатно c 10:45 до 18:45, по будням
+                .footer__info
+                    nav
+                        +menu-group([
+                            'О подарочном сертификате',
+                            'Политика конфиденциальности',
+                            'Договор оферты'])
+                .footer__copyrights
+                    p.footer__copy &copy;&nbsp;chay.info, 2019
+                    a.footer__madein(href="https://cakelabs.ru" target="_blank") Разработка сайта — Cake
+
++modal({
+    align: 'center',
+    id: 'password-recover'
+})
+    p.h1.indent-b--l Напомнить пароль
+    p.h4.indent-b--xl Если Вы забыли пароль, введите e-mail или логин, ссылка на смену пароля будет отправлена на Вашу почту.
+    form.form
+        .form__item
+            +input({
+                type: 'email', 
+                placeholder: 'E-mail', 
+                className: 'input--width--available'
+            })
+        button.button.button--view--dark.indent-t--l(type="submit") Отправить
+
++modal({
+    align: 'center',
+    id: 'subscribe'
+})
+    p.h1.indent-b--l Подписка оформлена
+    p.h4 Благодарим за доверие, теперь Вы будете получать новости о наших акциях и статьях первым!
+    button.button.button--view--dark.indent-t--l.modal__close-btn.js-modal-close(data-close-id= "subscribe") Вернуться
+
++modal({
+    align: 'center',
+    id: 'one-click-buy',
+    fields: 'wide'
+})
+    p.h1.indent-b--l Купить в 1 клик
+    +item({
+        image: 'Tea1.png',
+        title: 'Ягодная сангрия',
+        category: 'Чёрный чай',
+        priceValue: '2 508',
+        priceMeasure: 'Р/унция',
+    })
+    form.form.indent-t--m
+        .form__item
+            +input({
+                type: 'text', 
+                placeholder: 'Имя', 
+                className: 'input--width--available'
+            })
+        .form__item
+            +input({
+                type: 'text', 
+                placeholder: 'Телефон', 
+                className: 'input--width--available', 
+                inputClass: 'js-phone-mask'
+            })
+            +input({
+                type: 'email', 
+                placeholder: 'E-mail', 
+                className: 'input--width--available indent-l--s'
+            })
+        .form__item
+            +input({
+                type: 'textarea', 
+                placeholder: 'Комментарий к заказу', 
+                className: 'input--width--available'
+            })
+        button.button.button--view--dark.indent-t--l(type="submit") Отправить
+

@@ -1,0 +1,56 @@
+.lk-banner {
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        
+
+        &_view {
+            &_dark {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+
+    &__image {
+
+        & img {
+            display: block;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        padding: 0 170px 0 110px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__block-1 {
+
+    }
+
+    &__block-2 {
+        max-width: 330px;
+        text-align: center;
+    }
+
+    &__action {
+
+    }
+
+    &__action-link {
+
+    }
+
+    &__text {
+
+    }
+}

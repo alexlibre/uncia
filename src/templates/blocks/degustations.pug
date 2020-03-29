@@ -1,0 +1,21 @@
+include mixins/degustations-item
+
+.degustations.cat-deg-slider.swiper-container
+    .degustations__inner.swiper-wrapper
+
+        .degustations__item.swiper-slide
+            +degustations-item({
+                img: 'degustation-small-1.png',
+                title: 'Дегустация индийского чая',
+                vacant: 34,
+                when: 'Среда 19 августа, 19:00',
+                where: 'Невский проспет, 63'
+            })
+        .degustations__item.swiper-slide
+            +degustations-item({
+                img: 'degustation-small-2.png',
+                title: 'Дегустация китайского чая',
+                vacant: 8,
+                when: 'Среда 19 августа, 19:00',
+                where: 'проспект Науки, 33'
+            })

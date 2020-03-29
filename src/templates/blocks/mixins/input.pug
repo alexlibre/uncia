@@ -1,0 +1,9 @@
+//- mixin input(type, placeholder, className, id, value, inputClass)
+mixin input(data)
+    span.input.input--view--form(class= data.className)
+        if data.type !== 'textarea'
+            input.input__control(type= data.type placeholder= data.placeholder, id= data.id, value= data.value, class= data.inputClass)
+        else
+            textarea.input__control(placeholder= data.placeholder, id= data.id)
+        if block
+            block

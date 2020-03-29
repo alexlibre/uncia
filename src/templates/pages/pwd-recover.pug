@@ -1,0 +1,20 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+
+block title
+    title Унция — Статьи
+
+block content
+    .container
+        .page
+            +breadcrumbs([
+                {
+                    link: 'index.html',
+                    title: 'Главная'
+                }
+            ], 'Изменение пароля')
+            h1.h1.page__title Изменение пароля
+            p.text.indent-t--s Вы запросили изменение пароля, введите Ваш новый пароль ниже.
+            .page__content
+
+                a.js-password-recover-btn модалка

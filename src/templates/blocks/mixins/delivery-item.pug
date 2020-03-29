@@ -1,0 +1,18 @@
+include radio-box
+mixin delivery-item(data)
+    .cart__delivery-list
+        each shop in data.list
+            .cart__delivery-item
+                .delivery-item
+                    .delivery-item__inner
+                        +radio-box({
+                            id: shop.id,
+                            name: data.name,
+                            checked: shop.checked,
+                            inputClasses: 'indent-r--xs',
+                            labelClasses: 'radio-box__label_align_top',
+                            label: shop.title
+                        })
+                        .delivery-item__content
+                            .delivery-item__ready= shop.when
+                            .delivery-item__phone= shop.phone

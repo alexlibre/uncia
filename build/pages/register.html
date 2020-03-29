@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Унция — Регистрация</title>
+    <link rel="stylesheet" href="../css/bundle.css">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__bar">
+        <div class="container">
+          <div class="header__bar-inner">
+            <button class="header__burger js-burger view-mobile">
+              <div class="header__burger-wrap"><span></span><span></span><span></span></div>
+            </button>
+            <button class="header__cat-mobile js-popup-btn" data-id="cat-menu">
+              <div class="icon-plus">
+                <div class="icon-plus__block">Каталог</div>
+                <div class="icon-plus__icon indent-l--2xs"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><path fill="#543019" d="M3.5 5L0 0h7z"/></svg></div>
+              </div>
+            </button><a class="header__logo logo" href="main.html"><img src="../images/static/logo.svg" alt=""></a>
+            <ul class="header__top-controls">
+              <li class="header__top-controls-item view-mobile"><a class="icon header__top-control js-popup-btn" data-id="search"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="none" stroke="#543019" stroke-miterlimit="50" stroke-width="1.5" d="M7.5 14a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13z"/><path fill="none" stroke="#543019" stroke-linecap="square" stroke-miterlimit="50" stroke-width="1.5" d="M12 12.417l4.339 4.339"/></svg></a></li>
+              <li class="header__top-controls-item"><a class="icon header__top-control js-popup-btn" data-id="sign-in"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19"><path fill="none" stroke="#542f1d" stroke-miterlimit="50" stroke-width="1.5" d="M1 8.77h18.856M16 9V4.04C16 2.363 14.627 1 12.932 1H8.067C6.373 1 5 2.362 5 4.04V9"/><g><path fill="none" stroke="#542f1d" stroke-miterlimit="50" stroke-width="1.5" d="M16 12c0 3.313-2.462 6-5.5 6S5 15.313 5 12"/></g></svg></a></li>
+              <li class="header__top-controls-item"><a class="icon header__top-control" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"/></svg></a></li>
+              <li class="header__top-controls-item"><a class="icon header__top-control" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"/><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"/></svg></a></li>
+            </ul>
+            <div class="header__cat-menu js-popup" data-id="cat-menu">
+              <div class="container">
+                <div class="cat-menu">
+                  <div class="cat-menu__categories">
+                    <ul class="cat-menu__cat-list">
+                      <li class="cat-menu__cat-item"><a class="h4 is-active" href="catalog-tea.html">Чай</a></li>
+                      <li class="cat-menu__cat-item"><a class="h4">Кофе</a></li>
+                      <li class="cat-menu__cat-item"><a class="h4">Подарки</a></li>
+                      <li class="cat-menu__cat-item"><a class="h4">Посуда</a></li>
+                      <li class="cat-menu__cat-item"><a class="h4">Сладости</a></li>
+                      <li class="cat-menu__cat-item"><a class="h4">Упаковка</a></li>
+                      <li class="cat-menu__cat-item"><a class="h4">Подарочный сертификат</a></li>
+                    </ul>
+                  </div>
+                  <div class="cat-menu__content">
+                    <div class="cat-menu__view-all"><a class="link">Все виды</a></div>
+                    <div class="cat-menu__sub">
+                      <ul class="cat-menu__sub-list">
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Черный чай</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Зеленый чай</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Зеленый связанный чай</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Белый чай</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Желтый чай</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Улун</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Пу Эр</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Мате</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Ройбуш</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Фруктовый  и&nbsp;травяной чай</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Зеленый чай  с&nbsp;добавками</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Черный чай  с&nbsp;добавками</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Фунт Чая, -40%</a></li>
+                        <li class="cat-menu__sub-item"><a class="cat-menu__sub-link link">Чай в&nbsp;пирамидках</a></li>
+                      </ul>
+                    </div>
+                    <ul class="cat-menu__filters">
+                      <li class="cat-menu__filter">
+                        <div class="cat-menu__filter-title h4">Страна</div>
+                        <ul class="cat-menu__filter-list">
+                          <li class="cat-menu__filter-item"><a class="text">Китай</a>
+                            <ul class="cat-menu__filter-sublist">
+                              <li class="cat-menu__filter-subitem"><a class="text">Юннань</a></li>
+                              <li class="cat-menu__filter-subitem"><a class="text">Фуцзянь</a></li>
+                            </ul>
+                          </li>
+                          <li class="cat-menu__filter-item"><a class="text">Цейлон</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">Индия</a>
+                            <ul class="cat-menu__filter-sublist">
+                              <li class="cat-menu__filter-subitem"><a class="text">Ассам</a></li>
+                              <li class="cat-menu__filter-subitem"><a class="text">Дарджилинг</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="cat-menu__filter">
+                        <div class="cat-menu__filter-title h4">Подборки</div>
+                        <ul class="cat-menu__filter-list">
+                          <li class="cat-menu__filter-item"><a class="text">Черный &laquo;Как раньше, со&nbsp;слоном&raquo;</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">&laquo;Что-нибудь вкусненькое&raquo;</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">Необычные вкусы</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">&laquo;Чтобы бодрил&raquo;</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">Антистресс</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">Утренний, для завтрака</a></li>
+                        </ul>
+                      </li>
+                      <li class="cat-menu__filter">
+                        <div class="cat-menu__filter-title h4">Ингредиенты</div>
+                        <ul class="cat-menu__filter-list">
+                          <li class="cat-menu__filter-item"><a class="text">с клубникой</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">с облепихой</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">с мятой</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">с васильком</a></li>
+                          <li class="cat-menu__filter-item"><a class="text">с бергамотом</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <aside class="cat-menu__promo">
+                                <div class="action">
+                                  <div class="action__image"><img src="../images/content/action-1.png"></div>
+                                  <h3 class="h2 action__title">Год чёрного чая</h3>
+                                  <div class="action__buttons">
+                                    <button class="button button--view--link">В каталог</button>
+                                    <button class="button button--view--link2 indent-t--s">Подробнее</button>
+                                  </div>
+                                </div>
+                                <!--TODO: Image align-->
+                    <div class="cardlist cardlist--layout--vertical">
+                      <div class="cardlist__item">
+                                    <div class="item-card">
+                                      <div class="item-card__image"><img src="../images/content/Tea1.png"></div>
+                                      <div class="item-card__content">
+                                        <h4 class="h4">Весенне-ягодная сангрия</h4>
+                                        <p class="item-card__category">Чёрный чай</p>
+                                        <p class="item-card__price h4"><span class="item-card__price-value">2 508</span><span class="item-card__price-measure">Р/унция</span><span class="item-card__tip">?</span></p>
+                                        <div class="item-card__buttons">
+                                          <button class="button button--view--icon-primary item-card__button"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg></button>
+                                          <button class="button button--view--icon-secondary item-card__button favorite js-favorites-add" data-fav-id="6"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg></button>
+                                        </div>
+                                      </div>
+                                    </div>
+                      </div>
+                      <div class="cardlist__item">
+                                    <div class="item-card">
+                                      <div class="item-card__image"><img src="../images/content/Tea1.png"></div>
+                                      <div class="item-card__content">
+                                        <h4 class="h4">Весенне-ягодная сангрия</h4>
+                                        <p class="item-card__category">Чёрный чай</p>
+                                        <p class="item-card__price h4"><span class="item-card__price-value">2 508</span><span class="item-card__price-measure">Р/унция</span><span class="item-card__tip">?</span></p>
+                                        <div class="item-card__buttons">
+                                          <button class="button button--view--icon-primary item-card__button"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg></button>
+                                          <button class="button button--view--icon-secondary item-card__button favorite js-favorites-add" data-fav-id="7"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg></button>
+                                        </div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+            <div class="header__search js-popup" data-id="search">
+              <form class="form">
+                <div class="form__item"><span class="input input--view--default input--width--available">
+                    <input class="input__control" type="search"></span>
+                  <button class="button button--view--round-icon header__search-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"><path clip-rule="evenodd" d="M7.5 14c3.5899 0 6.5-2.9101 6.5-6.5S11.0899 1 7.5 1 1 3.9101 1 7.5 3.9101 14 7.5 14z" stroke="#fff" stroke-width="1.5"/><path d="M12 12.4167l4.339 4.339" stroke="#fff" stroke-width="1.5" stroke-linecap="square"/></svg></button>
+                </div>
+              </form>
+              <div class="header__search-results">
+                <div class="header__search-result is-visible">
+                  <p class="h5 indent-b--xs">Группы чая</p>
+                  <ul class="header__search-res-list">
+                    <li class="header__search-res-item">
+                                  <div class="radio-box js-radio-box">
+                                    <div class="radio-box__inner">
+                                      <input type="checkbox" id="search-cat-1" data-name="search-cats" checked>
+                                      <label class="radio-box__label" for="search-cat-1" aria-label="Каталог"><span class="radio-box__box indent-r--2xs"></span><span class="radio-box__text">Каталог</span></label>
+                                    </div>
+                                  </div>
+                    </li>
+                    <li class="header__search-res-item">
+                                  <div class="radio-box js-radio-box">
+                                    <div class="radio-box__inner">
+                                      <input type="checkbox" id="search-cat-2" data-name="search-cats">
+                                      <label class="radio-box__label" for="search-cat-2" aria-label="Акции"><span class="radio-box__box indent-r--2xs"></span><span class="radio-box__text">Акции</span></label>
+                                    </div>
+                                  </div>
+                    </li>
+                    <li class="header__search-res-item">
+                                  <div class="radio-box js-radio-box">
+                                    <div class="radio-box__inner">
+                                      <input type="checkbox" id="search-cat-3" data-name="search-cats">
+                                      <label class="radio-box__label" for="search-cat-3" aria-label="Подборки"><span class="radio-box__box indent-r--2xs"></span><span class="radio-box__text">Подборки</span></label>
+                                    </div>
+                                  </div>
+                    </li>
+                    <li class="header__search-res-item">
+                                  <div class="radio-box js-radio-box">
+                                    <div class="radio-box__inner">
+                                      <input type="checkbox" id="search-cat-4" data-name="search-cats">
+                                      <label class="radio-box__label" for="search-cat-4" aria-label="Блог"><span class="radio-box__box indent-r--2xs"></span><span class="radio-box__text">Блог</span></label>
+                                    </div>
+                                  </div>
+                    </li>
+                    <li class="header__search-res-item">
+                                  <div class="radio-box js-radio-box">
+                                    <div class="radio-box__inner">
+                                      <input type="checkbox" id="search-cat-5" data-name="search-cats">
+                                      <label class="radio-box__label" for="search-cat-5" aria-label="Библиотека"><span class="radio-box__box indent-r--2xs"></span><span class="radio-box__text">Библиотека</span></label>
+                                    </div>
+                                  </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="header__search-result is-visible">
+                  <p class="h5 indent-b--xs">Каталог</p>
+                  <div class="cardlist cardlist--2fr">
+                    <div class="cardlist__item">
+                                  <div class="item-card">
+                                    <div class="item-card__image"><img src="../images/content/Tea1.png"></div>
+                                    <div class="item-card__content">
+                                      <h4 class="h4">Весенне-ягодная сангрия</h4>
+                                      <p class="item-card__category">Чёрный чай</p>
+                                      <p class="item-card__price h4"><span class="item-card__price-value">2 508</span><span class="item-card__price-measure">Р/унция</span><span class="item-card__tip">?</span></p>
+                                      <div class="item-card__buttons">
+                                        <button class="button button--view--icon-primary item-card__button"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg></button>
+                                        <button class="button button--view--icon-secondary item-card__button favorite js-favorites-add" data-fav-id="9"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                    </div>
+                    <div class="cardlist__item">
+                                  <div class="item-card">
+                                    <div class="item-card__image"><img src="../images/content/Tea1.png"></div>
+                                    <div class="item-card__content">
+                                      <h4 class="h4">Весенне-ягодная сангрия</h4>
+                                      <p class="item-card__category">Чёрный чай</p>
+                                      <p class="item-card__price h4"><span class="item-card__price-value">2 508</span><span class="item-card__price-measure">Р/унция</span><span class="item-card__tip">?</span></p>
+                                      <div class="item-card__buttons">
+                                        <button class="button button--view--icon-primary item-card__button"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg></button>
+                                        <button class="button button--view--icon-secondary item-card__button favorite js-favorites-add" data-fav-id="2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                    </div>
+                    <div class="cardlist__item">
+                                  <div class="item-card">
+                                    <div class="item-card__image"><img src="../images/content/Tea1.png"></div>
+                                    <div class="item-card__content">
+                                      <h4 class="h4">Английский садовник</h4>
+                                      <p class="item-card__category">Чёрный чай</p>
+                                      <p class="item-card__price h4"><span class="item-card__price-value">2 508</span><span class="item-card__price-measure">Р/унция</span><span class="item-card__tip">?</span></p>
+                                      <div class="item-card__buttons">
+                                        <button class="button button--view--icon-primary item-card__button"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg></button>
+                                        <button class="button button--view--icon-secondary item-card__button favorite js-favorites-add" data-fav-id="1"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                    </div>
+                    <div class="cardlist__item">
+                                  <div class="item-card">
+                                    <div class="item-card__image"><img src="../images/content/Tea1.png"></div>
+                                    <div class="item-card__content">
+                                      <h4 class="h4">Весенне-ягодная сангрия</h4>
+                                      <p class="item-card__category">Чёрный чай</p>
+                                      <p class="item-card__price h4"><span class="item-card__price-value">2 508</span><span class="item-card__price-measure">Р/унция</span><span class="item-card__tip">?</span></p>
+                                      <div class="item-card__buttons">
+                                        <button class="button button--view--icon-primary item-card__button"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg></button>
+                                        <button class="button button--view--icon-secondary item-card__button favorite js-favorites-add" data-fav-id="3"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__top">
+              <ul class="header__top-nav">
+                <li class="header__top-nav-item"><a class="header__top-link" href="#">Акции</a></li>
+                <li class="header__top-nav-item"><a class="header__top-link" href="#">Читать</a></li>
+                <li class="header__top-nav-item"><a class="header__top-link" href="#">Франчайзинг</a></li>
+                <li class="header__top-nav-item"><a class="header__top-link" href="#">Корпоративные подарки</a></li>
+                <li class="header__top-nav-item"><a class="header__top-link" href="#">Доставка</a></li>
+                <li class="header__top-nav-item view-mobile js-popup-btn" data-id="shops">
+                  <p class="header__top-link">Магазины</p>
+                </li>
+              </ul><a class="header__top-location js-popup-btn" data-id="top-location">
+                <div class="icon-plus">
+                  <div class="icon-plus__block">Санкт-Петербург</div>
+                  <div class="icon-plus__icon indent-l--3xs"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><path fill="#543019" d="M3.5 5L0 0h7z"/></svg></div>
+                </div></a>
+              <div class="header__location js-popup" data-id="top-location">
+                <p class="h4 header__location-title">Выбрать город</p>
+                <div class="header__city-search"><span class="input input--width--available">
+                    <div class="icon-plus">
+                      <div class="icon-plus__block icon-plus__block_width_available">
+                        <select class="input__control form-control js-select"></select>
+                      </div>
+                      <div class="icon-plus__icon header__city-search-btn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"><path clip-rule="evenodd" d="M7.5 14c3.5899 0 6.5-2.9101 6.5-6.5S11.0899 1 7.5 1 1 3.9101 1 7.5 3.9101 14 7.5 14z" stroke="#543019" stroke-width="1.5"/><path d="M12 12.4167l4.339 4.339" stroke="#543019" stroke-width="1.5" stroke-linecap="square"/></svg></div>
+                    </div></span></div>
+                <ul class="header__location-list">
+                  <li class="header__location-item">Москва</li>
+                  <li class="header__location-item">Санкт-Петербург</li>
+                  <li class="header__location-item">Архангельск</li>
+                  <li class="header__location-item">Владивосток</li>
+                  <li class="header__location-item">Волгоград</li>
+                  <li class="header__location-item">Воронеж</li>
+                  <li class="header__location-item">Екатеринбург</li>
+                  <li class="header__location-item">Ижевск</li>
+                  <li class="header__location-item">Иркутск</li>
+                  <li class="header__location-item">Казань</li>
+                  <li class="header__location-item">Кемерово</li>
+                  <li class="header__location-item">Краснодар</li>
+                  <li class="header__location-item">Красноярск</li>
+                  <li class="header__location-item">Мурманск</li>
+                </ul>
+              </div>
+              <div class="header__sign-in js-popup" data-id="sign-in">
+                <form class="form">
+                  <div class="form__item"><span class="input input--view--form">
+                          <input class="input__control" type="email" placeholder="E-mail"></span>
+                  </div>
+                  <div class="form__item"><span class="input input--view--form">
+                          <input class="input__control" type="password" placeholder="Пароль"></span>
+                  </div>
+                  <div class="form__item"><a class="link-2 js-password-recover-btn" href="pwd-recover.html">Забыли пароль?</a></div>
+                  <div class="form__buttons"><a class="button button--view--dark indent-r--s" href="auth.html">Войти</a>
+                    <button class="button button--view--underlink">Зарегистрироваться</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header__bottom">
+            <ul class="header__bottom-categories">
+              <li class="header__bottom-categories-item"><a class="header__bottom-link" href="catalog-card.html">Чай</a></li>
+              <li class="header__bottom-categories-item"><a class="header__bottom-link" href="catalog-card-coffee.html">Кофе</a></li>
+              <li class="header__bottom-categories-item"><a class="header__bottom-link" href="#">Подарки</a></li>
+              <li class="header__bottom-categories-item"><a class="header__bottom-link js-popup-btn" data-id="cat-menu">
+                  <div class="icon-plus">
+                    <div class="icon-plus__block">Весь каталог</div>
+                    <div class="icon-plus__icon indent-l--2xs"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><path fill="#543019" d="M3.5 5L0 0h7z"/></svg></div>
+                  </div></a></li>
+            </ul>
+            <div class="header__bottom-controls"><a class="header__bottom-stores">
+                <div class="icon-plus">
+                  <div class="icon-plus__icon indent-r--xs"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="19"><path fill="none" stroke="#543019" stroke-miterlimit="50" stroke-width="1.5" d="M7.5 18c-.653-.71-1.866-1.756-3.079-3.392C2.181 11.616 1 9.33 1 7.448 1 3.9 3.924 1 7.5 1 11.077 1 14 3.9 14 7.448c0 1.882-1.182 4.168-3.421 7.16C9.366 16.213 8.153 17.29 7.5 18z"/><path fill="none" stroke="#543019" stroke-miterlimit="50" stroke-width="1.5" d="M9.261 9.261A2.494 2.494 0 0 1 7.5 10a2.492 2.492 0 0 1-1.761-.739A2.493 2.493 0 0 1 5 7.5c0-.682.284-1.307.739-1.761A2.492 2.492 0 0 1 7.5 5c.682 0 1.307.284 1.761.739.455.454.739 1.08.739 1.761 0 .682-.284 1.307-.739 1.761z"/></svg></div>
+                  <div class="icon-plus__block">Магазины</div>
+                </div></a><a class="header__bottom-search js-popup-btn" data-id="search">
+                <div class="icon-plus">
+                  <div class="icon-plus__icon indent-r--xs"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="none" stroke="#543019" stroke-miterlimit="50" stroke-width="1.5" d="M7.5 14a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13z"/><path fill="none" stroke="#543019" stroke-linecap="square" stroke-miterlimit="50" stroke-width="1.5" d="M12 12.417l4.339 4.339"/></svg></div>
+                  <div class="icon-plus__block">Поиск</div>
+                </div></a><a class="header__phone" href="tel:88005552835">8 800 555-28-35</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <div class="page">
+        <div class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="main.html" title="Главная">Главная</a></li>
+            <li class="breadcrumb__item breadcrumb__item--last"><span class="breadcrumb__link breadcrumb__link--current">Регистрация</span></li>
+          </ul>
+        </div>
+        <h1 class="h1 page__title">Регистрация</h1>
+        <div class="page__content">
+          <div class="register">
+            <div class="container">
+              <div class="register__inner">
+                <div class="register__form">
+                  <form class="form" action="/">
+                    <div class="form__block indent-b--2xl"><span class="input input--view--form input--width--available">
+                            <input class="input__control" type="email" placeholder="E-mail"></span>
+                    </div>
+                    <div class="form__block indent-b--l2">
+                      <p class="form__block-title h3 indent-b--m">Пароль</p><span class="input input--view--form input--width--available indent-b--s">
+                            <input class="input__control" type="password" placeholder="Пароль"></span><span class="input input--view--form input--width--available">
+                            <input class="input__control" type="password" placeholder="Повторите пароль"></span>
+                    </div>
+                    <div class="form__submit">
+                      <div class="form__row">
+                        <button class="button button--view--dark indent-r--2xl register__submit" type="submit">Сохранить</button>
+                        <label class="checkbox checkbox--view--default checkbox_align_top">
+                          <input class="checkbox__control" type="checkbox" checked="checked"/>
+                          <div class="checkbox__box"></div><span class="checkbox__text text">Отправляя нам данную форму вы соглашаетесь с политикой конфиденциальности.</span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <section class="footer__block-1">
+        <div class="container">
+          <nav class="footer__product-menu">
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Черный чай</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Черный чай</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Зеленый чай</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Зеленый связанный чай</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Белый чай</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Желтый чай</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Улун</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Пу Эр</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Мате</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Ройбуш</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Фруктовый и травяной чай</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Зеленый чай с добавками</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Черный чай с добавками</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Год Чёрного Чая</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Чай в пирамидках</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Кофе</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Ароматизированный кофе</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Плантационный кофе</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Эспрессо - смеси</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Кофе в капсулах</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Посуда</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Аксессуары</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Ёмкости для хранения чая и кофе</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Посуда для чайных церемоний</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Сита</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Турки, кофеварки</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Чайники</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Чайные пары, кружки, чашки</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Этническая посуда</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Сладости</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Джемы, варенья и сиропы</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Сахар и конфеты</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Мёд</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Нуга</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Орехи и фрукты в шоколаде</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Восточные сладости</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Мармелад</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Шоколад</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Упаковка</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Корзины, сундуки, шкатулки, поддоны</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Коробки</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Пакеты</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Подарки</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Весенние Подарки</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Комплимент</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Мини - презент</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Подарок</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Статусный подарок</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Свадьба</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Учителям</a></li>
+                    </ul>
+                  </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="footer__block-2">
+        <div class="container">
+          <div class="footer__subscript">
+            <div class="footer__subscript-desc">
+              <h2 class="h2 footer__subscript-title">Будьте в курсе</h2>
+              <p class="footer__subscript-text">Подпишитесь на последние обновления и узнавайте о новинках и специальных предложениях первыми</p>
+            </div>
+            <div class="footer__subscript-form">
+              <form class="form">
+                <div class="form__item"><span class="input input--view--dark input--width--available">
+                    <input class="input__control" type="email"></span>
+                  <button class="button button--view--dark js-subscribe-btn" type="submit" data-id="subscribe">Отправить</button>
+                </div>
+                <div class="form__item">
+                      <label class="checkbox checkbox--view--dark" for="footer-subscribes">
+                        <input class="checkbox__control" type="checkbox" id="footer-subscribes" checked>
+                        <div class="checkbox__box"></div><span class="checkbox__text text">Cогласие на обработку персональных данных.</span>
+                      </label>
+                </div>
+              </form>
+            </div>
+            <ul class="footer__social">
+              <li class="footer__social-item"><a class="footer__social-link">
+                  <div class="icon-plus">
+                    <div class="icon-plus__icon indent-r--s">
+                      <div class="footer__social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2698 14c.7654 0 .7654-1.0889.7654-1.5556 0-.7777.7655-1.5555 1.531-1.5555.7654 0 2.0667 1.3222 3.0618 2.3333.7655.7778.7655.7778 1.531.7778h2.2953s1.5309-.0778 1.5309-1.5556c0-.4666-.5347-1.3222-2.2953-3.111-1.5309-1.5556-2.2964-.7778 0-3.889 1.3779-1.9433 2.4495-3.6555 2.2953-4.1222C22.8321.8567 18.9293.0778 18.3935.779c-1.5309 2.3322-1.8371 2.8767-2.2964 3.8878C15.3316 6.2234 15.254 7 14.5662 7c-.6889 0-.7655-1.4778-.7655-2.3333 0-2.5667.3827-4.3556-.7655-4.6667h-2.2964C9.5141 0 8.4424.7789 8.4424.7789s-.9174.7767-.7654.7767c.2296 0 1.5309-.31 1.5309.7777V3.889S9.2079 7 8.4424 7C7.677 7 6.146 3.8889 4.6162 1.5556c-.537-.9323-.7666-.7767-1.531-.7767H.7878c-.7643 0-.8409.5433-.7643.7767 1.531 3.8888 2.6026 6.3 5.5114 9.4111 2.678 2.8 4.4386 2.9555 5.9706 3.0333h.7644z" fill="#fff"/></svg></div>
+                    </div>
+                    <div class="icon-plus__block">
+                      <div class="footer__social-name h4">Vkontakte</div>
+                    </div>
+                  </div></a></li>
+              <li class="footer__social-item"><a class="footer__social-link">
+                  <div class="icon-plus">
+                    <div class="icon-plus__icon indent-r--s">
+                      <div class="footer__social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 7.7713H7.2538V5.2804c0-.9355.612-1.1536 1.0423-1.1536h2.6436V.0145L7.2989 0C3.2572 0 2.3374 3.0672 2.3374 5.03v2.7413H0v4.2376h2.3374V24h4.9164V12.0089h3.3174L11 7.7713z" fill="#fff"/></svg></div>
+                    </div>
+                    <div class="icon-plus__block">
+                      <div class="footer__social-name h4">Facebook</div>
+                    </div>
+                  </div></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="footer__block-3">
+        <div class="container">
+          <nav class="footer__menu">
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Контакты</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Магазины</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Офисы</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Читать</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Блог</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Вакансии</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Чайный лист</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Библиотека</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">О нас</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Бизнесу</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Поставщикам</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Франчайзинг</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Корпоративные подарки</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="footer__menu-col">
+                  <div class="footer__menu-group">
+                    <div class="footer__menu-title">
+                      <h2 class="h2">Клиентам</h2>
+                    </div>
+                    <ul class="footer__menu-block">
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Доставка и оплата</a></li>
+                      <li class="footer__menu-item"><a class="footer__link" href="#">Скидки и акции</a></li>
+                      <li class="footer__product-menu-item"><a class="footer__link footer__sign-in-btn">
+                          <div class="icon-plus">
+                            <div class="icon-plus__icon indent-r--xs"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19"><path fill="none" stroke="#542f1d" stroke-miterlimit="50" stroke-width="1.5" d="M1 8.77h18.856M16 9V4.04C16 2.363 14.627 1 12.932 1H8.067C6.373 1 5 2.362 5 4.04V9"/><g><path fill="none" stroke="#542f1d" stroke-miterlimit="50" stroke-width="1.5" d="M16 12c0 3.313-2.462 6-5.5 6S5 15.313 5 12"/></g></svg></div>
+                            <div class="icon-plus__block">Войти</div>
+                          </div></a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="footer__block-4">
+        <div class="container">
+          <div class="footer__additional">
+            <div class="footer__contacts"><a class="footer__phone" href="tel:88005552835">8 800 555-28-35</a>
+              <p class="footer__schedule">Звонок по России бесплатно c 10:45 до 18:45, по будням</p>
+            </div>
+            <div class="footer__info">
+              <nav>
+                    <div class="footer__menu-group">
+                      <ul class="footer__menu-block">
+                        <li class="footer__menu-item"><a class="footer__link" href="#">О подарочном сертификате</a></li>
+                        <li class="footer__menu-item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+                        <li class="footer__menu-item"><a class="footer__link" href="#">Договор оферты</a></li>
+                      </ul>
+                    </div>
+              </nav>
+            </div>
+            <div class="footer__copyrights">
+              <p class="footer__copy">&copy;&nbsp;chay.info, 2019</p><a class="footer__madein" href="https://cakelabs.ru" target="_blank">Разработка сайта — Cake</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+        <div class="modal js-modal" data-id="password-recover">
+          <div class="modal__shadow js-modal-close" data-close-id="password-recover"></div>
+          <div class="modal__inner">
+            <div class="modal__wrap">
+              <div class="modal__content modal__content--align--center" id="password-recover">
+                <div class="modal__close js-modal-close" data-close-id="password-recover"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" fill="none"><path d="M1.394.394L26.606 25.606M26.6061.394L1.3939 25.606" stroke="#fff" stroke-linecap="square"/></svg></div>
+                <p class="h1 indent-b--l">Напомнить пароль</p>
+                <p class="h4 indent-b--xl">Если Вы забыли пароль, введите e-mail или логин, ссылка на смену пароля будет отправлена на Вашу почту.</p>
+                <form class="form">
+                  <div class="form__item"><span class="input input--view--form input--width--available">
+                          <input class="input__control" type="email" placeholder="E-mail"></span>
+                  </div>
+                  <button class="button button--view--dark indent-t--l" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal js-modal" data-id="subscribe">
+          <div class="modal__shadow js-modal-close" data-close-id="subscribe"></div>
+          <div class="modal__inner">
+            <div class="modal__wrap">
+              <div class="modal__content modal__content--align--center" id="subscribe">
+                <div class="modal__close js-modal-close" data-close-id="subscribe"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" fill="none"><path d="M1.394.394L26.606 25.606M26.6061.394L1.3939 25.606" stroke="#fff" stroke-linecap="square"/></svg></div>
+                <p class="h1 indent-b--l">Подписка оформлена</p>
+                <p class="h4">Благодарим за доверие, теперь Вы будете получать новости о наших акциях и статьях первым!</p>
+                <button class="button button--view--dark indent-t--l modal__close-btn js-modal-close" data-close-id="subscribe">Вернуться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal js-modal" data-id="one-click-buy">
+          <div class="modal__shadow js-modal-close" data-close-id="one-click-buy"></div>
+          <div class="modal__inner">
+            <div class="modal__wrap">
+              <div class="modal__content modal__content--align--center modal__content--fields--wide" id="one-click-buy">
+                <div class="modal__close js-modal-close" data-close-id="one-click-buy"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" fill="none"><path d="M1.394.394L26.606 25.606M26.6061.394L1.3939 25.606" stroke="#fff" stroke-linecap="square"/></svg></div>
+                <p class="h1 indent-b--l">Купить в 1 клик</p>
+                    <div class="item">
+                      <div class="item__image"><img src="../images/content/Tea1.png"></div>
+                      <div class="item__content">
+                        <h3 class="h3">Ягодная сангрия</h3>
+                        <p class="item__category">Чёрный чай</p>
+                        <p class="item__price h4"><span class="item__price-value">2 508</span><span class="item__price-measure">Р/унция</span><span class="item__tip">?
+                            <div class="item__tip-block tip">
+                              <div class="tip__content"></div>
+                            </div></span></p>
+                      </div>
+                    </div>
+                <form class="form indent-t--m">
+                  <div class="form__item"><span class="input input--view--form input--width--available">
+                          <input class="input__control" type="text" placeholder="Имя"></span>
+                  </div>
+                  <div class="form__item"><span class="input input--view--form input--width--available">
+                          <input class="input__control js-phone-mask" type="text" placeholder="Телефон"></span><span class="input input--view--form input--width--available indent-l--s">
+                          <input class="input__control" type="email" placeholder="E-mail"></span>
+                  </div>
+                  <div class="form__item"><span class="input input--view--form input--width--available">
+                          <textarea class="input__control" placeholder="Комментарий к заказу"></textarea></span>
+                  </div>
+                  <button class="button button--view--dark indent-t--l" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div><script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="../js/vendor.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

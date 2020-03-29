@@ -1,0 +1,50 @@
+.rating {
+    $c: &;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__star {
+        margin-right: 5px;
+        width: 17px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        & path {
+            transition: fill .2s ease;
+        }
+
+        &_active {
+
+            & path {
+                fill: #543019;
+            }
+        }
+    }
+
+    &_active {
+
+        & #{$c}__star {
+
+            
+
+            & input {
+                width: 0;
+                height: 0;
+                visibility: hidden;
+            }
+
+            & label {
+                cursor: pointer;
+            }
+        }
+    }
+}

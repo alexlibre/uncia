@@ -1,0 +1,13 @@
+mixin lib-card(data)
+    .lib-card(class= data.view==='dark'? 'lib-card_view_dark': 'lib-card_view_light')
+        .lib-card__inner
+            .lib-card__header.indent-b--m
+                h2.h1= data.title
+            p.lib-card__description.indent-b--m= data.text
+            .lib-card__image.indent-b--l
+                img(src="../images/content/" + data.image, alt= 'Библиотека ' + data.title)
+            ul.lib-card__list
+                each item in data.list
+                    li.lib-card__item
+                        a.lib-card__link.link-2(href= item.href)= item.title
+            p.lib-card__more.link-2 Все статьи

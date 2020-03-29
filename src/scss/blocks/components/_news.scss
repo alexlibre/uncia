@@ -1,0 +1,27 @@
+.news {
+  &__list {
+    @include unlist();
+
+  }
+
+  &__item {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #E1E1E1;
+    margin-top: 35px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    margin-bottom: 15px;
+  }
+}

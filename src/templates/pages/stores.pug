@@ -1,0 +1,96 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/store 
+
+block title
+    title Унция — Магазины
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Магазины')
+        h1.h1.page__title Магазины
+        .page__content
+            .stores
+                .container
+                    .stores__inner
+                        .stores__main
+                            .dropdown.dropdown_view_centered.dropdown_view_bold.indent-b--l2.dropdown_size_l
+                                .dropdown__inner
+                                    .icon-plus
+                                        .icon-plus__block.icon-plus__block_width_available
+                                            .dropdown__title.link магазины в санкт-петербурге
+                                        .icon-plus__icon
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="6" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 6L0 0h5L2.5 6z" fill="#552F1D"/></svg>
+                            label.icon-plus.stores__search.indent-b--s(for="search-stores")
+                                .icon-plus__icon.indent-r--s
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"><path clip-rule="evenodd" d="M7.5 14a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" stroke="#543019" stroke-width="1.5"/><path d="M12 12.417l4.339 4.339" stroke="#543019" stroke-width="1.5" stroke-linecap="square"/></svg>
+                                .icon-plus__block.icon-plus__block_width_available
+                                    input(type="search" id="search-stores" placeholder="Поиск магазинов")
+                            .stores__list
+                                .stores__item.js-accordeon
+                                    +store({
+                                        title: 'Владимирский проспект, 1/47',
+                                        opened: 'Время работы: 10-00 до 22-00',
+                                        metro: 'Василеостровская',
+                                        phone: '+7 (812) 677-39-61',
+                                        image: 'store-01.jpg',
+                                        subtitle: 'Кроме того, в магазинах Петербурга действуют следующие скидки:',
+                                        text: 'При покупке каждой пятой унции предоставляется скидка в размере 100 рублей. Каждую неделю титестер рекомендует новый сорт чая, на который мы снижаем цену на 20%.',
+                                        active: false,
+                                        id: 1
+                                    })
+                                .stores__item.is-active.js-accordeon
+                                    +store({
+                                        title: 'Невский проспект, 63',
+                                        opened: 'Время работы: 10-00 до 22-00',
+                                        metro: 'Василеостровская',
+                                        phone: '+7 (812) 677-39-61',
+                                        image: 'store-01.jpg',
+                                        subtitle: 'Кроме того, в магазинах Петербурга действуют следующие скидки:',
+                                        text: 'При покупке каждой пятой унции предоставляется скидка в размере 100 рублей. Каждую неделю титестер рекомендует новый сорт чая, на который мы снижаем цену на 20%.',
+                                        active: true,
+                                        id: 2
+                                    })
+                                .stores__item.js-accordeon
+                                    +store({
+                                        title: 'Средний проспект Васильевского острова, 19',
+                                        opened: 'Время работы: 10-00 до 22-00',
+                                        metro: 'Василеостровская',
+                                        phone: '+7 (812) 677-39-61',
+                                        image: 'store-01.jpg',
+                                        subtitle: 'Кроме того, в магазинах Петербурга действуют следующие скидки:',
+                                        text: 'При покупке каждой пятой унции предоставляется скидка в размере 100 рублей. Каждую неделю титестер рекомендует новый сорт чая, на который мы снижаем цену на 20%.',
+                                        active: false,
+                                        id: 3
+                                    })
+                                .stores__item.js-accordeon
+                                    +store({
+                                        title: 'переулок Гривцова, 26',
+                                        opened: 'Время работы: 10-00 до 22-00',
+                                        metro: 'Василеостровская',
+                                        phone: '+7 (812) 677-39-61',
+                                        image: 'store-01.jpg',
+                                        subtitle: 'Кроме того, в магазинах Петербурга действуют следующие скидки:',
+                                        text: 'При покупке каждой пятой унции предоставляется скидка в размере 100 рублей. Каждую неделю титестер рекомендует новый сорт чая, на который мы снижаем цену на 20%.',
+                                        active: false,
+                                        id: 4
+                                    })
+                                .stores__item.js-accordeon
+                                    +store({
+                                        title: 'улица Савушкина, 141',
+                                        opened: 'Время работы: 10-00 до 22-00',
+                                        metro: 'Василеостровская',
+                                        phone: '+7 (812) 677-39-61',
+                                        image: 'store-01.jpg',
+                                        subtitle: 'Кроме того, в магазинах Петербурга действуют следующие скидки:',
+                                        text: 'При покупке каждой пятой унции предоставляется скидка в размере 100 рублей. Каждую неделю титестер рекомендует новый сорт чая, на который мы снижаем цену на 20%.',
+                                        active: false,
+                                        id: 5
+                                    })
+
+                        .stores__map#stores-map

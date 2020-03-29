@@ -1,0 +1,13 @@
+.grid {
+  $f: &;
+
+  &__3-cols {
+    @include u-row-flex(40px);
+    justify-content: space-between;
+
+    & #{$f}__item {
+      @include u-col(40px);
+      @include u-size(2, 7, 40px);
+    }
+  }
+}

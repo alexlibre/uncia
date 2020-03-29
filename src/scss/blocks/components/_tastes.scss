@@ -1,0 +1,66 @@
+.tastes {
+    background-color: #fff;
+    &__list {
+        @include unlist();
+        @include u-row-flex(40px);
+        align-items: flex-start;
+        text-align: center;
+        @include md-block {
+            @include u-row-flex(16px);
+        }
+    }
+    &__item {
+        @include u-col(40px);
+        @include u-size(1, 7, 40px);
+        @include md-block {
+            @include u-col(16px);
+            @include u-size(1, 4, 16px);
+            display: none;
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                display: block;
+            }
+        }
+    }
+    &__all {
+        align-self: flex-end;
+        @include md-block {
+            display: block !important;
+            @include u-size(4, 4, 16px);
+            margin-top: 30px;
+        }
+    }
+}
+
+.taste {
+    $c: &;
+    &__image {
+        width: 70px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(.9);
+        transition: transform .2s cubic-bezier(0, 0, 0.12, 1);
+        &>img {
+            max-height: 100%;
+        }
+        &_view {
+            &_l {
+                height: 90px;
+                width: 110px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__caption {
+        max-width: 170px;
+    }
+    &:hover {
+        & #{$c}__image {
+            transform: scale(1);
+        }
+    }
+}

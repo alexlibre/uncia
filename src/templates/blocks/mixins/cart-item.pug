@@ -1,0 +1,28 @@
+include ./input
+mixin cart-item(data)
+    li.cart__item(data-id=data.id)
+        button.button.button--view--icon.cart__item-del.js-del-cart-item(data-del-id= data.id)
+            .icon-plus.icon-plus--vertical-align--baseline
+                .icon-plus__icon
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" fill="none"><path d="M1.3214 2l8.3572 8M9.6786 2l-8.3572 8" stroke="#543019" stroke-width="1.5" stroke-linecap="square"/></svg>
+                .icon-plus__block.link-2.indent-l--2xs.view-desktop Удалить
+        .cart-item
+            .cart-item__image.js-add-to-cart(data-id=data.id)
+                img(src="../images/content/" + data.image)
+            h4.h4.cart-item__title= data.title
+            p.h4.cart-item__price!= data.price+'&nbsp;'
+                |
+                span.cart-item__measure= data.measure
+            .cart-item__qty
+                button.button.button--view--icon.cart-item__qty-dec.js-cart-dec
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="1" fill="none"><path fill="#D1CCCC" d="M0 0h22v1H0z"/></svg>
+                +input({
+                    type: 'text', 
+                    className: 'input--view--small', 
+                    value: data.qty
+                })
+                button.button.button--view--icon.cart-item__qty-inc.js-cart-inc
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" fill="none"><path fill="#D1CCCC" d="M0 11h22v1H0z"/><path fill="#D1CCCC" d="M11.5.5v22h-1V.5z"/></svg>
+            .cart-item__sum.h4
+                span.cart-item__sum-value
+                span.cart-item__measure &nbsp;Руб.

@@ -1,0 +1,20 @@
+include ../blocks/mixins/catalog
+.swiper-container.article-theme-slider
+    .swiper-wrapper
+        .swiper-slide.article-theme-slider__item
+            +catalog({
+                indentClass: 'indent-t--l2',
+                number: 4
+            })
+        .swiper-slide.article-theme-slider__item
+            +catalog({
+                indentClass: 'indent-t--l2',
+                number: 4
+            })
+        .swiper-slide.article-theme-slider__item
+            +catalog({
+                indentClass: 'indent-t--l2',
+                number: 4
+            })
+    .swiper-pagination.article-theme-slider__pagination
+

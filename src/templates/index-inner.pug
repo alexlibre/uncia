@@ -1,0 +1,27 @@
+include blocks/mixins/grid-debug
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible',content='IE=edge')
+        meta(name='viewport',content='width=device-width, initial-scale=1')
+
+        block title
+            title default title
+
+        link(rel='stylesheet', href='../css/bundle.css')
+        link(rel='stylesheet', href='../css/main.css')
+
+    body
+        //- +debug()
+        include blocks/standing/header
+        main.content
+            block content
+
+        include blocks/standing/footer
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+        script(src='../js/vendor.js')
+        script(src='../js/main.js')

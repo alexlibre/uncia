@@ -1,0 +1,33 @@
+{
+  "name": "chay.info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "rollup": "^1.21.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "smart-grid": "^2.1.2"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "mapbox-gl": "^1.5.0",
+    "swiper": "^5.2.1"
+  }
+}

@@ -1,0 +1,62 @@
+.lk-personal {
+    &__form {
+        @include u-row-flex(40px);
+        @include md-block {
+            @include u-row-flex(16px)
+        }
+    }
+    &__form-inputs {
+        @include u-col(40px);
+        @include u-size(5, 8, 40px);
+        order: 1;
+        @include md-block {
+            @include u-col(16px);
+            @include u-size(2, 3, 16px);
+        }
+        @include sm-block {
+            @include u-col(16px);
+            @include u-size(3, 3, 16px);
+        }
+    }
+    &__form-pic {
+        @include u-col(40px);
+        @include u-size(3, 8, 40px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        order: 2;
+        @include md-block {
+            @include u-col(16px);
+            @include u-size(1, 3, 16px);
+            align-items: center;
+            justify-content: center;
+        }
+        @include sm-block {
+            @include u-col(16px);
+            @include u-size(3, 3, 16px);
+            margin-top: 24px;
+        }
+    }
+    &__form-submit {
+        @include u-col(40px);
+        @include u-size(8, 8, 40px);
+        order: 3;
+        margin-top: 30px;
+        @include md-block {
+            @include u-col(16px);
+            @include u-size(3, 3, 16px);
+        }
+    }
+    &__avatar {
+        width: 145px;
+        height: 145px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__load {
+        margin-top: 22px;
+    }
+}

@@ -1,0 +1,46 @@
+.articles {
+  padding-bottom: 90px;
+  
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  &__highlight{
+    @include row-flex();
+  }
+
+  &__first{
+    @include col();
+    @include size(8);
+  }
+  &__magazine{
+    @include col();
+    @include size(4);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  &__grid {
+    margin: 70px auto 40px;
+    @include row-flex();
+    align-items: flex-start;
+  }
+
+  &__item {
+    @include col();
+    @include size(4);
+    margin-top: 70px;
+
+    &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
+      margin-top: 0;
+    }
+  }
+
+  &__more-qty {
+    color: #a5a5a5;
+  }
+}

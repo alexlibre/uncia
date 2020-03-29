@@ -1,0 +1,76 @@
+body {
+    overflow-x: hidden;
+    background-color: #fafafa;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    &.is-unscrolled {
+        overflow: hidden;
+    }
+    &.disable-hover {
+        pointer-events: none;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+.content {
+    flex-grow: 2;
+    width: 100%;
+    min-height: 300px;
+    @include md-block {
+        overflow-x: hidden;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    // outline: 1px solid aqua;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+::selection {
+    background: #c7c7c7;
+    color: #543019;
+}
+
+.stickem-container {
+    position: relative;
+}
+
+.stickem {
+    width: 510px;
+}
+
+.stickit {
+    position: fixed;
+    top: 0;
+}
+
+.stickit-end {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}

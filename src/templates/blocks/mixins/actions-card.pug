@@ -1,0 +1,16 @@
+mixin actions-card(data)
+    .actions-card
+        .actions-card__inner
+            .actions-card__image
+                img(src="../images/content/" + data.image, alt= data.title)
+            .actions-card__title
+                h2.h2.indent-b--m= data.title
+                .actions-card__more.link Подробнее о скидках
+
+            .actions-card__description
+                .actions-card__value.indent-b--l2= data.value 
+                    span %
+                .actions-card__rate
+                    p.actions-card__rate-val.link-2= data.rate
+                    div.actions-card__tip ?
+            

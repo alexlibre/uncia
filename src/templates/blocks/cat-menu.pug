@@ -1,0 +1,127 @@
+include ../blocks/mixins/action-slide
+include mixins/item-card
+
+.header__cat-menu.js-popup(data-id="cat-menu")
+    .container
+        .cat-menu
+            .cat-menu__categories
+                ul.cat-menu__cat-list
+                    li.cat-menu__cat-item
+                        a.h4.is-active(href="catalog-tea.html") Чай
+                    li.cat-menu__cat-item
+                        a.h4 Кофе
+                    li.cat-menu__cat-item
+                        a.h4 Подарки
+                    li.cat-menu__cat-item
+                        a.h4 Посуда
+                    li.cat-menu__cat-item
+                        a.h4 Сладости
+                    li.cat-menu__cat-item
+                        a.h4 Упаковка
+                    li.cat-menu__cat-item
+                        a.h4 Подарочный сертификат
+            .cat-menu__content
+                .cat-menu__view-all
+                    a.link Все виды
+                .cat-menu__sub
+                    ul.cat-menu__sub-list
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Черный чай
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Зеленый чай
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Зеленый связанный чай
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Белый чай
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Желтый чай
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Улун
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Пу Эр
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Мате
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Ройбуш
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Фруктовый  и&nbsp;травяной чай
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Зеленый чай  с&nbsp;добавками
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Черный чай  с&nbsp;добавками
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Фунт Чая, -40%
+                        li.cat-menu__sub-item
+                            a.cat-menu__sub-link.link Чай в&nbsp;пирамидках
+                ul.cat-menu__filters
+                    li.cat-menu__filter
+                        .cat-menu__filter-title.h4 Страна
+                        ul.cat-menu__filter-list
+                            li.cat-menu__filter-item
+                                a.text Китай
+                                ul.cat-menu__filter-sublist
+                                    li.cat-menu__filter-subitem
+                                        a.text Юннань
+                                    li.cat-menu__filter-subitem
+                                        a.text Фуцзянь
+                            li.cat-menu__filter-item
+                                a.text Цейлон
+                            li.cat-menu__filter-item
+                                a.text Индия
+                                ul.cat-menu__filter-sublist
+                                    li.cat-menu__filter-subitem
+                                        a.text Ассам
+                                    li.cat-menu__filter-subitem
+                                        a.text Дарджилинг
+                    li.cat-menu__filter
+                        .cat-menu__filter-title.h4 Подборки
+                        ul.cat-menu__filter-list
+                            li.cat-menu__filter-item
+                                a.text Черный &laquo;Как раньше, со&nbsp;слоном&raquo;
+                            li.cat-menu__filter-item
+                                a.text &laquo;Что-нибудь вкусненькое&raquo;
+                            li.cat-menu__filter-item
+                                a.text Необычные вкусы
+                            li.cat-menu__filter-item
+                                a.text &laquo;Чтобы бодрил&raquo;
+                            li.cat-menu__filter-item
+                                a.text Антистресс
+                            li.cat-menu__filter-item
+                                a.text Утренний, для завтрака
+                    li.cat-menu__filter
+                        .cat-menu__filter-title.h4 Ингредиенты
+                        ul.cat-menu__filter-list
+                            li.cat-menu__filter-item
+                                a.text с клубникой
+                            li.cat-menu__filter-item
+                                a.text с облепихой
+                            li.cat-menu__filter-item
+                                a.text с мятой
+                            li.cat-menu__filter-item
+                                a.text с васильком
+                            li.cat-menu__filter-item
+                                a.text с бергамотом
+            aside.cat-menu__promo
+                +action-slide({
+                    image: 'action-1.png',
+                    title: 'Год чёрного чая'
+                })
+                .cardlist.cardlist--layout--vertical
+                    .cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 6
+                        })
+                    .cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 7
+                        })

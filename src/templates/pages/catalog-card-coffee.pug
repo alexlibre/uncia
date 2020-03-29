@@ -1,0 +1,204 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/taste-item
+include ../blocks/mixins/catalog-banner
+include ../blocks/mixins/catalog
+include ../blocks/mixins/plate
+include ../blocks/mixins/keep
+include ../blocks/mixins/option
+include ../blocks/mixins/radio-box
+include ../blocks/mixins/progress
+include ../blocks/mixins/taste-option
+include ../blocks/mixins/degustation
+include ../blocks/mixins/item-gallery
+
+block title
+    title Унция — Каталог кофе
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            },
+            {
+                link: 'catalog-tea.html',
+                title: 'Каталог'
+            }
+        ], 'Пралине Ликёр')
+        .page__title
+            h1.h1 Пралине Ликёр
+            .page__title-rates 
+                a.page__title-rate.indent-r--m
+                    .icon-plus
+                        .icon-plus__icon.indent-r--2xs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.75l-4.996 2.627.954-5.564-4.042-3.94 5.586-.811L8.5 0l2.498 5.062 5.586.811-4.042 3.94.954 5.564L8.5 12.75z" fill="#543019"/></svg>
+                        .icon-plus__block 
+                            .link-2 4.5
+                a.page__title-comments
+                    .icon-plus
+                        .icon-plus__icon.indent-r--2xs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.366 0H2.634C1.179 0 0 1.273 0 2.843v6.624c0 1.57 1.179 2.843 2.634 2.843h.468V16l4.822-3.69h7.442C16.82 12.31 18 11.038 18 9.467V2.843C18 1.273 16.821 0 15.366 0z" fill="#543019"/></svg>
+                        .icon-plus__block 
+                            .link-2 22
+        .page__content
+            //- .container
+            .catalog-card
+                section.section.indent-b--3xl
+                    .container
+                        .catalog-card__inner
+                            .catalog-card__preview
+                                +item-gallery({items: [
+                                    {
+                                        img: 'praline.jpg',
+                                        imgThumb: 'praline.jpg'
+                                    },
+                                    {
+                                        img: 'praline2.jpg',
+                                        imgThumb: 'praline2.jpg'
+                                    }
+                                ]})
+                            .catalog-card__details
+                                .catalog-card__detail-block
+                                    .catalog-card__status.icon-plus.icon-plus--vertical-align--baseline
+                                        .icon-plus__icon.indent-r--3xs
+                                            img(src="../images/static/hit.png")
+                                        .icon-plus__block Хит продаж
+
+                                    p.text Большинство из&nbsp;нас любит шоколадные конфеты. Это факт известный, неоспоримый. Одна из&nbsp;самых популярных начинок&nbsp;&mdash; пралине: сочетание тёртых орехов и&nbsp;сиропа из&nbsp;карамелизированного сахара Сладкий, ореховый, карамельный, чуть терпкий, с&nbsp;нотками шоколада и&nbsp;с&nbsp;приятной, лёгкой &laquo;ликёрностью&raquo;. Этот кофе подойдёт для любителей изысканно-сладкого вкуса.
+                                .catalog-card__detail-block
+                                    .catalog-card__options
+                                        ul.options.options_align_top
+                                            li.options__item
+                                                +option({
+                                                    label: 'Страна',
+                                                    value: 'Китай',
+                                                    small: true
+                                                })
+                                            li.options__item
+                                                +progress({
+                                                    label: 'Кислотность',
+                                                    range: '1-9',
+                                                    value: '1',
+                                                    indentClass: 'indent-b--m'
+                                                })
+                                                +progress({
+                                                    label: 'Тело',
+                                                    range: '3-10',
+                                                    value: '7'
+                                                })
+                                .catalog-card__detail-block
+                                    .catalog-card__options
+                                        ul.options.options_align_bottom
+                                            li.options__item
+                                                +option({
+                                                    label: 'Вкус',
+                                                    value: 'Шоколадные и карамельные ноты',
+                                                    small: true
+                                                })
+                                            li.options__item
+                                                +option({
+                                                    label: 'Послевкусие',
+                                                    value: 'Короткое, среднее',                                          small: true
+                                                })
+
+                            .catalog-card__prices
+                                p.catalog-card__price
+                                    span.catalog-card__price-value.h1 120
+                                    span.catalog-card__price-measure.h4 Р/унция
+                                p.link-2.indent-t--xs ~ 35 чашек
+                                form.form.indent-t--m
+                                    .form__item
+                                        +radio-box({
+                                            name: 'pack',
+                                            id: 'pack-1',
+                                            label: 'Рассыпной',
+                                            inputClasses: 'indent-r--xs',
+                                            checked: true
+                                        })
+                                    .form__item
+                                        +radio-box({
+                                            name: 'pack',
+                                            id: 'pack-2',
+                                            label: 'Пирамидки',
+                                            inputClasses: 'indent-r--xs',
+                                        })
+                                    .form__item
+                                        +radio-box({
+                                            name: 'pack',
+                                            id: 'pack-3',
+                                            label: 'Пакет 0,5 кг',
+                                            inputClasses: 'indent-r--xs',
+                                        })
+                                        
+
+                                .catalog-card__status.icon-plus.indent-t--m
+                                    .icon-plus__icon.indent-l--3xs.indent-r--s
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" fill="none"><path d="M0 4.765l.789-.7998 3.867 2.2715L11.324 0 12 .6654 4.9475 10 0 4.765z" fill="#A5A5A5"/></svg>
+                                    .icon-plus__block В наличии&nbsp;
+                                        a.link-2.link-2--dark в 37 магазинах
+                                .catalog-card__status.icon-plus.indent-t--2xs
+                                    .icon-plus__icon.indent-r--xs
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3499 7.36941L14.8175 12.0338C15.4927 12.1799 16 12.7818 16 13.5C16 14.3269 15.3271 15 14.5 15C13.6731 15 13 14.3269 13 13.5C13 12.9606 13.2863 12.4866 13.7151 12.2222L13.2415 7.49738C10.4614 8.07934 8.36698 10.5495 8.36698 13.5C8.36698 16.8817 11.118 19.6326 14.4999 19.6326C17.8818 19.6326 20.6328 16.8817 20.6328 13.5002C20.6328 10.1188 17.8815 7.36761 14.4999 7.36761C14.4498 7.36761 14.3998 7.36821 14.3499 7.36941ZM14.4696 13.9239L14.6397 13.9015C14.5959 13.9167 14.5489 13.925 14.5 13.925C14.4898 13.925 14.4796 13.9247 14.4696 13.9239ZM14.4999 6C14.4039 6 14.3083 6.00181 14.2132 6.00541L13.7171 1.05694C13.7027 0.912321 13.6453 0.777775 13.5552 0.675606C13.0449 0.0978488 11.6455 -0.597906 10 0.901289L10.6931 1.90067C11.6741 1.00706 12.3541 1.27567 12.6376 1.47257L12.7856 2.94935C11.1742 2.87246 8.03218 3.14946 6.35902 6.15935C6.05161 6.71236 5.75999 7.21699 5.48932 7.68539L5.48926 7.68549C4.40595 9.56011 3.65801 10.8544 3.57495 12.3473L3.57493 12.3476C3.56138 12.5913 3.54837 12.8252 3.53301 13.0474C3.35999 13.0163 3.18186 13 3 13C1.34576 13 0 14.3458 0 16.0001C0 17.6544 1.34576 19 3 19C4.65424 19 6 17.6544 6 16.0001C6 14.9756 5.48381 14.0693 4.69784 13.5278C4.73005 13.1762 4.75059 12.8066 4.77189 12.4235L4.77191 12.4232C4.84732 11.0662 5.48539 10.0121 6.37594 8.54081L6.37595 8.5408C6.68749 8.0261 7.02994 7.46035 7.39001 6.81273C8.73287 4.39742 11.495 4.17435 12.9144 4.23466L13.1044 6.13016C9.63338 6.78596 7 9.84132 7 13.5C7 17.6354 10.3645 21 14.4999 21C18.6355 21 22 17.6354 22 13.5C22 9.36462 18.6355 6 14.4999 6ZM4.45436 14.9055C4.68443 15.2104 4.82099 15.5897 4.82099 16.0003C4.82099 17.0042 4.00406 17.8214 3 17.8214C1.99594 17.8214 1.17901 17.0044 1.17901 16.0003C1.17901 14.996 1.99594 14.1791 3 14.1791C3.13396 14.1791 3.26459 14.1936 3.39039 14.2212C3.32155 14.5412 3.22337 14.8059 3.07593 15.0029C3.05086 15.001 3.02554 15 3 15C2.44867 15 2 15.4485 2 16.0001C2 16.5515 2.44867 17 3 17C3.55133 17 4 16.5515 4 16.0001C4 15.9443 3.99541 15.8896 3.98658 15.8362C4.19788 15.5652 4.34684 15.2525 4.45436 14.9055Z" fill="#A5A5A5"/>
+                                        </svg>
+                                    .icon-plus__block Доставим сегодня
+                                .catalog-card__btns.indent-t--l2
+                                    button.button.button--view--dark.button--view--dark-x2
+                                        .icon-plus
+                                            .icon-plus__icon.indent-r--s
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" fill="none"><path clip-rule="evenodd" d="M15.556 20H1.4446C1.1996 20 1 19.8025 1 19.5585l.8546-12.9352c0-.244.199-.4415.4453-.4415h12.4008c.2464 0 .4453.1975.4453.4415L16 19.5585c0 .244-.1989.4415-.444.4415z" stroke="#fff" stroke-width="1.5"/><path d="M5.4117 9.6364V4.0776C5.4117 2.3781 6.7944 1 8.4997 1c1.7058 0 3.0885 1.3781 3.0885 3.0776v5.5588" stroke="#fff" stroke-width="1.5"/></svg>
+                                            .icon-plus__block
+                                                p.link.link--view--white В корзину
+                                    button.button.button--view--icon-secondary.catalog-item__fav.favorite.js-favorites-add(data-fav-id=1)
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"/></svg>
+                                .catalog-card__btns
+                                    button.button.button--view--underlink.js-one-click-buy-btn.indent-l--m Купить в 1 клик
+                        
+                section.section.indent-b--3xl
+                    .container
+                        .section__header.indent-b--3xl
+                            h2.h1 Описание
+                        .catalog-card__description-center
+                            h3.h3.indent-b--l2 Выберите чайную основу — купаж на основе черного чая, зеленого чая или без чая — травяные и фруктовые сборы. Ищите нужный ингредиент в облаке и переходите в каталог на подборку чаев с вашими ингредиентами.
+                            p.text Драгоценные мои друзья! Ни за что не угадаете, чем я только что отобедал! И хотя описывать содержимое своей тарелки, а стало быть, и желудка – занятие не совсем приличное, я все же не могу удержаться, и сейчас вы сами поймете, отчего. Итак, я в Янгоне, в Британской Бирме, или, как здешние жители сами ее называют, Бама, и только что с большим аппетитом и удовольствием оттрапезничал… чаем.
+                            p.text О, кажется, я вас не удивил! Вы, должно быть, вообразили себе, что бедный сэр Генри опять на голодном пайке. Влачится где-то по свету, не имея возможности порядочно поесть в каком-нибудь отеле или благословенной закусочной, и всего-то ему и остается, что развести костерок, вытащить из походного саквояжа свой медный маленький чайник, и если не утолить, то хотя бы заглушить голод очередной – одной из сотен тысяч – чашкой чаю…
+                section.section
+                    .container
+                        .catalog-card__slider.indent-b--5xl
+                            .catalog-card__slider-wrap
+                                include ../blocks/catalog-slider
+                            .catalog-card__slider-desc
+                                h3.h3.catalog-card__aside-title Выберите чайную основу — купаж на основе черного чая, зеленого чая или без чая.
+                                p.text О да, признаюсь, что подобных трапез было немало в течение моего столь затянувшегося путешествия.
+
+                section.section.indent-b--5xl
+                    .container
+                        .section__header.indent-b--2xl
+                            h2.h1 Отзывы
+                        include ../blocks/reviews
+                section.section
+                    .container
+                        .section__header.indent-b--2xl
+                            h2.h1 Унция&nbsp;
+                                em рекомендует
+                    +catalog({
+                        indentClass: 'indent-b--4xl',
+                        number: 4
+                    })
+                    .container
+                        .cardlist.cardlist--2col
+                            .cardlist__item
+                                +plate({
+                                    image: 'plate-3.jpg',
+                                    title: 'Зеленый вкуснее весной',
+                                    qty: '15 видов'
+                                })
+                            .cardlist__item
+                                +plate({
+                                    image: 'plate-4.jpg',
+                                    title: 'Рождественские вечера',
+                                    qty: '15 видов'
+                                })
+                        button.button--view--link.indent-t--2xl.indent-h--a Все подборки

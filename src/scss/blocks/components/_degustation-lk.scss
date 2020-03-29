@@ -1,0 +1,43 @@
+.degustation-lk {
+    &__header {
+        height: 226px;
+        position: relative;
+        background-color: #180E0B;
+        color: #fff;
+        padding-left: 110px;
+        display: flex;
+        align-items: center;
+        @include md-block {
+            padding-left: 62px;
+        }
+    }
+    &__image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+    &__title {
+        color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+    &__footer {
+        display: flex;
+        padding: 30px 24px 30px 62px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e1e1e1;
+    }
+}
+
+.degustations-lk {
+    &__item {
+        margin-bottom: 50px;
+    }
+}

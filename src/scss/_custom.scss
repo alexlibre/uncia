@@ -1,0 +1,91 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    @media screen and (max-width: 1366px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.debug {
+    @include debug(transparent, 1px dotted rgba(215, 0, 28, 0.3));
+    z-index: 1000000;
+    pointer-events: none;
+    will-change: transform;
+    &>div {
+        // outline: 1px dashed rgba(0, 128, 0, .2);
+    }
+    &>* {
+        pointer-events: none;
+    }
+    &>div>div>div {
+        background-color: rgba(215, 0, 28, 0.02);
+    }
+}
+
+.mapboxgl-ctrl-attrib,
+.mapboxgl-ctrl-logo {
+    display: none !important;
+}
+
+.text {
+    &--center {
+        text-align: center;
+    }
+}
+
+.shake {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    color: #dd2d24;
+    transition: color 0.82s ease;
+}
+
+.view-desktop {
+    @include md-block {
+        display: none;
+    }
+}
+
+.view-mobile {
+    display: none;
+    @include md-block {
+        display: block;
+    }
+}
+
+.flex-mobile {
+    display: none;
+    @include md-block {
+        display: flex;
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

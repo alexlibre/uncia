@@ -1,0 +1,99 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/option 
+include ../blocks/mixins/item-gallery 
+include ../blocks/mixins/degustation
+
+block title
+    title Унция — Малый пр. В.О., д. 88
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            },
+            {
+                link: 'stores.html',
+                title: 'Магазины'
+            }
+        ], 'Малый пр. В.О., д. 88')
+        h1.h1.page__title Малый пр. В.О., д. 88
+        .page__content
+            .shop
+                .container
+                    section.shop__section
+                        .shop__inner
+                            .shop__gallery
+                                img(src="../images/content/shop01.jpg", alt="")
+                            .shop__description
+                                .indent-b--l
+                                    +option({
+                                        small: true,
+                                        value: 'Время работы: 10-00 до 22-00',
+                                        label: 'Ежедневно',
+                                        indentClass: 'indent-b--m'
+                                    })
+                                    +option({
+                                        small: true,
+                                        value: '+7 (812) 677-39-61',
+                                        label: 'Телефон',
+                                        indentClass: 'indent-b--m'
+                                    })
+                                    +option({
+                                        small: true,
+                                        value: '9 октября 2003',
+                                        label: 'Дата открытия'
+                                    })
+                                button.button.button--view--underlink.shop__view-map.indent-b--xl расположение на карте
+                                p.text Выберите чайную основу&nbsp;&mdash; купаж на&nbsp;основе черного чая, зеленого чая или без чая&nbsp;&mdash; травяные и&nbsp;фруктовые сборы. Ищите нужный ингредиент в&nbsp;облаке и&nbsp;переходите в&nbsp;каталог на&nbsp;подборку чаев с&nbsp;вашими ингредиентами. <br /> <br /> Выберите чайную основу&nbsp;&mdash; купаж на&nbsp;основе черного чая, зеленого чая или без чая&nbsp;&mdash; травяные и&nbsp;фруктовые сборы. Ищите нужный ингредиент в&nbsp;облаке и&nbsp;переходите в&nbsp;каталог на&nbsp;подборку чаев с&nbsp;вашими ингредиентами. <br /> <br />Выберите чайную основу&nbsp;&mdash; купаж на&nbsp;основе черного чая, зеленого чая или без чая&nbsp;&mdash; травяные и&nbsp;фруктовые сборы. Ищите нужный ингредиент в&nbsp;облаке и&nbsp;переходите в&nbsp;каталог на&nbsp;подборку чаев с&nbsp;вашими ингредиентами
+                    section.shop__section
+                        .shop__discount
+                            .shop__system
+                                p.h1.indent-b--l Дисконтная система
+                                .shop__disc-list
+                                    .shop__disc-item
+                                        .shop__disc-value 3<i>%</i>
+                                        .shop__disc-label.link-2.link--view--ghost от 1 500 до 2 999 руб.
+                                    .shop__disc-item
+                                        .shop__disc-value 6<i>%</i>
+                                        .shop__disc-label.link-2.link--view--ghost от 3 000 до 5 999 руб.
+                                    .shop__disc-item
+                                        .shop__disc-value 10<i>%</i>
+                                        .shop__disc-label.link-2.link--view--ghost 6 000 + руб.
+
+                            .shop__actions
+                                .shop__action
+                                    p.h2 100 Р
+                                    p.link-2.link--view--ghost При покупке каждой пятой унции предоставляется скидка в размере 100 рублей.
+                                .shop__action
+                                    p.h2 20 % на чай
+                                    p.link-2.link--view--ghost Каждую неделю титестер рекомендует новый сорт чая, на который мы снижаем цену на 20%.
+                    section.shop__section
+                        .shop__degustations
+                            .shop__degustation
+                                .shop__degustation-item
+                                    +degustation({
+                                        image: 'degustation.jpg',
+                                        title: 'Ближайшая дегустация<em>&nbsp;Gaba чай</em>',
+                                        vacant: 34,
+                                        when: 'Среда 19 августа, 19:00',
+                                        where: 'Невский проспет 63, магазин Унция'
+                                    })
+                                .shop__degustation-item
+                                    +degustation({
+                                        image: 'degustation.jpg',
+                                        title: 'Дегустация <em>Индийский&nbsp;чай</em>',
+                                        vacant: 34,
+                                        when: 'Четверг 25 августа, 19:00',
+                                        where: 'Невский проспет 63, магазин Унция'
+                                    })
+                    section.shop__section
+                        .shop__location
+                            .shop__map
+                                button.button.button--view--underlink.indent-b--l.shop__route маршрут 
+                                #shop-map
+
+
+

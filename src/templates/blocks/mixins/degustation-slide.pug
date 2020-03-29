@@ -1,0 +1,21 @@
+mixin degustation-slide(els)
+    .degustation-slide
+        .degustation-slide__header
+            .degustation-slide__image
+                img(src="../images/content/" + els.img data-swiper-parallax-x="200" data-swiper-parallax-opacity="0" data-swiper-parallax-scale="1.2") 
+            .degustation-slide__title.h1(data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0") Ближайшая дегустация
+                em &nbsp;Gaba чай
+            .degustation-slide__vacant
+                button.button.button--view--dark.degustation-slide__btn Я приду
+                .labeled-by
+                    .h5-b.degustation-slide__vacant-val 34
+                    p.degustation-slide__vacant-free.labeled__value.h5 Осталось мест    
+        .degustation-slide__footer
+            .degustation-slide__when
+                .labeled-by
+                    .labeled-by__label.h5-b Когда
+                    .labeled__value Среда 19 августа, 19:00
+            .degustation-slide__where
+                .labeled-by
+                    .labeled-by__label.h5-b Где
+                    .labeled__value Невский проспет 63, магазин Унция

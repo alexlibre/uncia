@@ -1,0 +1,19 @@
+.cat-tastes {
+    @include unlist();
+    padding: 40px 0 6px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+        flex: 0 0 25%;
+        margin-bottom: 34px;
+        display: flex;
+        justify-content: center;
+        &:last-of-type {
+            margin-right: auto;
+        }
+        @include md-block {
+            flex: 0 0 30%;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+mixin degustation-lk(data)
+    .degustation-lk
+        .degustation-lk__header
+            .degustation-lk__image(style="background-image: url(../images/content/" + data.img + ");")
+            .degustation-lk__title.h2!= data.title
+        .degustation-lk__footer
+            .degustation-lk__when
+                .labeled-by
+                    .labeled-by__label.h5-b Когда
+                    .labeled__value= data.when
+            .degustation-lk__where
+                .labeled-by
+                    .labeled-by__label.h5-b Где
+                    .labeled__value= data.where
+               
+            button.button.button--view--dark.degustation-lk__btn Не приду
+            a.link-2 Подробнее

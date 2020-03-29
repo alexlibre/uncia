@@ -1,0 +1,176 @@
+.lk-orders {
+    &__inner {}
+    &__row {
+        // @include md-block {
+        //     @include row-flex();
+        // }
+    }
+    &__row-inner {
+        width: 100%;
+        @include md-block {
+            @include row-flex();
+        }
+        @include u-row-flex(40px);
+    }
+    &__head {
+        @include md-block {
+            @include col();
+        }
+        @include u-col(40px);
+        &-num {
+            @include size-md(4);
+        }
+        &-items {
+            @include size-md(3);
+        }
+        &-sum {
+            @include size-md(2);
+        }
+        &-status {
+            @include size-md(3);
+        }
+    }
+    &__order {
+        &:not(:nth-of-type(1)) {
+            & .lk-orders__heading {
+                display: none;
+            }
+        }
+        &:nth-of-type(odd) {
+            & .lk-orders__res {
+                background-color: #FAFAFA;
+            }
+        }
+    }
+    &__res {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 112px;
+        cursor: pointer;
+        &.is-active {
+            cursor: default;
+            & .lk-orders__arrow {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &__heading {
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 14px;
+        display: flex;
+    }
+    &__detailed {
+        display: flex;
+        align-items: center;
+        transform-origin: top;
+        transition: all .3s cubic-bezier(0, 0, 0.12, 1);
+        overflow: hidden;
+        max-height: 0;
+        border-top: 1px solid #e1e1e1;
+        position: relative;
+        &.is-active {
+            max-height: none;
+            transition: all .3s cubic-bezier(0, 0, 0.12, 1);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #e1e1e1;
+        }
+    }
+    &__fr {
+        @include md-block {
+            @include col();
+        }
+        @include u-col(40px);
+        &-num {
+            @include size-md(4);
+            @include u-size(4, 12, 40px);
+        }
+        &-items {
+            @include size-md(3);
+            @include u-size(2, 12, 40px);
+        }
+        &-sum {
+            @include size-md(2);
+            @include u-size(2, 12, 40px);
+            white-space: nowrap;
+        }
+        &-status {
+            @include size-md(3);
+            @include u-size(4, 12, 40px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-list {
+            margin-left: auto;
+            @include size-md(9);
+            @include u-size(9, 12, 40px);
+        }
+        &-controls {
+            @include size-md(3);
+            @include u-size(2, 12, 40px);
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 24px 0;
+        border-bottom: 1px solid #e1e1e1;
+        &:last-of-type {
+            border-bottom: 0;
+            padding-bottom: 48px;
+        }
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 72px;
+        height: 72px;
+    }
+    &__title {
+        margin-left: 15px;
+        flex-basis: 120px;
+    }
+    &__price {
+        margin-left: auto;
+        text-align: right;
+        white-space: nowrap;
+        flex-basis: 180px;
+        @include md-block {
+            flex-basis: 120px;
+        }
+    }
+    &__qty {
+        margin-left: auto;
+        text-align: center;
+        flex-basis: 40px;
+        @include md-block {
+            // margin-left: 20px;
+        }
+    }
+    &__total {
+        margin-left: auto;
+        text-align: right;
+        flex-basis: 90px;
+        white-space: nowrap;
+    }
+    &__control {
+        cursor: pointer;
+    }
+    &__arrow {
+        margin-right: 72px;
+        transform: scaleY(-1);
+        transition: transform .3s cubic-bezier(0, 0, 0.12, 1);
+    }
+}

@@ -1,0 +1,73 @@
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 0 1px #e1e1e1;
+    box-sizing: border-box;
+    padding: 10px 50px 20px;
+    &__image {
+        height: 86px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 15px;
+        & img {
+            display: block;
+        }
+    }
+    &__value {
+        font-family: 'ArtScript', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 200px;
+        color: #F0ECEC;
+        height: 86px;
+        line-height: 100px;
+        &--size {
+            &--s {
+                font-size: 80px;
+                line-height: 140px;
+            }
+        }
+    }
+    &__title {
+        text-align: center;
+        min-height: auto;
+        margin: 0 auto 20px;
+    }
+    &__text {
+        margin: 30px auto 40px;
+        text-align: center;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+    }
+    &__pagination {
+        position: relative;
+        height: 8px;
+        margin-top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        .swiper-pagination-bullet {
+            opacity: 1;
+            background-color: #e2e2e2;
+            margin: 0 16px!important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #4C0B0B;
+        }
+    }
+    &--slide {
+        height: 500px;
+        padding: 40px 50px 60px;
+        & .action__title {
+            min-height: 68px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.action-slider {}

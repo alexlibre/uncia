@@ -1,0 +1,28 @@
+include mixins/slide-left
+.swiper-container.index-slider.index-slider--left
+    .swiper-wrapper
+        .swiper-slide.index-slider__left-slide
+            +slide-left({
+                img: 'Photo.jpg',
+                title: 'Согреваем тех,',
+                titleEm: 'Кто далеко',
+                desc: 'отправим подарок в любую точку мира',
+                button: 'Выбрать подарок'
+            })
+        .swiper-slide.index-slider__left-slide
+            +slide-left({
+                img: 'Photo2.jpg',
+                title: 'Охлаждаем тех,',
+                titleEm: 'Кто рядом',
+                desc: 'отправим подарок в любую точку мира',
+                button: 'Выбрать подарок'
+            })
+        .swiper-slide.index-slider__left-slide
+            +slide-left({
+                img: 'Photo3.jpg',
+                title: 'Делаем что-то,',
+                titleEm: 'Где-то как-то',
+                desc: 'отправим подарок в любую точку мира',
+                button: 'Выбрать подарок'
+            })
+    .swiper-pagination

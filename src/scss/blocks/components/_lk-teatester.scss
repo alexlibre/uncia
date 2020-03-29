@@ -1,0 +1,161 @@
+.lk-teatester {
+    &__list {
+        @include unlist();
+    }
+    &__item {
+        position: relative;
+        &:last-of-type {
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                display: block;
+                background-color: #e1e1e1;
+                z-index: 2;
+            }
+        }
+    }
+    &-item {
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 12px;
+            height: 1px;
+            width: 100%;
+            display: block;
+            background-color: #e1e1e1;
+            z-index: 2;
+        }
+        &__inner {
+            width: 100%;
+        }
+        &__date {
+            color: #a5a5a5;
+            display: inline-block;
+            padding-right: 15px;
+            background-color: #fff;
+            position: relative;
+            z-index: 3;
+        }
+        &__content {
+            padding: 25px 0 55px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__image {
+            width: 160px;
+            height: 160px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 80px;
+            & img {
+                display: block;
+            }
+            @include md-block {
+                margin-right: 30px;
+            }
+        }
+        &__title {
+            flex: 0 0 180px;
+            padding-top: 30px;
+            @include md-block {
+                padding-top: 0;
+                flex: 0 0 140px;
+            }
+        }
+        &__name {
+            margin-top: 15px;
+            line-height: 30px;
+            min-height: 60px;
+            text-decoration: none;
+        }
+        &__desc {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 50px;
+            margin-left: auto;
+            flex: 0 0 400px;
+            @include md-block {
+                padding-top: 0;
+                flex: 0 0 300px;
+                margin-right: 20px;
+            }
+        }
+        &__rate {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            @include md-block {
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+        &__rating {
+            @include md-block {
+                margin-top: 8px;
+            }
+        }
+        &__text {
+            max-height: 66px;
+        }
+        &__controls {
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            @include md-block {
+                padding-top: 0;
+            }
+        }
+        &__control {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #f4f4f4;
+        }
+        &__edit {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.teatester-new {
+    &__name {
+        width: 330px;
+    }
+    &__notes {
+        width: 250px;
+        height: 64px;
+        padding-top: 16px;
+    }
+    &__circle {
+        & img {
+            display: block;
+            max-width: 75px;
+        }
+    }
+    &__rating {
+        width: 116px;
+        margin-right: 90px;
+    }
+    &__comment {
+        width: 620px;
+        & textarea {
+            border: 1px solid #e1e1e1;
+        }
+    }
+}

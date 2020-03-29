@@ -1,0 +1,10 @@
+mixin rating-set()
+    .rating.rating_active.js-rating
+        .rating__inner
+            - var n = 1;
+            while n < 6
+                .rating__star.js-rate
+                    input.rating__control(type="radio" name="rating" value= n  id="rate-"+ n)
+                    label(for="rate-"+ n)
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16.168" height="15.377" viewBox="0 0 16.168 15.377"><path id="star-empty" d="M8.5,12.75h0l-5,2.627h0l.954-5.563h0L.416,5.873h0L6,5.062H6L8.5,0h0L11,5.062h0l5.586.812h0l-4.042,3.94h0l.954,5.563h0Z" transform="translate(-0.416)" fill="#f4f4f4"/></svg>
+                - n++

@@ -1,0 +1,38 @@
+include mixins/review
+.reviews
+    .reviews__inner
+        .reviews__list
+            .reviews__item
+                +review({
+                    title: 'Тимошенко Елена',
+                    date: '27 июня ‘19',
+                    text: 'Сладкий цветочный аромат сухой заварки. Очень горький вкус жареных орехов, привкус копчения на огне. Светло-золотистый настоя. Горький вкус жареных орехов, привкус копчения на огне',
+                    linkText: 'Смотреть все отзывы Елены',
+                    href: '#'
+                })
+            .reviews__item
+                +review({
+                    title: 'Тимошенко Елена',
+                    date: '27 июня ‘19',
+                    text: 'Сладкий цветочный аромат сухой заварки. Очень горький вкус жареных орехов, привкус копчения на огне. Светло-золотистый настоя. Горький вкус жареных орехов, привкус копчения на огне',
+                    linkText: 'Смотреть все отзывы Елены',
+                    href: '#'
+                })
+            .reviews__item
+                +review({
+                    title: 'Тимошенко Елена',
+                    date: '27 июня ‘19',
+                    text: 'Сладкий цветочный аромат сухой заварки. Очень горький вкус жареных орехов, привкус копчения на огне. Светло-золотистый настоя. Горький вкус жареных орехов, привкус копчения на огне',
+                    linkText: 'Смотреть все отзывы Елены',
+                    href: '#'
+                })
+            button.button.button--view--underlink.indent-t--xs Все комментарии
+        .reviews__additional
+            .reviews__teatester.indent-b--xl
+                include teatester-review
+            .reviews__action
+                p.h1 Добавьте <span class="reviews__action-val">5</span> <br>записей <br>титестера и&nbsp;получите <br>подарок
+                .reviews__action-btns
+                    button.button--view--link.reviews__action-add.indent-b--m Добавить запись
+                    a.link-2.link--view--ghost.reviews__action-more Подробнее об акции
+            

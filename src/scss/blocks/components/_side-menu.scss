@@ -1,0 +1,168 @@
+.side-menu {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        @include md-block {
+            @include row-flex();
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        @include sm-block {
+            flex-direction: column;
+        }
+    }
+    // &__collapse {
+    //     @include md-block {
+    //         @include col();
+    //         @include size-md(5);
+    //     }
+    // }
+    &__block {
+        border: 1px solid #e1e1e1;
+        &:not(:first-of-type) {
+            border-top-color: transparent;
+        }
+        position: relative;
+        @include md-block {
+            @include col();
+            @include size-md(5);
+            border: 0;
+        }
+        @include sm-block {
+            @include col();
+            @include size-md(12)
+        }
+    }
+    &__list {
+        @include unlist();
+        padding: 50px 60px 50px 70px;
+        @include md-block {
+            padding: 20px;
+            display: none;
+            position: absolute;
+            z-index: 10;
+            background: #fff;
+            left: 0;
+            top: 62px;
+            width: 100%;
+            padding-left: 40px;
+            &.is-active {
+                display: block;
+                box-shadow: 0 2px 30px rgba(237, 237, 237, .5);
+            }
+        }
+    }
+    &__item {
+        margin-bottom: 28px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        @include unlink();
+        color: $color-base-2;
+        cursor: pointer;
+        &.is-active {
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 60px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background-color: #552f1d;
+            }
+        }
+    }
+    &__profile {
+        padding: 30px;
+        border: 1px solid #e1e1e1;
+        border-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include md-block {
+            border: 0;
+            flex-direction: row;
+            padding: 0;
+            align-self: flex-start;
+            @include col();
+            @include size-md(5);
+            @include shift-md-left(2);
+        }
+        @include sm-block {
+            @include shift-sm-left(0);
+            margin-top: 24px;
+        }
+    }
+    &__avatar {
+        width: 103px;
+        height: 103px;
+        border-radius: 50%;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        & img {
+            display: block;
+        }
+        @include md-block {
+            margin-bottom: auto;
+            margin-right: 20px;
+        }
+    }
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-name {
+            color: #27160e;
+            font-family: "Blacker Display", serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 25px;
+        }
+        @include md-block {
+            align-items: flex-start;
+        }
+        @include sm-block {
+            white-space: nowrap;
+        }
+    }
+    &__logout {
+        margin-top: 10px;
+    }
+    &__collapse {
+        height: 62px;
+        border: 1px solid #E1E1E1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        line-height: 62px;
+        color: #543019;
+        white-space: nowrap;
+        cursor: pointer;
+        &:after {
+            content: '';
+            display: block;
+            border-color: #552F1D transparent transparent transparent;
+            border-style: solid;
+            border-width: 7px 3px 0 3px;
+            height: 0;
+            width: 0;
+        }
+        &.is-active {
+            &:after {
+                border-color: transparent transparent #552F1D transparent;
+                border-width: 0 3px 7px 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.keep {
+    &__grid {
+        @include row-flex();
+        padding-top: 90px;
+    }
+    &__content {
+        @include col();
+        @include size(7);
+        @include size-md(6);
+    }
+    &__aside {
+        @include col();
+        @include size(3);
+        @include size-md(4);
+        @include shift-left(2);
+        @include shift-md-left(2);
+    }
+    &__rules {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include md-block {
+            flex-wrap: wrap;
+        }
+    }
+    &__rule {
+        width: 25%;
+        @include md-block {
+            width: 50%;
+        }
+    }
+}

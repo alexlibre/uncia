@@ -1,0 +1,16 @@
+mixin item-card(data)
+    .item-card
+        .item-card__image
+            img(src="../images/content/" + data.image)
+        .item-card__content
+            h4.h4= data.title
+            p.item-card__category= data.category
+            p.item-card__price.h4
+                span.item-card__price-value= data.priceValue
+                span.item-card__price-measure= data.priceMeasure
+                span.item-card__tip ?
+            .item-card__buttons
+                button.button.button--view--icon-primary.item-card__button
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M15.586 19H2.415A.415.415 0 0 1 2 18.585l.798-12.17c0-.23.185-.415.415-.415h11.574c.23 0 .416.186.416.415L16 18.585c0 .23-.186.415-.414.415z"></path><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M6 9V3.85C6 2.278 7.343 1 9 1s3 1.277 3 2.85V9"></path></svg>
+                button.button.button--view--icon-secondary.item-card__button.favorite.js-favorites-add(data-fav-id= data.rndId)
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"></path></svg>

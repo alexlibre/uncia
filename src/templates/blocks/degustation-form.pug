@@ -1,0 +1,61 @@
+include mixins/radio-box
+.degustation-form.indent-b--5xl
+    .degustation-form__inner
+        .degustation-form__content
+            h2.degustation-form__title.h1.indent-b--l2 Дегустировать чай Gaba
+            p.degustation-form__desc.text.indent-b--l Мы подготовим для вас индивидуальную дегустацию
+            form(action="/")
+                .form__row.indent-b--l
+                    .drop.drop_width_l.drop_view_dark.js-drop.indent-r--l2
+                        .drop__btn
+                            .drop__label-text Выберите магазин
+                            .drop__qty
+                            .drop__arrow
+                        .drop__content
+                            .drop__box
+                                .degustation-form__store
+                                    +radio-box({
+                                        id: 'store-1',
+                                        label: 'Магазин 1',
+                                        name: 'deg-store',
+                                        inputClasses: 'indent-r--2xs',
+                                        classes: 'degustation-form__store-inner'
+                                    })
+                                        p Выбери меня!
+                                .degustation-form__store
+                                    +radio-box({
+                                        id: 'store-2',
+                                        label: 'Магазин 2',
+                                        checked: true,
+                                        name: 'deg-store',
+                                        inputClasses: 'indent-r--2xs',
+                                        classes: 'degustation-form__store-inner'
+                                    })
+                                        p Нет, меня!
+                                .degustation-form__store
+                                    +radio-box({
+                                        id: 'store-3',
+                                        label: 'Магазин 3',
+                                        name: 'deg-store',
+                                        inputClasses: 'indent-r--2xs',
+                                        classes: 'degustation-form__store-inner',
+                                        disabled: true
+                                    })
+                                        p Меня не надо!
+                                .degustation-form__store
+                                    +radio-box({
+                                        id: 'store-4',
+                                        label: 'Магазин 4',
+                                        name: 'deg-store',
+                                        inputClasses: 'indent-r--2xs',
+                                        classes: 'degustation-form__store-inner'
+                                    })
+                                        p Не слушай никого!
+                    .drop.drop_width_l.drop_view_dark
+                        label.drop__btn(for="cal")
+                            input.drop__label-input#cal(type="text" placeholder="Выберите дату и время" autocomplete="off")
+                            .drop__cal
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.59587 2.68947e-05C0.717532 2.68947e-05 0 0.698032 0 1.55249V11.4475C0 12.302 0.717532 13 1.59587 13H12.4041C13.2825 13 14 12.302 14 11.4475V1.55249C14 0.698032 13.2825 2.68947e-05 12.4041 2.68947e-05H11.4545C11.2864 -0.00229453 11.1314 0.146013 11.1314 0.30955C11.1314 0.473102 11.2864 0.621394 11.4545 0.619073H12.4041C12.9403 0.619073 13.3636 1.03086 13.3636 1.55249V4.33335H0.636364V1.55249C0.636364 1.03086 1.05966 0.619073 1.59587 0.619073H2.54545C2.71355 0.621394 2.8686 0.473102 2.8686 0.30955C2.8686 0.146013 2.71355 -0.00227905 2.54545 2.68947e-05H1.59587ZM5.28571 0C5.12791 0 5 0.22385 5 0.5C5 0.77615 5.12791 1 5.28571 1H8.71429C8.87209 1 9 0.77615 9 0.5C9 0.22385 8.87209 0 8.71429 0H5.28571ZM4 2.5C4 2.2209 3.7791 2 3.5 2C3.22091 2 3 2.2209 3 2.5C3 2.77911 3.22091 3 3.5 3C3.7791 3 4 2.77911 4 2.5ZM10 2C10.2791 2 10.5 2.2209 10.5 2.5C10.5 2.77911 10.2791 3 10 3C9.72091 3 9.5 2.77911 9.5 2.5C9.5 2.2209 9.72091 2 10 2ZM13 5H1V11.1204C1 11.612 1.39911 12 1.90468 12H12.0953C12.6009 12 13 11.612 13 11.1204V5Z" fill="#170000"/></svg>
+                button.button.button--view--dark.indent-h--a(type="submit") Записаться
+
+

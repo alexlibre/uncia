@@ -1,0 +1,9 @@
+mixin history-item(data)
+    li.index-history__item
+        .icon-plus.icon-plus--layout--vertical
+            .icon-plus__icon
+                .index-history__image
+                    img(src='../images/static/' + data.img)
+            .icon-plus__block
+                p.index-history__caption.h4= data.text1
+                    span= data.text2

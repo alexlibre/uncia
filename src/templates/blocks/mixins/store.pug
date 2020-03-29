@@ -1,0 +1,22 @@
+mixin store(data)
+    .store.js-accordeon-add(class= data.active===true? 'is-active': '' data-id= data.id)
+        .store__inner
+            .store__main
+                h3.store__title.h4= data.title
+                .store__row
+                    p.store__opened.link-2.link--view--ghost= data.opened
+                    .store__metro
+                        .icon-plus
+                            .icon-plus__icon.indent-r--2xs
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" fill="none"><mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="21"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h26v21H0V0z" fill="#fff"/></mask><g mask="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.774 2.63C19.509.62 17.356 0 17.356 0l-4.343 14.554h-.037L8.596 0S6.443.603 4.178 2.63C1.765 4.784-.313 8.09.04 13.33.318 17.477 3.436 21 3.436 21l6.032-.018s-5.178-2.703-6.422-6.958c-1.485-5.021.835-8.51 2.617-10.171.724-.62 1.782-.767 2.172.566l5.16 16.435h.018s3.805-12.18 5.16-16.435c.408-1.333 1.466-1.187 2.171-.566 1.782 1.662 4.102 5.15 2.617 10.171-1.243 4.255-6.421 6.958-6.421 6.958l6.032.018s3.136-3.543 3.396-7.67c.316-5.24-1.763-8.546-4.194-10.7z" fill="#543019"/></g></svg>
+                            .icon-plus__block
+                                p.link-2.link--view-ghost= data.metro
+                a.store__phone.h4(href= 'tel:' + data.phone)= data.phone
+            .store__additional.js-accordeon-collapse
+                .store__image.indent-b--l
+                    img(src="../images/content/" + data.image, alt=data.title)
+                h4.store__subtitle.h4.indent-b--m= data.subtitle
+                p.text.indent-b--l= data.text
+                .store__buttons
+                    a.button.button--view--dark.indent-r--l(href="store-detail.html") Подробно о магазине
+                    button.button.button--view--underlink Маршрут

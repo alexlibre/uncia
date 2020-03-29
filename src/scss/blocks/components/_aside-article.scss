@@ -1,0 +1,34 @@
+.aside-article {
+    &__inner {
+        border: 1px solid #e1e1e1;
+        padding: 130px 40px 110px;
+        text-align: center;
+        position: relative;
+        &:before {
+            content: '';
+            background-color: #fff;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-130px, -130px);
+        }
+    }
+    &__img {
+        width: 168px;
+        height: 168px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+    &__text {
+        font-style: italic;
+        color: #170000;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,288 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/cart-item
+include ../blocks/mixins/input
+include ../blocks/mixins/checkbox
+include ../blocks/mixins/radio-box
+include ../blocks/mixins/checkbox-item
+include ../blocks/mixins/delivery-item
+
+
+block title
+    title Унция — Оформление заказа
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Оформление заказа')
+        h1.h1.page__title Оформление заказа
+        .page__content
+            .container
+                .cart
+                    .cart__grid
+                        .cart__main
+                            .cart__auth
+                                form.form(action="/" id="auth")
+                                    .form__row
+                                        .form__block.cart__auth-data
+                                            .form__item.indent-b--s
+                                                +input({
+                                                    type: 'text', 
+                                                    placeholder: 'Имя',
+                                                    
+                                                })
+                                            .form__item.indent-b--s
+                                                +input({
+                                                    type: 'text', 
+                                                    placeholder: 'Фамилия',
+                                                    
+                                                })
+                                            .form__item.indent-b--s
+                                                +input({
+                                                    type: 'text', 
+                                                    placeholder: 'Отчество',
+                                                    
+                                                })
+                                            .form__item.indent-b--s
+                                                +input({
+                                                    type: 'email', 
+                                                    placeholder: 'Email',
+                                                    
+                                                })
+                                            .form__item
+                                                +input({
+                                                    type: 'phone', 
+                                                    placeholder:' Телефон',
+                                                    inputClass: 'js-phone-mask',
+                                                    
+                                                })
+                                        .form__block
+                                            .form__item
+                                                a.button.button--view--underlink.cart__auth-login(href="auth.html") Авторизоваться
+                                            .form__item
+                                                .cart__social
+                                                    p.link-2 Войти через
+                                                    .cart__social-list
+                                                        .cart__social-item
+                                                            a.link Facebook
+                                                        .cart__social-item
+                                                            a.link VK
+                                form(id="order")
+                            .cart__delivery
+                                section.section
+                                    .section__header.indent-b--l
+                                        h2.h1 Доставка
+
+
+                                    .tabs.tabs_view_full.indent-b--2xl
+                                        .tabs__list(role="tablist")
+                                            .tabs__tab.is-active.link(role="tab" data-index="1" tabindex="0") Магазины «Унция»
+                                            .tabs__tab.link(role="tab" data-index="2" tabindex="-1") Курьер
+                                            .tabs__tab.link(role="tab" data-index="3" tabindex="-1") Пункты самовывоза
+                                            .tabs__tab.link(role="tab" data-index="4" tabindex="-1") Почта России
+
+                                        .tabs__panels
+                                            .tabs__panel.is-active(role="tabpanel" data-index="1")
+                                                p.cart__ship.indent-v--m Заберите уже сегодня
+                                                .cart__delivery-shops.indent-b--2xl
+                                                    .cart__delivery-map#cart-shops
+                                                    
+                                                    +delivery-item({
+                                                        name: 'shop',
+                                                        list: [
+                                                            {
+                                                                title: 'Средний проспект Васильевского острова, 19',
+                                                                id: 'shop-1',
+                                                                when: 'Забрать 21 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                                checked: true
+                                                            },
+                                                            {
+                                                                title: 'переулок Гривцова, 26',
+                                                                id: 'shop-2',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                            {
+                                                                title: 'Владимирский проспект, 1/47',
+                                                                id: 'shop-3',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                            {
+                                                                title: 'улица Савушкина, 141',
+                                                                id: 'shop-4',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                            {
+                                                                title: 'переулок Гривцова, 26',
+                                                                id: 'shop-5',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                        ]
+                                                    })
+                                                        
+                                            .tabs__panel(role="tabpanel" data-index="2")
+                                                p.cart__ship.indent-v--m Отдадим курьеру завтра
+                                                p.cart__delivery-price.h3 Доставка 245 руб. (бесплатно от 2 600 руб.)
+                                                .cart__delivery-when.indent-b--l2
+                                                    .drop.drop_width_m.js-drop.indent-r--xl
+                                                        label.drop__btn(for="cart-cal")
+                                                            input.drop__label-input.drop__label-input_align_center#cart-cal(type="text" placeholder="Дата доставки" autocomplete="off")
+                                                            .drop__arrow
+                                                        .drop__content
+                                                    .drop.drop_width_m.js-drop
+                                                        label.drop__btn(for="cart-time")
+                                                            input.drop__label-input.drop__label-input_align_center.only-time#cart-time(type="text" placeholder="Время доставки" autocomplete="off")
+                                                            .drop__arrow
+                                                        .drop__content
+                                                .form__row
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Улица', 
+                                                        className: 'input--width--available indent-r--xs'
+                                                    })
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Дом', 
+                                                        className: 'indent-r--xs'
+                                                    })
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Корпус', 
+                                                        className: 'indent-r--xs'
+                                                    })
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Квартира'
+                                                    })
+                                            .tabs__panel(role="tabpanel" data-index="3") 
+                                                p.cart__ship.indent-v--m Отдадим курьеру завтра
+                                                p.cart__delivery-price.h3 Доставка 245 руб. (бесплатно от 2 600 руб.)
+                                                .cart__delivery-shops
+                                                    .cart__delivery-map#cart-self
+                                                    +delivery-item({
+                                                        name: 'self',
+                                                        list: [
+                                                            {
+                                                                title: 'Средний проспект Васильевского острова, 19',
+                                                                id: 'self-1',
+                                                                when: 'Забрать 21 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                                checked: true
+                                                            },
+                                                            {
+                                                                title: 'переулок Гривцова, 26',
+                                                                id: 'self-2',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                            {
+                                                                title: 'Владимирский проспект, 1/47',
+                                                                id: 'self-3',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                            {
+                                                                title: 'улица Савушкина, 141',
+                                                                id: 'self-4',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                            {
+                                                                title: 'переулок Гривцова, 26',
+                                                                id: 'self-5',
+                                                                when: 'Забрать 22 июня',
+                                                                phone: '+7 (812) 677-39-61',
+                                                            },
+                                                        ]
+                                                    })
+                                            .tabs__panel(role="tabpanel" data-index="4")
+                                                p.cart__ship.indent-v--m Отдадим курьеру завтра
+                                                .form__row
+                                                    +input(
+                                                        {type: 'text', 
+                                                        placeholder: 'Улица', 
+                                                        className: 'input--width--available indent-r--xs'
+                                                    })
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Дом', 
+                                                        className: 'indent-r--xs'
+                                                    })
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Корпус', 
+                                                        className: 'indent-r--xs'
+                                                    })
+                                                    +input({
+                                                        type: 'text', 
+                                                        placeholder: 'Квартира'
+                                                    })
+                                    section.section.indent-b--3xl
+                                        .section__header.indent-b--l
+                                            h2.h1 Оплата
+                                        .cart__pay-types
+                                            .cart__section-content
+                                                .radio-boxes
+                                                    .radio-boxes__item.indent-r--2xl
+                                                        +radio-box({
+                                                            id: 'pay-1',
+                                                            name: 'pay',
+                                                            checked: true,
+                                                            inputClasses: 'indent-r--xs',
+                                                            label: 'Наличными при получении'
+                                                        })
+                                                    .radio-boxes__item
+                                                        +radio-box({
+                                                            id: 'pay-2',
+                                                            name: 'pay',
+                                                            inputClasses: 'indent-r--xs',
+                                                            label: 'Картой Online'
+                                                        })
+                                    section.section
+                                        .section__header.indent-b--l
+                                            h2.h1 Комментарий к заказу
+                                        .cart__section-content
+                                            +input({
+                                                type: 'textarea', 
+                                                className: 'input--width--available'
+                                            })
+                                            +checkbox({
+                                                id: 'callback-details',
+                                                text: 'Перезвонить мне по деталям заказа',
+                                                classes: 'checkbox--view--ghost indent-t--m',
+                                                checked: true
+                                            })
+
+                        .cart__total
+                            .cart__total-discounts
+                                .cart__row.cart__row_distribute_between
+                                    h2.h2 11 255 Р
+                                    a.link.link--view--ghost(href="cart.html") Вернуться в корзину 
+                                p.link-2.indent-t--2xs Итого
+                                
+                            .cart__total-final
+                                .cart__total-final-wrap
+                                    .cart__total-final-sum
+                                        h2.h2 11 255 Р
+                                        p.link-2.indent-t--2xs Итоговая стоимость
+                                    .cart__total-final-btns
+                                        button.button.button--view--dark Оформить заказ
+                                .cart__total-additional
+                                    +checkbox({
+                                        id: 'cart-subscript',
+                                        text: 'Я хочу получать полезные чайные письма',
+                                        classes: 'checkbox--view--ghost indent-v--s',
+                                        checked: true
+                                    })
+                                    p.cart__politics.link-2 Оформляя заказ, вы&nbsp;соглашаетесь с&nbsp;<a class="innerlink">договором оферты и&nbsp;политикой конфиденциальности</a>
+                            span.cart__total-man
+
+

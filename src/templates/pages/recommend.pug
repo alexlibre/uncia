@@ -1,0 +1,62 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/rec
+
+block title
+    title Унция — Титестер рекомендует
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Титестер рекомендует')
+        h1.h1.page__title Титестер рекомендует
+        .page__content
+            .container
+                .rec
+                    .rec__inner
+                        .rec__header.indent-b--m
+                            h2.h3 Каждую неделю новый сорт чая, на который мы снижаем цену на 20%
+                                span.rec__rate -20%
+                        p.rec__subheader.text.indent-b--m Чтобы Вы могли пробовать новые сорта, открывая для себя многообразие вкусов чая Унция.
+                        .rec__list
+                            .rec__item
+                                +rec-item({
+                                    dates: 'С 20 по 26 мая',
+                                    image: 'Tea1.png',
+                                    name: 'Ягодная сангрия',
+                                    priceOld: '2 890',
+                                    price: '2 508',
+                                    units: 'Р/унция',
+                                    qty: '12 чашек',
+                                    text: 'Освежающая сангрия — визитная карточка пиренейской гастрономии, известная всем. Мы же предлага...',
+                                    id: 7
+                                })
+                            .rec__item
+                                +rec-item({
+                                    dates: 'С 20 по 26 мая',
+                                    image: 'Tea1.png',
+                                    name: 'Ягодная сангрия',
+                                    priceOld: '2 890',
+                                    price: '2 508',
+                                    units: 'Р/унция',
+                                    qty: '12 чашек',
+                                    text: 'Освежающая сангрия — визитная карточка пиренейской гастрономии, известная всем. Мы же предлага...',
+                                    id: 2
+                                })
+                            .rec__item
+                                +rec-item({
+                                    dates: 'С 20 по 26 мая',
+                                    image: 'Tea1.png',
+                                    name: 'Ягодная сангрия',
+                                    priceOld: '2 890',
+                                    price: '2 508',
+                                    units: 'Р/унция',
+                                    qty: '12 чашек',
+                                    text: 'Освежающая сангрия — визитная карточка пиренейской гастрономии, известная всем. Мы же предлага...',
+                                    id: 1
+                                })
+                                

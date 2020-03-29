@@ -1,0 +1,170 @@
+extends ../index-inner
+include ../blocks/mixins/taste-item
+include ../blocks/mixins/breadcrumbs
+
+block title
+    title Унция — Подборки
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Подборки')
+        h1.h1.page__title Подборки от Унции
+        .page__content
+            .tastes.indent-b--s
+                .container
+                    .compilations
+                        .compilations-history__desc
+                            p.compilations-history__years 17
+                            p.compilations-history__text.h3 17 лет мы занимаемся чаем. Из самых популярных запросов мы составили тематические подборки. Ищите и находите нужный чай для разных ситуаций.
+                        ul.compilations__list
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-1.png',
+                                        text1: 'Чай со слоном, ',
+                                        text2: 'как раньше',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-2.png',
+                                        text1: 'Ароматный чай ',
+                                        text2: 'без добавок',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-3.png',
+                                        text1: 'Что-нибудь ',
+                                        text2: 'необычное',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-4.png',
+                                        text1: 'Самое ',
+                                        text2: 'дорогое',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-3.png',
+                                        text1: 'Бодрящий, ',
+                                        text2: 'тонизирующий',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-1.png',
+                                        text1: 'Чай со слоном, ',
+                                        text2: 'как раньше',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-2.png',
+                                        text1: 'Ароматный чай ',
+                                        text2: 'без добавок',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-3.png',
+                                        text1: 'Что-нибудь ',
+                                        text2: 'необычное',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-1.png',
+                                        text1: 'Утренний ',
+                                        text2: 'для завтрака',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-4.png',
+                                        text1: 'Самое ',
+                                        text2: 'дорогое',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-1.png',
+                                        text1: 'Утренний ',
+                                        text2: 'для завтрака',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-3.png',
+                                        text1: 'Бодрящий, ',
+                                        text2: 'тонизирующий',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-3.png',
+                                        text1: 'Что-нибудь ',
+                                        text2: 'необычное',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-1.png',
+                                        text1: 'Утренний ',
+                                        text2: 'для завтрака',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-4.png',
+                                        text1: 'Самое ',
+                                        text2: 'дорогое',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-1.png',
+                                        text1: 'Утренний ',
+                                        text2: 'для завтрака',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-3.png',
+                                        text1: 'Бодрящий, ',
+                                        text2: 'тонизирующий',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+                            li.compilations__item
+                                a.compilations__link(href="#")
+                                    +taste-item({
+                                        img: 'comp-2.png',
+                                        text1: 'Ароматный чай ',
+                                        text2: 'без добавок',
+                                        imgSizeClass: 'taste__image_view_l'
+                                    })
+

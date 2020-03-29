@@ -1,0 +1,79 @@
+.index-business {
+    &__block-top {
+        @include row-flex();
+        position: relative;
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background-color: #543019;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+    &__content {
+        @include col();
+        @include size(5);
+        @include size-md(5);
+        @include shift-md-left(1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        @include md-block {
+            font-size: 28px;
+        }
+    }
+    &__image {
+        @include col();
+        @include size(7);
+        @include size-md(6);
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        &>img {}
+        &:after {
+            content: '';
+            width: 386px;
+            height: 312px;
+            background: url("../images/static/balloon.png") right top no-repeat;
+            background-size: 100%;
+            display: block;
+            position: absolute;
+            right: -92px;
+            bottom: 9px;
+            transform: translateY(100%);
+            @include md-block {
+                display: none;
+            }
+        }
+    }
+    &__block-bottom {
+        @include row-flex();
+    }
+    &__collect {
+        @include col();
+        @include size(9);
+        @include size-md(11);
+        @include shift-md-left(1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px 0 35px;
+    }
+    &__subtitle {
+        max-width: 290px;
+    }
+    &__cta-title {
+        max-width: 210px;
+    }
+}

@@ -1,0 +1,10 @@
+mixin slide-left(els)
+    .slide-left
+        .slide-left__image(style="background-image: url(../images/content/" + els.img + ")")
+            //- img(src="../images/content/" + els.img)
+        .slide-left__content
+            .slide-left__title.h0(data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000")= els.title
+                br
+                em(data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000")= els.titleEm
+            .slide-left__text(data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000")= els.desc
+            button.button.button--view--dark(data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000")= els.button

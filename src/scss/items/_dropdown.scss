@@ -1,0 +1,40 @@
+.dropdown {
+    $c: &;
+
+    cursor: pointer;
+
+    &__inner {
+        padding-bottom: 15px;
+    }
+
+    &__title {
+        line-height: 1;
+    }
+
+    &__drop {
+
+    }
+
+    &_view {
+
+        &_centered {
+
+            & #{$c}__title {
+                text-align: center;
+            }
+        }
+
+        &_bold {
+            border-bottom: 2px solid #552F1D;
+            color: #27160E;
+        }
+    }
+
+    &_size {
+
+        &_l {
+            width: 320px;
+        }
+
+    }
+}

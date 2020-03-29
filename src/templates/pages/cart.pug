@@ -1,0 +1,201 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/cart-item
+include ../blocks/mixins/input
+include ../blocks/mixins/checkbox
+include ../blocks/mixins/checkbox-item
+
+
+block title
+    title Унция — Корзина
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Корзина')
+        h1.h1.page__title Корзина
+        .page__content
+            .container
+                .cart
+                    .cart__grid
+                        .cart__main
+                            ul.cart__list
+                                +cart-item({
+                                    image: 'cart-image.png',
+                                    title: 'Весенне-ягодная сангрия',
+                                    price: '2 508',
+                                    measure: 'Р/унция',
+                                    qty: '',
+                                    id: '2'
+                                })
+                                +cart-item({
+                                    image: 'Tea1.png',
+                                    title: 'Английский садовник',
+                                    price: '3 708',
+                                    measure: 'Р/унция',
+                                    qty: '',
+                                    id: '1'
+                                })
+                                +cart-item({
+                                    image: 'Tea1.png',
+                                    title: 'Английский садовник',
+                                    price: '3 708',
+                                    measure: 'Р/унция',
+                                    qty: '',
+                                    id: '3'
+                                })
+                            .cart__additions
+                                .cart__addition
+                                    .section
+                                        .section__header.indent-b--m
+                                            h2.h1 Комплимент&nbsp;от&nbsp;&laquo;Унции&raquo;<br>
+                                                em Бесплатно
+                                        .cart__step.indent-b--l
+                                            .cart__step-num 1
+                                            .cart__step-title.link Выберите подарок
+                                        .cart__presents
+                                            .cart__present
+                                                .card
+                                                    .card__content.card__content--vertical-align--center.card__content--distribute--center
+                                                        .card__image
+                                                            img(src="../images/content/present-1.png")
+                                                        .card__title.h4.text--center.indent-t--2xs Весенне-ягодная сангрия
+                                                        button.button.button--view--link-narrow.indent-t--xs Получить
+                                            .cart__present
+                                                .card
+                                                    .card__content.card__content--vertical-align--center.card__content--distribute--center
+                                                        .card__image
+                                                            img(src="../images/content/present-1.png")
+                                                        .card__title.h4.text--center.indent-t--2xs Весенне-ягодная сангрия
+                                                        button.button.button--view--link-narrow.indent-t--xs Получить
+                                            .cart__present
+                                                .card
+                                                    .card__content.card__content--vertical-align--center.card__content--distribute--center
+                                                        .card__image
+                                                            img(src="../images/content/present-1.png")
+                                                        .card__title.h4.text--center.indent-t--2xs Весенне-ягодная сангрия
+                                                        button.button.button--view--link-narrow.indent-t--xs Получить
+                                .cart__addition
+                                    .section
+                                        .section__header
+                                            h2.h1 Купите еще на&nbsp;326&nbsp;P <br>и&nbsp;получите <em>бесплатно</em>
+                                        .cart__step.indent-b--xl
+                                            .cart__step-num 2
+                                        .cart__free
+                                            .cart__free-img
+                                                img(src="../images/content/Tea1.png", alt="")
+                                            .cart__free-title
+                                                h3.h2 Весенне-ягодная сангрия
+                                            .cart__free-text
+                                                p.text «Лимонный чабрец» освежает и тонизирует. Он особенно хорош во время небольшого перерыва в перв...
+                                            .cart__free-btn
+                                                 button.button.button--view--link-narrow.indent-t--xs Получить
+
+                                .cart__addition
+                                    .section
+                                        .section__header
+                                            h2.h1 Упаковать&nbsp;
+                                                em в&nbsp;подарок
+                                        .cart__step.indent-b--l
+                                            .cart__step-num 3
+                                            .cart__step-title.link Мы упакуем ваши вещи в подарок
+                                        .cart__present
+                                            .cart__present-text.indent-b--l2
+                                                p.text В&nbsp;комментарии к&nbsp;заказу вы&nbsp;можете указать пожелания по&nbsp;цветовой гамме или описать для кого предназначается подарок, чтобы наши специалисты для упаковки сделали все сами. При подтверждении заказа наш сотрудник уточнит все детали. Дарите чайную радость.
+                                            .cart__present-selects
+                                                .cart__present-select.drop.drop_width_m.js-drop
+                                                    .drop__btn
+                                                        .drop__label-text Выберите открытку
+                                                        .drop__qty
+                                                        .drop__arrow
+                                                    .drop__content
+                                                        .drop__box
+                                                            .cart__present-item.cart__present-item_distribute_center
+                                                                .cart__present-image
+                                                                    img(src="../images/content/present-card.jpg", alt="")
+                                                                +checkbox-item({
+                                                                    id: 'card-1',
+                                                                    label: 'Чайное счастье'
+                                                                })
+                                                            .cart__present-item.cart__present-item_distribute_center
+                                                                .cart__present-image
+                                                                    img(src="../images/content/present-card.jpg", alt="")
+                                                                +checkbox-item({
+                                                                    id: 'card-2',
+                                                                    label: 'Чайное счастье',
+                                                                    checked: true
+                                                                })
+                                                            .cart__present-item.cart__present-item_distribute_center
+                                                                .cart__present-image
+                                                                    img(src="../images/content/present-card.jpg", alt="")
+                                                                +checkbox-item({
+                                                                    id: 'card-3',
+                                                                    label: 'Чайное счастье',
+                                                                    checked: true
+                                                                })
+                                                .cart__present-select.drop.drop_width_m.js-drop
+                                                    .drop__btn
+                                                        .drop__label-text Выберите подарок
+                                                        .drop__qty
+                                                        .drop__arrow
+                                                    .drop__content
+                                                        .drop__box
+                                                            .cart__present-item.cart__present-item_distribute_center
+                                                                .cart__present-image
+                                                                    img(src="../images/content/present-pack-1.jpg", alt="")
+                                                                +checkbox-item({
+                                                                    id: 'note-1',
+                                                                    label: 'Нота 1'
+                                                                })
+                                                            .cart__present-item.cart__present-item_distribute_center
+                                                                .cart__present-image
+                                                                    img(src="../images/content/present-pack-2.jpg", alt="")
+                                                                +checkbox-item({
+                                                                    id: 'note-2',
+                                                                    label: 'Нота 2',
+                                                                    checked: true
+                                                                })
+                                                            .cart__present-item.cart__present-item_distribute_center
+                                                                .cart__present-image
+                                                                    img(src="../images/content/present-pack-1.jpg", alt="")
+                                                                +checkbox-item({
+                                                                    id: 'note-3',
+                                                                    label: 'Нота 3',
+                                                                    checked: true
+                                                                })
+                                                            
+                                            .cart__present-giftcard
+                                                h4.h4 Как подписать открытку?
+                                                +input({type: 'textarea'})
+                                                
+
+                                    
+                        .cart__total
+                            .cart__total-discounts
+                                h2.h2 11 255 Р
+                                p.link-2.indent-t--2xs Итого
+                                +input({
+                                    type: 'text',
+                                    className: 'indent-t--m', 
+                                    inputClass: 'js-card-mask'
+                                })
+                                +checkbox({
+                                    id: 'disc-card',
+                                    text: 'Оформить карту постоянного покупателя Унции',
+                                    classes: 'checkbox--view--ghost indent-t--2xs',
+                                    checked: true
+                                })
+                                p.link-2.link-2--view--dashed.indent-t--m Есть купон или подарочный сертификат?
+                            .cart__total-final
+                                .cart__row.cart__row_align_top.cart__row_distribute_between
+                                .cart__final
+                                    .cart__total-final-sum
+                                        h2.h2 11 255 Р
+                                        p.link-2.indent-t--2xs с учетом скидки
+                                    .cart__total-final-btns
+                                        button.button.button--view--dark Оформить заказ
+                                        button.button.button--view--underlink.js-one-click-buy-btn.cart__one-click(data-id="one-click-buy") Купить в 1 клик

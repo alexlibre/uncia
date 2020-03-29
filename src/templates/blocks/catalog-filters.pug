@@ -1,0 +1,329 @@
+include mixins/checkbox-item
+include mixins/radio-box
+
+.cat-filters__advanced.js-cat-filters-collapse(data-collapse="cat-filters")
+    .container
+        .cat-filters__advanced-inner
+            .cat-filters__adv-clear-top.js-checkbox-dropdown-clear.flex-mobile
+                .icon-plus.cat-filters__advanced-clear
+                    .icon-plus__icon.indent-r--s
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" fill="none"><path d="M1.321 2l8.358 8M9.679 2L1.32 10" stroke="#543019" stroke-width="1.5" stroke-linecap="square"/></svg>
+                    .icon-plus__block
+                        p.link Очистить
+            .view-mobile
+                .cat-filters__adv-sort
+                    .h3 Сортировать 
+
+                    +radio-box({
+                        id: 'sort-1',
+                        label: 'По цене вверх',
+                        name: 'sort',
+                        inputClasses: 'indent-r--2xs',
+                        checked: true
+                    })
+                    +radio-box({
+                        id: 'sort-2',
+                        label: 'По цене вниз',
+                        name: 'sort',
+                        inputClasses: 'indent-r--2xs',
+                    })
+                    +radio-box({
+                        id: 'sort-3',
+                        label: 'По популярности',
+                        name: 'sort',
+                        inputClasses: 'indent-r--2xs',
+                    })
+            .cat-filters__advanced-wrap
+                .cat-filters__advanced-drops
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Страна
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'country-1',
+                                        label: 'Китай',
+                                        checked: true
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'country-2',
+                                        label: 'Индия',
+                                        checked: true
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'country-3',
+                                        label: 'Шри Ланка'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'country-4',
+                                        label: 'Кения'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'country-5',
+                                        label: 'Зимбабве'
+                                    })
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_m.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Регион/Провинция
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'region-1',
+                                        label: 'Китай'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'region-2',
+                                        label: 'Индия'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'region-3',
+                                        label: 'Шри Ланка'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'region-4',
+                                        label: 'Кения'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'region-5',
+                                        label: 'Зимбабве'
+                                    })
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Плантация
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'plantation-1',
+                                        label: 'Китай'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'plantation-2',
+                                        label: 'Индия'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'plantation-3',
+                                        label: 'Шри Ланка'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'plantation-4',
+                                        label: 'Кения'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'plantation-5',
+                                        label: 'Зимбабве'
+                                    })
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Вкус
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'taste-1',
+                                        label: 'Древесный'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'taste-2',
+                                        label: 'Ягоды'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'taste-3',
+                                        label: 'Сухофрукты'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'taste-4',
+                                        label: 'Травяной'
+                                    })
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Нота вкуса
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'note-1',
+                                        label: 'Древесный'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'note-2',
+                                        label: 'Ягоды'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'note-3',
+                                        label: 'Сухофрукты'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'note-4',
+                                        label: 'Травяной'
+                                    })
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Ингредиенты
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'igredients-1',
+                                        label: 'Лаванда'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'igredients-2',
+                                        label: 'Мята'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'igredients-3',
+                                        label: 'Малина'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'igredients-4',
+                                        label: 'Ежевика'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'igredients-5',
+                                        label: 'Орех'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'igredients-6',
+                                        label: 'Кокос'
+                                    })
+
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Фасовка
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'pack-1',
+                                        label: 'Россыпь'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'pack-2',
+                                        label: 'Пакетики'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'pack-3',
+                                        label: 'Брикеты'
+                                    })
+                    
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Прессовка
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'press-1',
+                                        label: 'Россыпь'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'press-2',
+                                        label: 'Пакетики'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'press-3',
+                                        label: 'Брикеты'
+                                    })       
+                    
+                    
+                    .cat-filters__advanced-fr
+                        .cat-filters__adv-select.cat-filters__adv-select_size_s.js-checkbox-dropdown.indent-b--4xl(data-type="adv")
+                            .cat-filters__adv-row Кофеин
+                                .cat-filters__adv-qty
+                                .cat-filters__arrow
+                            .cat-filters__adv-drop
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'cofee-1',
+                                        label: 'Россыпь'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'cofee-2',
+                                        label: 'Пакетики'
+                                    })
+                                .cat-filters__adv-item
+                                    +checkbox-item({
+                                        id: 'cofee-3',
+                                        label: 'Брикеты'
+                                    })
+                .cat-filters__advanced-col
+                    .js-checkbox-dropdown
+                        .cat-filters__solo-item
+                            +checkbox-item({
+                                id: 'solo-1',
+                                label: 'Чай с легендой',
+                                checked: true
+                            })
+                        .cat-filters__solo-item
+                            +checkbox-item({
+                                id: 'solo-2',
+                                label: 'Год черного чая'
+                            })
+                        .cat-filters__solo-item
+                            +checkbox-item({
+                                id: 'solo-3',
+                                label: 'Популярные',
+                                checked: true
+                            })
+                        .cat-filters__solo-item
+                            +checkbox-item({
+                                id: 'solo-4',
+                                label: 'Лидер по качеству'
+                            })
+                .cat-filters__advanced-col
+                    .icon-plus.cat-filters__advanced-clear.js-checkbox-dropdown-clear
+                        .icon-plus__icon.indent-r--s
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" fill="none"><path d="M1.321 2l8.358 8M9.679 2L1.32 10" stroke="#543019" stroke-width="1.5" stroke-linecap="square"/></svg>
+                        .icon-plus__block
+                            p.link Очистить
+    .cat-filters__advanced-collapse(data-collapse-btn="cat-filters")
+        .icon-plus
+            .icon-plus__icon.indent-r--s
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 0l4 8H0l4-8z" fill="#543019"/></svg>
+            .icon-plus__block
+                p.link Свернуть

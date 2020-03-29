@@ -1,0 +1,19 @@
+.labeled-by {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 5px;
+  }
+
+  &__value {
+
+  }
+
+  &--vertical-align {
+
+    &--center {
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+include mixins/cat-slide
+.swiper-container.cat-slider.cat-slider--second
+    .swiper-wrapper
+        .swiper-slide.cat-slider__item
+            +cat-slide({
+                img: 'cat-slider-2.jpg',
+            })
+        .swiper-slide.cat-slider__item
+            +cat-slide({
+                img: 'cat-slider-1.jpg',
+            })
+
+    .swiper-pagination.cat-slider__pagination

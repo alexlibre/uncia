@@ -1,0 +1,19 @@
+mixin favorites-item()
+    .favorites__item.card.card--border--around
+        button.button.button--icon-primary.favorites__remove.js-remove-item
+            <svg class="favorites__remove-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path d="M1.321 1L9.68 9" fill="none" stroke-linecap="square" stroke="#543019" stroke-miterlimit="50" stroke-width="1.5"/><g><path d="M9.679 1L1.32 9" fill="none" stroke-linecap="square" stroke="#543019" stroke-miterlimit="50" stroke-width="1.5"/></g></svg>
+        .favorites-item
+            .card__content.card__content--vertical-align--center.card__content--distribute--center
+                .card__header.card__header--distribute--between
+                .favorites-item__image
+                    img(src="../images/content/Tea1.png")
+                h3.favorites-item__title.h3 Ягодная сангрия
+                .favorites-item__category Чёрный чай
+                .favorites-item__price.h4
+                    .icon-plus
+                        .icon-plus__block
+                            span.favorites-item__price-value 2 508&nbsp;
+                            span.favorites-item__price-measure Р/Унция
+                        .icon-plus__icon
+                            span.item-card__tip ?
+                .favorites-item__qty.link-2 12 чашек

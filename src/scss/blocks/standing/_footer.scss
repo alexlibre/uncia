@@ -1,0 +1,209 @@
+@import '../../mixins';
+@import '../../smart-grid';
+.footer {
+    &__block-1 {
+        background: url("../../../images/static/velik.png") no-repeat #FAFAFA; //TODO привязка к краю?
+        background-position: calc(100% - -70px) calc(100% - -38px);
+        padding-top: 90px;
+    }
+    &__block-2 {
+        background-color: #543019;
+        color: #fff;
+    }
+    &__block-3 {
+        background-color: #FAFAFA;
+        position: relative;
+    }
+    &__block-4 {
+        background-color: #FAFAFA;
+        border-top: 1px solid #9B9B9B;
+    }
+    &__subscript-title {
+        color: inherit;
+    }
+    &__subscript-text {
+        color: inherit;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &__social {
+        @include unlist();
+        text-align: left;
+        @include md-block {
+            border-top: 1px solid #6E3F21;
+            padding-top: 24px;
+            margin-top: 30px;
+        }
+    }
+    &__social-item {
+        margin-bottom: 32px;
+        max-width: 140px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include md-block {
+            max-width: none;
+            margin-bottom: 0;
+        }
+    }
+    &__social-link {
+        display: inline-block;
+        height: 100%;
+        cursor: pointer;
+    }
+    &__social-icon {
+        width: 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__social-name {
+        color: inherit;
+    }
+    &__product-menu {
+        @include unlist();
+        @include row-flex();
+        padding-bottom: 70px;
+        @include md-block {
+            justify-content: space-between;
+        }
+    }
+    &__menu {
+        @include row-flex();
+        padding: 60px 0 56px;
+        @include md-block {
+            justify-content: space-between;
+        }
+    }
+    &__menu-block {
+        @include unlist();
+        @include sm-block {
+            columns: 1;
+        }
+    }
+    &__menu-col {
+        @include col();
+        @include size(3);
+        @include size-md(3);
+        @include sm-block {
+            @include size-sm(12);
+        }
+    }
+    &__link {
+        @include unlink();
+        color: $color-base-2
+    }
+    &__menu-group {
+        margin-bottom: 60px;
+        max-width: 248px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__menu-item {
+        margin-bottom: 14px;
+    }
+    &__menu-title {
+        margin-bottom: 32px;
+    }
+    &__subscript {
+        @include row-flex();
+        padding: 74px 0 48px;
+        @include md-block {
+            padding-bottom: 24px;
+        }
+    }
+    &__subscript-desc {
+        @include col();
+        @include size(3);
+        @include md-block {
+            @include size(4);
+        }
+    }
+    &__subscript-form {
+        @include col();
+        @include size(6);
+        padding-right: 28px;
+        @include md-block {
+            @include size(8);
+            padding-right: 0;
+        }
+    }
+    &__subscript-title {
+        margin-bottom: 32px;
+    }
+    &__subscript-text {
+        max-width: 266px;
+    }
+    &__social {
+        @include col();
+        @include size(3);
+        @include md-block {
+            @include size(12);
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    &__sign-in-btn {
+        display: inline-block;
+        margin-top: 24px;
+        cursor: pointer;
+    }
+    &__additional {
+        @include row-flex();
+        position: relative;
+        @include md-block {
+            justify-content: space-between;
+        }
+    }
+    &__contacts {
+        @include col();
+        @include size(5);
+        // height: 157px;
+        position: relative;
+        padding-top: 32px;
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width: 1px;
+            height: 100%;
+            display: block;
+            background-color: #9B9B9B;
+        }
+    }
+    &__info {
+        @include col();
+        @include size(3);
+        @include shift-left(1);
+        // height: 157px;
+        display: flex;
+        padding: 30px 0;
+    }
+    &__copyrights {
+        @include col();
+        @include size(3);
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    &__phone {
+        @include unlink();
+    }
+    &__schedule {
+        margin-top: 22px;
+        width: 210px;
+    }
+    &__madein {
+        @include unlink();
+        margin-top: auto;
+        @include md-block {
+            margin-top: 32px;
+        }
+    }
+}

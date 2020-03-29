@@ -1,0 +1,36 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/favorites-item
+
+block title
+	title Унция — Личный кабинет - Избранное
+
+block content
+	.page
+		+breadcrumbs([
+			{
+				link: 'index.html',
+				title: 'Главная'
+			},
+			{
+				link: 'lk-personal-data.html',
+				title: 'Личный кабинет'
+			}
+		], 'Избранное')
+		h1.h1.page__title Избранное
+		.page__content
+			.container
+				.lk
+					.lk__menu
+						include ../blocks/side-menu
+					.lk__content
+						include ../blocks/degustation-slider
+						.favorites
+							.favorites__inner
+								+favorites-item
+								+favorites-item
+								+favorites-item
+								+favorites-item
+								+favorites-item
+								+favorites-item
+								+favorites-item

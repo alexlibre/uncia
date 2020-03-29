@@ -1,0 +1,8 @@
+mixin taste-option(data)
+    a.taste-option.option.icon-plus.icon-plus--layout--vertical(href= data.href)
+        .icon-plus__icon.indent-b--2xs
+            .taste-option__image
+                img(src='../images/static/' + data.image)
+        .icon-plus__block
+            p.h3.taste-option__value= data.value
+            

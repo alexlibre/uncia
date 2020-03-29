@@ -1,0 +1,6 @@
+mixin progress(data)
+    .option(class= data.indentClass? data.indentClass: '')
+        .progress.indent-b--2xs
+            .progress__bar
+                .progress__fill(class= "progress__fill_range_" + data.range + " progress__value_" + data.value)
+        p.option__label.link.link--view--ghost= data.label

@@ -1,0 +1,27 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+//- include ../blocks/mixins/favorites-item
+
+block title
+	title Унция — Личный кабинет - Персональные данные
+
+block content
+	.page
+		+breadcrumbs([
+			{
+				link: 'index.html',
+				title: 'Главная'
+			},
+			{
+				link: 'lk-personal-data.html',
+				title: 'Личный кабинет'
+			}
+		], 'Подписка')
+		h1.h1.page__title Подписка
+		.page__content
+			.container
+				.lk
+					.lk__menu
+						include ../blocks/side-menu
+					include ../blocks/lk-subscipt
+						

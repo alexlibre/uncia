@@ -1,0 +1,18 @@
+include mixins/cat-slide
+.swiper-container.cat-slider.cat-slider--first
+    .swiper-wrapper
+        .swiper-slide.cat-slider__item
+            +cat-slide({
+                img: 'cat-slider-1.jpg',
+            })
+        .swiper-slide.cat-slider__item
+            +cat-slide({
+                img: 'cat-slider-2.jpg',
+            })
+        .swiper-slide.cat-slider__item
+            +cat-slide({
+                img: 'cat-slider-3.jpg',
+            })
+        
+
+    .swiper-pagination.cat-slider__pagination

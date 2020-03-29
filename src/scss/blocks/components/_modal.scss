@@ -1,0 +1,108 @@
+.modal {
+    $c: &;
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    &.is-opened {
+        display: block;
+        & #{$c}__wrap {
+            transform: translateY(0%);
+            transition: transform .4s cubic-bezier(0, 0, 0.12, 1) 0s;
+        }
+        & #{$c}__close {
+            transform: translate(-50%, 0%) rotate(90deg);
+            opacity: 1;
+            transition: all .2s cubic-bezier(0, 0, 0.12, 1) .2s;
+            &:hover {
+                transform: translate(-50%, 0%) rotate(180deg);
+            }
+        }
+    }
+    &__shadow {
+        background-color: #0B0705;
+        opacity: .9;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        z-index: -1;
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        pointer-events: none;
+    }
+    &__wrap {
+        z-index: 1001;
+        background-color: #fff;
+        position: relative;
+        transform: translateY(100px);
+        max-width: 620px;
+        will-change: transform;
+        backface-visibility: hidden;
+        transition: transform .4s cubic-bezier(0, 0, 0.12, 1) .2s;
+        pointer-events: all;
+        &_size {
+            &_fit {
+                max-width: none;
+                @include md-block {
+                    max-width: 730px;
+                }
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        padding: 80px 70px 70px;
+        &--align {
+            &--center {
+                text-align: center;
+                display: flex;
+                align-items: stretch;
+                flex-direction: column;
+            }
+        }
+        &--fields {
+            &--wide {
+                padding: 80px 110px 100px;
+                @include md-block {
+                    padding: 70px 60px;
+                }
+            }
+        }
+        &#password-recover {
+            background: url("../images/static/pwd-recover-bg.png") bottom center no-repeat #fff;
+        }
+        &#subscribe {
+            background: url("../images/static/subscribe-modal-bg.png") bottom center no-repeat #fff;
+        }
+    }
+    &__close {
+        z-index: 1001;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        top: -40px;
+        left: 50%;
+        transform: translate(-50%, 200%) rotate(0deg);
+        opacity: 0;
+        transition: all .2s cubic-bezier(0, 0, 0.12, 1) 0s;
+    }
+    &__close-btn {
+        align-self: center;
+    }
+    &__title {
+        margin-bottom: 80px;
+    }
+}

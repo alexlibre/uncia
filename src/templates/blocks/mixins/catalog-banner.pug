@@ -1,0 +1,23 @@
+mixin catalog-banner(data)
+    .catalog-banner(class=data.indentClass)
+        .container
+            .catalog-banner__inner
+                .catalog-banner__image(style="background-image: url(../images/content/" + data.image + ");")
+                    .catalog-banner__content
+                        if data.title
+                            .catalog-banner__block-1
+                                if data.action
+                                    p.catalog-banner__action= data.action
+                                h2.h2!= data.title
+                                if data.actionLink
+                                    a.catalog-banner__action-link.indent-t--s= data.actionLink
+                        .catalog-banner__block-2
+                            if data.subtitle
+                                p.h3.catalog-banner__text!= data.subtitle
+                            if data.text
+                                p.catalog-banner__text= data.text
+                            if data.buttonText
+                                if data.buttonView === 'white'
+                                    button.button.button--view--white= data.buttonText
+                                else
+                                    button.button.button--view--dark.button--view--dark-x2= data.buttonText

@@ -1,0 +1,6 @@
+mixin review(data)
+    .review
+        .review__title.h2= data.title
+        .review__date.link-2.link--view--ghost= data.date
+        .review__text.text= data.text
+        a.review__link.link-2.link--view--ghost(href= data.href)= data.linkText

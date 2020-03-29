@@ -1,0 +1,32 @@
+mixin catalog-item(data)
+    .catalog-item
+        .card__content.card__content--vertical-align--center.card__content--distribute--center
+            .card__header.card__header--distribute--between
+                button.button.button--view--icon-secondary.catalog-item__fav.favorite.js-favorites-add(data-fav-id= data.id)
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17"><path fill="none" stroke="#552f1d" stroke-miterlimit="50" stroke-width="1.5" d="M20.998 5.395c0-1.99-1.78-4.395-4.75-4.395C13.28 1 11.5 3.93 11.5 3.93S9.72 1 6.75 1C3.78 1 2 3.405 2 5.395 2 7.385 1.629 8.823 11.499 16c9.87-7.177 9.498-8.615 9.498-10.605z"/></svg>
+                if data.types
+                    .catalog-item__types
+                        each type in data.types
+                            .catalog-item__type
+                                button.button.button--view--icon-secondary!= type.icon
+                                if type.icon
+                                    .catalog-item__tooltip!= type.iconTooltip
+            .catalog-item__image
+                img(src="../images/content/" + data.image)
+            h3.catalog-item__title.h3= data.title
+            .catalog-item__category= data.category
+            .catalog-item__price.h4
+                .icon-plus
+                    .icon-plus__block
+                        span.catalog-item__price-value 2 508&nbsp;
+                        span.catalog-item__price-measure Р/Унция
+                    .icon-plus__icon
+                        span.item-card__tip ?
+            .catalog-item__qty.link-2= data.qty
+            
+            .catalog-item__desc
+                | Да Хун Пао – (кит. 大红袍; dàhóng páo; букв. «Большой красный халат») – прославленный утесный улун, который производят в горах Уи на северо-западе провинции
+            .catalog-item__btns
+                button.button.button--buy
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.75c-1.28 0-2.25.978-2.25 2.1v1.4h4.5v-1.4c0-1.123-.97-2.1-2.25-2.1zm3.75 3.5v-1.4c0-2.023-1.715-3.6-3.75-3.6s-3.75 1.578-3.75 3.6v1.4H2.213c-.634 0-1.148.504-1.165 1.134L.25 18.56v.025a1.165 1.165 0 001.165 1.165h13.171c.642 0 1.164-.52 1.164-1.165v-.024l-.797-12.177a1.165 1.165 0 00-1.166-1.134H11.75zm-1.5 1.5V9h1.5V6.75h1.723l.753 11.5H1.774l.754-11.5H4.25V9h1.5V6.75h4.5z" fill="#552F1D"/></svg>
+                button.button.button--view--underlink.js-one-click-buy-btn(data-id="one-click-buy") <span class="view-desktop">Купить</span> в 1 клик

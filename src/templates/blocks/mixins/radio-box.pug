@@ -1,0 +1,9 @@
+mixin radio-box(data)
+    .radio-box.js-radio-box(class= data.classes)
+        .radio-box__inner
+            input(type="checkbox" id= data.id data-name= data.name checked= data.checked? true: false disabled= data.disabled? true: false)
+            label.radio-box__label(for= data.id aria-label= data.label class= data.labelClasses)
+                span.radio-box__box(class= data.inputClasses)
+                span.radio-box__text= data.label
+        if block
+            block

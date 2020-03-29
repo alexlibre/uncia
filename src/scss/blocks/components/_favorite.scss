@@ -1,0 +1,11 @@
+.favorite {
+  & path {
+    fill: transparent;
+    transition: fill .2s ease-in-out;
+  }
+  &.is-favorite {
+    & path {
+      fill: #543019;
+    }
+  }
+}

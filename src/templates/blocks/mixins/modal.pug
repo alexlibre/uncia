@@ -1,0 +1,10 @@
+mixin modal(options)
+    .modal.js-modal(data-id= options.id)
+        .modal__shadow.js-modal-close(data-close-id= options.id)
+        .modal__inner
+            .modal__wrap(class=options.maxWidth === 'none' ? 'modal__wrap_size_fit':'')
+                .modal__content(class=options.align === 'center' ? 'modal__content--align--center':'' class=options.fields === 'wide' ? 'modal__content--fields--wide':'' id= options.id)
+                    .modal__close.js-modal-close(data-close-id= options.id)
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" fill="none"><path d="M1.394.394L26.606 25.606M26.6061.394L1.3939 25.606" stroke="#fff" stroke-linecap="square"/></svg>
+                    if block
+                        block

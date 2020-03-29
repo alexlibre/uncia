@@ -1,0 +1,59 @@
+include ../blocks/mixins/lk-teatester-item
+.lk-teatester
+    .lk-teatester__inner
+        ul.lk-teatester__list
+            li.lk-teatester__item
+                +lk-teatester-item({
+                    date: '27 июня ‘19',
+                    image: 'teatester-img-1.png',
+                    rating: 0,
+                    title: 'Крадущийся тигр',
+                    category: 'Красный чай',
+                    notes: 'Сухофрукты'
+                })
+            li.lk-teatester__item
+                +lk-teatester-item({
+                    date: '20 июня ‘19',
+                    image: 'teatester-img-1.png',
+                    rating: 1,
+                    title: 'Затаившийся дракон',
+                    category: 'Чёрный чай',
+                    notes: 'Древесные'
+                })
+            li.lk-teatester__item
+                +lk-teatester-item({
+                    date: '15 июня ‘19',
+                    image: 'teatester-img-1.png',
+                    rating: 2,
+                    title: 'Зелёный лист',
+                    category: 'Самогон',
+                    notes: 'Травы и мята'
+                })
+            li.lk-teatester__item
+                +lk-teatester-item({
+                    date: '31 мая ‘19',
+                    image: 'teatester-img-1.png',
+                    rating: 3,
+                    title: 'Шаолиньский монах',
+                    category: 'Зеленый чай',
+                    notes: 'Лесные травы'
+                })
+            li.lk-teatester__item
+                +lk-teatester-item({
+                    date: '9 мая ‘19',
+                    image: 'teatester-img-1.png',
+                    rating: 4,
+                    title: 'Большой красный халат',
+                    category: 'Чёрный чай',
+                    notes: ''
+                })
+            li.lk-teatester__item
+                +lk-teatester-item({
+                    date: '1 мая ‘19',
+                    image: 'teatester-img-1.png',
+                    rating: 5,
+                    title: 'Панда',
+                    category: 'Улун',
+                    notes: 'Молоко и мёд'
+                })
+        button.button--view--link.indent-t--l.indent-h--a Показать еще

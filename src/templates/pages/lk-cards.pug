@@ -1,0 +1,34 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/lk-banner
+
+block title
+    title Унция — Личный кабинет - Карта Унция
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            },
+            {
+                link: 'lk-personal-data.html',
+                title: 'Личный кабинет'
+            }
+        ], 'Карта Унция')
+        h1.h1.page__title Карта &laquo;Унция&raquo;
+        .page__content
+            .container
+                .lk
+                    .lk__menu
+                        include ../blocks/side-menu
+                    .lk__content
+                        +lk-banner({
+                            indentClass: 'indent-b--l',
+                            image: 'dir-banner.png',
+                            viewType: 'dark',
+                            title: 'Поздравляем!',
+                            subtitle: 'Вашу карту можно заменить на «Карта с 15% скидкой»'
+                        })
+                        include ../blocks/lk-card

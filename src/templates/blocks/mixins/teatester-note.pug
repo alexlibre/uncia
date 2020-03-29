@@ -1,0 +1,19 @@
+mixin teatester-note(data)
+    .note
+        .note__inner
+            .note__date.link-2= data.date
+            .note__row
+                a.note__image(href=data.href )
+                    img(src="../images/content/" + data.image, alt= data.name)
+                .note__title
+                    a.note__category.link.indent-b--2xs(href=data.href )= data.cat
+                    a.note__name.h3(href=data.href )= data.name
+                .note__description
+                    .note__row.indent-b--2xs
+                        .note__notes.link-2= 'Основные ноты: '+ data.notes
+                        .note__rate
+                            .icon-plus
+                                .icon-plus__icon.indent-r--2xs
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.75l-4.996 2.627.954-5.564-4.042-3.94 5.586-.811L8.5 0l2.498 5.062 5.586.811-4.042 3.94.954 5.564L8.5 12.75z" fill="#543019"/></svg>
+                                .icon-plus__block.link-2= data.rate
+                    p.note__text.js-collapsible= data.text

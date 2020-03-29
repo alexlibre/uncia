@@ -1,0 +1,18 @@
+.article-theme-slider {
+  overflow: visible;
+  
+  & &__pagination {
+    position: static;
+    margin-top: 30px;
+
+    & .swiper-pagination-bullet {
+      margin: 0 17px;
+      background-color: #E9E9E9;
+      opacity: 1;
+    }
+
+    & .swiper-pagination-bullet-active {
+      background-color: #170000;
+    }
+  }
+}

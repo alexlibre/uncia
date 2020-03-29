@@ -1,0 +1,19 @@
+mixin slide-right(els)
+    .slide-right
+        .slide-right__content
+            .slide-right__number= els.number
+            .slide-right__title.h1(data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0")= els.title
+            .slide-right__category.h5(data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0")= els.category
+            .slide-right__images
+                .slide-right__image-back(data-swiper-parallax-x="60")
+                    img(src="../images/content/" + els.imgBack)
+                .slide-right__image-front
+                    img(src="../images/content/" + els.imgFront)
+            .slide-right__buttons
+                button.button.button--view--dark.button--view--dark-x2
+                    .icon-plus
+                        .icon-plus__icon.indent-r--s
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" fill="none"><path clip-rule="evenodd" d="M15.556 20H1.4446C1.1996 20 1 19.8025 1 19.5585l.8546-12.9352c0-.244.199-.4415.4453-.4415h12.4008c.2464 0 .4453.1975.4453.4415L16 19.5585c0 .244-.1989.4415-.444.4415z" stroke="#fff" stroke-width="1.5"/><path d="M5.4117 9.6364V4.0776C5.4117 2.3781 6.7944 1 8.4997 1c1.7058 0 3.0885 1.3781 3.0885 3.0776v5.5588" stroke="#fff" stroke-width="1.5"/></svg>
+                        .icon-plus__block
+                            p.link.link--view--white В корзину
+                button.button.button--view--underlink.indent-l--l Подробнее

@@ -1,0 +1,19 @@
+mixin degustations-item(data)
+    .degustation-item
+        .degustation-item__header
+            .degustation-item__image(style="background-image: url(../images/content/" + data.img + ");")
+            .degustation-item__title.h2= data.title
+        .degustation-item__footer
+            .degustation-item__when
+                .labeled-by
+                    .labeled-by__label.h5-b Когда
+                    .labeled__value= data.when
+            .degustation-item__where
+                .labeled-by
+                    .labeled-by__label.h5-b Где
+                    .labeled__value= data.where
+            .degustation-item__vacant
+                .labeled-by
+                    .h5-b.degustation-item__vacant-val= data.vacant
+                    p.degustation-item__vacant-free.labeled__value.h5 Осталось мест    
+                button.button.button--view--dark.degustation-item__btn Я приду

@@ -1,0 +1,87 @@
+.degustation {
+    &__header {
+        height: 226px;
+        position: relative;
+        background-color: #180E0B;
+        color: #fff;
+        padding: 74px 0 0 110px;
+    }
+    &__image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        max-width: 440px;
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        @include row-flex();
+    }
+    &__vacant {
+        @include col();
+        @include size(4);
+        @include shift-left(1);
+        transform: translateY(-32px);
+        display: flex;
+        align-items: flex-end;
+    }
+    &__vacant-val {
+        font-family: 'ArtScript', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 200px;
+        line-height: 100px;
+        color: #543019;
+        position: relative;
+    }
+    &__btn {
+        padding: 0 55px;
+    }
+    &__when {
+        @include col();
+        @include size(2)
+    }
+    &__where {
+        @include col();
+        @include size(3);
+    }
+    &__calendar-link {
+        @include col();
+        @include size(2);
+    }
+    &__btn {
+        background-color: #552F1D;
+    }
+    &-form {
+        @include row-flex();
+        &__inner {
+            @include col();
+            @include size(8);
+            @include size-md(12);
+            @include shift(2);
+            @include shift-md(0);
+            background-color: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 70px 0 100px;
+        }
+        &__content {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+        &__title,
+        &__desc {
+            text-align: center;
+        }
+        &__store {
+            margin-bottom: 20px;
+        }
+    }
+}

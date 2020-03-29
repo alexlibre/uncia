@@ -1,0 +1,268 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/taste-item
+include ../blocks/mixins/catalog-banner
+include ../blocks/mixins/catalog
+include ../blocks/mixins/plate
+include ../blocks/mixins/checkbox-item
+
+block title
+    title Унция — Каталог чай
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            },
+            {
+                link: 'catalog-tea.html',
+                title: 'Каталог'
+            }
+        ], 'Чай')
+        h1.h1.page__title Черный чай с добавками
+        .page__content
+            .tastes.indent-b--s
+                .container
+                    ul.tastes__list
+                        li.tastes__item
+                            +taste-item({
+                                img: 'add-1.png',
+                                text1: 'Чай со слоном, ',
+                                text2: 'как раньше'
+                            })
+                        li.tastes__item
+                            +taste-item({
+                                img: 'add-2.png',
+                                text1: 'Ароматный чай ',
+                                text2: 'без добавок'
+                            })
+                        li.tastes__item
+                            +taste-item({
+                                img: 'add-3.png',
+                                text1: 'Что-нибудь ',
+                                text2: 'необычное'
+                            })
+                        li.tastes__item
+                            +taste-item({
+                                img: 'add-4.png',
+                                text1: 'Самое ',
+                                text2: 'дорогое'
+                            })
+                        li.tastes__item
+                            +taste-item({
+                                img: 'add-1.png',
+                                text1: 'Утренний ',
+                                text2: 'для завтрака'
+                            })
+                        li.tastes__item
+                            +taste-item({
+                                img: 'add-3.png',
+                                text1: 'Бодрящий, ',
+                                text2: 'тонизирующий'
+                            })
+                        li.tastes__item.tastes__all
+                            a.h4 Смотреть все
+            .cat-filters.indent-b--3xl
+                .container
+                    .cat-filters__inner
+                        .cat-filters__subcat-select.js-checkbox-dropdown(data-type="subcat")
+                            .cat-filters__subcat-row Чёрный чай с добавками
+                                .cat-filters__subcat-qty
+                                .cat-filters__arrow
+                            .cat-filters__subcat-drop
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-1',
+                                        label: 'Черный чай'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-2',
+                                        label: 'Зеленый чай'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-3',
+                                        label: 'Зеленый связанный чай'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-4',
+                                        label: 'Белый чай'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-5',
+                                        label: 'Желтый чай',
+                                        checked: true
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-6',
+                                        label: 'Улун'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-7',
+                                        label: 'Мате'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-8',
+                                        label: 'Ройбуш'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-9',
+                                        label: 'Фруктовый и травяной чай'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-10',
+                                        label: 'Зеленый чай с добавками'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-11',
+                                        label: 'Черный чай с добавками'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-12',
+                                        label: 'Фунт Чая, -40%'
+                                    })
+                                .cat-filters__subcat-item
+                                    +checkbox-item({
+                                        id: 'tea-13',
+                                        label: 'Чай в пирамидках'
+                                    })
+
+                        .cat-filters__price-select.js-checkbox-dropdown(data-type="price")
+                            .cat-filters__price-row Стоимость
+                                .cat-filters__price-qty
+                                .cat-filters__arrow
+                            .cat-filters__price-drop
+                                .cat-filters__price-item here
+
+
+
+
+
+
+                        .cat-filters__adv-search
+                            .icon-plus(data-collapse-btn="cat-filters")
+                                .icon-plus__icon.indent-r--m
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="15" fill="none"><path d="M0 3.3203h4.566M9.706 3.3203h12.0281" stroke="#543019" stroke-width="1.5"/><path clip-rule="evenodd" d="M9.706 3.3202c0 1.419-1.15 2.57-2.57 2.57-1.419 0-2.57-1.151-2.57-2.57 0-1.42 1.151-2.57 2.57-2.57 1.42 0 2.57 1.15 2.57 2.57z" stroke="#543019" stroke-width="1.5"/><path d="M12.0285 10.7676H.0005M17.5002 10.7676h4.234" stroke="#543019" stroke-width="1.5"/><path clip-rule="evenodd" d="M12.0283 10.7675c0 1.42 1.151 2.57 2.57 2.57 1.42 0 2.57-1.15 2.57-2.57 0-1.419-1.15-2.57-2.57-2.57-1.419 0-2.57 1.151-2.57 2.57z" stroke="#543019" stroke-width="1.5"/></svg>
+                                .icon-plus__block Расширенный поиск
+                        .cat-filters__sort-by-price.view-desktop
+                            .icon-plus
+                                .icon-plus__icon.indent-r--s
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" fill="none"><path d="M9.208 1.5H15M15 11.5H0M15 6.5H5.166" stroke="#543019" stroke-width="1.5"/></svg>
+                                .icon-plus__block Сортировать по цене вверх
+                include ../blocks/catalog-filters
+                                        
+                                        
+
+            +catalog({
+                indentClass: 'indent-b--l2',
+                number: 8
+            })
+
+            +catalog-banner({
+                image: 'cat-plate-1.jpg',
+                indentClass: 'indent-b--l2',
+                title: 'Зеленый чай вкуснее весной',
+                actionLink: 'О скидке',
+                action: '~10%',
+                text: 'Совсем скоро наступит 2019 год и самое время начинать выбирать подарки. ',
+                buttonView: 'white',
+                buttonText: 'Выбрать чай'
+            })
+
+            +catalog({
+                indentClass: 'indent-b--l2',
+                number: 8
+            })
+
+            +catalog-banner({
+                image: 'cat-plate-2.jpg',
+                indentClass: 'indent-b--l2',
+                title: 'Согреваем тех, <br>Кто далеко',
+                subtitle: 'отправим подарок в&nbsp;любую точку мира',
+                buttonText: 'Выбрать подарок'
+            })
+
+            +catalog({
+                indentClass: 'indent-b--l2',
+                number: 4
+            })
+
+            .catalog-text.indent-b--5xl
+                .container
+                    .catalog-text__inner
+                        .catalog-text__title.indent-b--3xl
+                            .h1 Тайму Шань Бай Хоу
+                        .catalog-text__content
+                            .catalog-text__subtitle.h3.indent-b--s Выберите чайную основу — купаж на основе черного чая, зеленого чая или без чая — травяные и фруктовые сборы. Ищите нужный ингредиент в облаке.
+                            p.text Драгоценные мои друзья! Ни&nbsp;за&nbsp;что не&nbsp;угадаете, чем я&nbsp;только что отобедал! И&nbsp;хотя описывать содержимое своей тарелки, а&nbsp;стало быть, и&nbsp;желудка&nbsp;&mdash; занятие не&nbsp;совсем приличное, я&nbsp;все&nbsp;же не&nbsp;могу удержаться, и&nbsp;сейчас вы&nbsp;сами поймете, отчего. Итак, я&nbsp;в&nbsp;Янгоне, в&nbsp;Британской Бирме, или, как здешние жители сами ее&nbsp;называют, Бама, и&nbsp;только что с&nbsp;большим аппетитом и&nbsp;удовольствием оттрапезничал... чаем. <br><br>О, кажется, я&nbsp;вас не&nbsp;удивил! Вы, должно быть, вообразили себе, что бедный сэр Генри опять на&nbsp;голодном пайке. Влачится где-то по&nbsp;свету, не&nbsp;имея возможности порядочно поесть в&nbsp;каком-нибудь отеле или благословенной закусочной, и&nbsp;всего-то ему и&nbsp;остается, что развести костерок, вытащить из&nbsp;походного саквояжа свой медный маленький чайник, и&nbsp;если не&nbsp;утолить, то&nbsp;хотя&nbsp;бы заглушить голод очередной&nbsp;&mdash; одной из&nbsp;сотен тысяч&nbsp;&mdash; чашкой чаю... О&nbsp;да, признаюсь, что подобных трапез было немало в&nbsp;течение моего столь затянувшегося путешествия. Я&nbsp;даже мог&nbsp;бы составить небольшой реестр видов и&nbsp;сортов чая, которые одолевают голод лучше всего. Я&nbsp;слышал, что среди дам нынче вошли в&nbsp;моду диэты&nbsp;&mdash; если раньше все наперебой хотели быть пухленькими и&nbsp;давали друг другу советы, как пополнеть, то&nbsp;теперь в&nbsp;моде стройность, и&nbsp;те&nbsp;же самые леди буквально морят себя голодом и&nbsp;даже отказываются от&nbsp;сливок к&nbsp;файв-о-клоку. Так вот, диэтирующим дамам мой список&nbsp;бы пришелся ко&nbsp;двору
+
+
+            .catalog-actual.indent-b--6xl
+                .container
+                    .cardlist.cardlist--2col
+                        .cardlist__item
+                            +plate({
+                                image: 'plate-1.jpg',
+                                title: 'Зеленый вкуснее весной',
+                                qty: '15 видов'
+                            })
+                        .cardlist__item
+                            +plate({
+                                image: 'plate-2.jpg',
+                                title: 'Рождественские вечера',
+                                qty: '15 видов'
+                            })
+                    button.button--view--link.indent-t--l.indent-h--a Все подборки
+
+            .degustation.indent-b--2xl
+                .container
+                    .degustation__header
+                        .degustation__image
+                            img(src="../images/content/degustation.jpg")
+                        .degustation__title.h1 Ближайшая дегустация
+                            em &nbsp;Gaba чай
+                    .degustation__footer
+                        .degustation__vacant
+                            .labeled-by
+                                .labeled-by__label.h5-b.degustation__vacant-val 34
+                                .labeled__value.h5 Осталось мест
+                            button.button.button--view--dark.indent-l--l.degustation__btn Я приду
+                        .degustation__when
+                            .labeled-by
+                                .labeled-by__label.h5-b Когда
+                                .labeled__value Среда 19 августа, 19:00
+                        .degustation__where
+                            .labeled-by
+                                .labeled-by__label.h5-b Где
+                                .labeled__value Невский проспет 63, магазин Унция
+                        .degustation__calendar-link Календарь <br>дегустаций
+
+            .bonus-card
+                .container
+                    .bonus-card__row
+                        .bonus-card__left
+                            h2.h1.bonus-card__title Бонусная карта
+                            p.h3.bonus-card__text Получайте скидки, бонусы и многое другое с бонусной картой Унция
+                        .bonus-card__cards
+                            .bonus-card__sample
+                                img(src="../images/content/bonus-card-1.png")
+                            .bonus-card__sample
+                                img(src="../images/content/bonus-card-2.png")
+                            .bonus-card__sample
+                                img(src="../images/content/bonus-card-3.png")
+                        .bonus-card__right
+                            button.button.button--view--dark Получить карту
+
+            //- include ../blocks/flavors

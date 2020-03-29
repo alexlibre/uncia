@@ -1,0 +1,18 @@
+include mixins/degustation-slide
+.swiper-container.degustation-slider.indent-b--xl
+    .swiper-wrapper
+        .swiper-slide.degustation-slider__item
+            +degustation-slide({
+                img: 'degustation-slider-1.jpg',
+            })
+        .swiper-slide.degustation-slider__item
+            +degustation-slide({
+                img: 'degustation-slider-1.jpg',
+            })
+        .swiper-slide.degustation-slider__item
+            +degustation-slide({
+                img: 'degustation-slider-1.jpg',
+            })
+    .degustation-slider__controls
+        a.degustation-slider__calendar-link.text Календарь дегустаций    
+        .swiper-pagination.degustation-slider__pagination

@@ -1,0 +1,44 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/degustation-lk
+
+block title
+	title Унция — Личный кабинет - Дегустация
+
+block content
+	.page
+		+breadcrumbs([
+			{
+				link: 'index.html',
+				title: 'Главная'
+			},
+			{
+				link: 'lk-personal-data.html',
+				title: 'Личный кабинет'
+			}
+		], 'Дегустация')
+		h1.h1.page__title Дегустация
+		.page__content
+			.container
+				.lk
+					.lk__menu
+						include ../blocks/side-menu
+					.lk__content
+						.degustations-lk
+							.degustations-lk__item
+								+degustation-lk({
+									img: 'degustation-small-2.png',
+									title: 'Ближайшая дегустация <br>Gaba чая',
+									vacant: 8,
+									when: 'Среда 19 августа, 19:00',
+									where: 'проспект Науки, 33'
+								})
+							.degustations-lk__item
+								+degustation-lk({
+									img: 'degustation-small-2.png',
+									title: 'Ближайшая дегустация <br>Gaba чая',
+									vacant: 8,
+									when: 'Среда 19 августа, 19:00',
+									where: 'проспект Науки, 33'
+								})
+							button.button.button--view--underlink Календарь дегустаций

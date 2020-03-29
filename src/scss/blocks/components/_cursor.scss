@@ -1,0 +1,23 @@
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+
+  &--custom {
+    width: 52px;
+    height: 52px;
+    left: -26px;
+    top: -26px;
+    border-radius: 50%;
+    z-index: 11000;
+    background: rgba(0,0,0,.1);
+  }
+
+  &__signature {
+    position: absolute;
+    left: 100%;
+    top: 100%;
+
+  }
+}

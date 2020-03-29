@@ -1,0 +1,21 @@
+mixin degustation(data)
+    .degustation(class= [data.indentClass, data.variantClass])
+        .degustation__header
+            .degustation__image
+                img(src="../images/content/" + data.image)
+            .degustation__title.h1!= data.title
+        .degustation__footer
+            .degustation__vacant
+                .labeled-by
+                    .labeled-by__label.h5-b.degustation__vacant-val= data.vacant
+                    .labeled__value.h5 Осталось мест
+                button.button.button--view--dark.indent-l--l.degustation__btn Я приду
+            .degustation__when
+                .labeled-by
+                    .labeled-by__label.h5-b Когда
+                    .labeled__value= data.when
+            .degustation__where
+                .labeled-by
+                    .labeled-by__label.h5-b Где
+                    .labeled__value= data.where 
+            .degustation__calendar-link Календарь <br>дегустаций

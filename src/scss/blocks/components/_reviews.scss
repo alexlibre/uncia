@@ -1,0 +1,76 @@
+.reviews {
+    &__inner {
+        @include row-flex();
+    }
+    &__list {
+        @include col();
+        @include size(5);
+        @include size-md(6);
+    }
+    &__item {
+        padding: 35px 0;
+        border-bottom: 1px solid #E1E1E1;
+        &:first-of-type {
+            padding-top: 0;
+        }
+        &:last-of-type {
+            border: 0;
+        }
+    }
+    &__additional {
+        @include col();
+        @include size(6);
+        @include size-md(5);
+        @include shift-left(1);
+        @include shift-md-left(1);
+    }
+    &__teatester {
+        background-color: #FAFAFA;
+        padding: 90px 110px;
+        @include md-block {
+            padding: 55px 40px 40px;
+        }
+    }
+    &__action {
+        position: relative;
+        color: #27160E;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+        &-val {
+            font-family: 'ArtScript', serif;
+            line-height: 0.45;
+            font-size: 200px;
+            top: -10px;
+            left: 170px;
+            position: absolute;
+            color: #543019;
+        }
+        &-btns {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        &-add {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        &-more {
+            text-decoration: none;
+        }
+    }
+}
+
+.review {
+    &__title {
+        margin-bottom: 5px;
+    }
+    &__date,
+    &__text {
+        margin-bottom: 20px;
+    }
+    &__link {
+        text-decoration: none;
+    }
+}

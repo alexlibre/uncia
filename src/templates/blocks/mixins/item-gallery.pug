@@ -1,0 +1,13 @@
+mixin item-gallery(data)
+    .gallery
+        .swiper-container.gallery__top
+            .swiper-wrapper
+                each slide, index in data.items
+                    .swiper-slide
+                        img(src="../images/content/" + data.items[index].img data-swiper-parallax-opacity="0")
+
+        .swiper-container.gallery__thumbs
+            .swiper-wrapper
+                each slide, index in data.items
+                    .swiper-slide.gallery__thumb
+                        img(src="../images/content/" + data.items[index].imgThumb)

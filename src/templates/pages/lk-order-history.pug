@@ -1,0 +1,28 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+//- include ../blocks/mixins/favorites-item
+
+block title
+	title Унция — Личный кабинет - История заказов
+
+block content
+	.page
+		+breadcrumbs([
+			{
+				link: 'index.html',
+				title: 'Главная'
+			},
+			{
+				link: 'lk-personal-data.html',
+				title: 'Личный кабинет'
+			}
+		], 'История заказов')
+		h1.h1.page__title История заказов
+		.page__content
+			.container
+				.lk
+					.lk__menu
+						include ../blocks/side-menu
+					.lk__content
+						include ../blocks/lk-orders
+						

@@ -1,0 +1,308 @@
+extends ../index-inner
+
+include ../blocks/mixins/history-item
+include ../blocks/mixins/item-card
+include ../blocks/mixins/plate
+include ../blocks/mixins/action-slide
+include ../blocks/mixins/degustation
+
+block title
+    title Унция
+
+block content
+    .page.page--view--white
+        .container
+            .index-sliders
+                .index-sliders__left-slider
+                    include ../blocks/index__left-slider
+                .index-sliders__right-slider
+                    include ../blocks/index__right-slider
+            section.index-history
+                ul.index-history__list
+                    +history-item({
+                        img: 'Elephant.png',
+                        text1: 'Чай со слоном, ',
+                        text2: 'как раньше'
+                    })
+                    +history-item({
+                        img: 'Pot.png',
+                        text1: 'Ароматный чай ',
+                        text2: 'без добавок'
+                    })
+                    +history-item({
+                        img: 'Berry.png',
+                        text1: 'Что-нибудь ',
+                        text2: 'необычное'
+                    })
+                    +history-item({
+                        img: 'Cup.png',
+                        text1: 'Самое ',
+                        text2: 'дорогое'
+                    })
+                    +history-item({
+                        img: 'Elephant.png',
+                        text1: 'Утренний ',
+                        text2: 'для завтрака'
+                    })
+                    +history-item({
+                        img: 'Berry.png',
+                        text1: 'Бодрящий, ',
+                        text2: 'тонизирующий'
+                    })
+                .index-history__desc
+                    p.index-history__years 17
+                    p.index-history__text.h3 17 лет мы занимаемся чаем. Из самых популярных запросов мы составили тематические подборки. Ищите и находите нужный чай для разных ситуаций.
+            section.section.indent-b--6xl
+                .section__header.indent-b--2xl
+                    h2.h1 Унция&nbsp;
+                        em Рекомендует
+                .banner
+                    .banner__image(style="background-image: url(../images/content/Christmas.jpg)")
+                    .banner__content
+                        .banner__qty.h5 15 видов
+                        h2.banner__title.h2 Рождественские ароматные
+                        .banner__desc.text Совсем скоро наступит 2019 год и самое время начинать выбирать подарки.
+                ul.cardlist.cardlist--3fr
+                    li.cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 12
+                        })
+                    li.cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 13
+                        })
+                    li.cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 14
+                        })
+                .banner
+                    .banner__image(style="background-image: url(../images/content/Evening.jpg)")
+                    .banner__content
+                        .banner__qty.h5 15 видов
+                        h2.banner__title.h2 Вечерний расслабляющий чай
+                        .banner__desc.text Совсем скоро наступит 2019 год и самое время начинать выбирать подарки.
+
+                ul.cardlist.cardlist--3fr.indent-b--xl
+                    li.cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 1
+                        })
+                    li.cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 2
+                        })
+                    li.cardlist__item
+                        +item-card({
+                            image: 'Tea1.png',
+                            title: 'Весенне-ягодная сангрия',
+                            category: 'Чёрный чай',
+                            priceValue: '2 508',
+                            priceMeasure: 'Р/унция',
+                            rndId: 3
+                        })
+        //include ../blocks/flavors
+
+        section.actions.indent-b--5xl
+            .container
+                .section__header.indent-b--2xl
+                    h2.h1 Скидки и Акции
+                .swiper-container.action-slider
+                    .swiper-wrapper
+                        .swiper-slide
+                            +action-slide({
+                                image: 'action-1.png',
+                                title: 'Год чёрного чая',
+                                desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                slide: true
+                            })
+                        .swiper-slide
+                            +action-slide({
+                                image: 'action-2.png',
+                                title: 'Ирландский чай',
+                                desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                slide: true
+                            })
+                        .swiper-slide
+                            +action-slide({
+                                image: 'action-3.png',
+                                title: 'Зеленый чай вкуснее весной',
+                                desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                slide: true
+                            })
+                        .swiper-slide
+                            +action-slide({
+                                image: 'action-1.png',
+                                title: 'Год чёрного чая',
+                                desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                slide: true
+                            })
+                        .swiper-slide
+                            +action-slide({
+                                image: 'action-2.png',
+                                title: 'Ирландский чай',
+                                desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                slide: true
+                            })
+                        .swiper-slide
+                            +action-slide({
+                                image: 'action-3.png',
+                                title: 'Зеленый чай вкуснее весной',
+                                desc: 'Совсем скоро наступит 2019 год и&nbsp;самое время начинать выбирать подарки. А&nbsp;что может быть лучше горячего ароматного чая.',
+                                slide: true
+                            })
+
+
+                .action__pagination.swiper-pagination
+        section.actual.indent-b--6xl
+            .container
+                .section__header.indent-b--3xl
+                    h2.h1 Актуальные
+                        em &nbsp;подборки чая
+                .cardlist.cardlist--2col
+                    .cardlist__item
+                        +plate({
+                            image: 'plate-1.jpg',
+                            title: 'Зеленый вкуснее весной',
+                            qty: '15 видов'
+                        })
+                    .cardlist__item
+                        +plate({
+                            image: 'plate-2.jpg',
+                            title: 'Рождественские вечера',
+                            qty: '15 видов'
+                        })
+                    .cardlist__item
+                        +plate({
+                            image: 'plate-3.jpg',
+                            title: 'Зеленый вкуснее весной',
+                            qty: '15 видов'
+                        })
+                    .cardlist__item
+                        +plate({
+                            image: 'plate-4.jpg',
+                            title: 'Рождественские вечера',
+                            qty: '15 видов'
+                        })
+                button.button--view--link.indent-t--2xl.indent-h--a Все подборки
+
+        section.section.section__degustation.indent-b--2xl
+            .container
+                +degustation({
+                    image: 'degustation.jpg',
+                    title: 'Ближайшая дегустация<em>&nbsp;Gaba чай</em>',
+                    vacant: 34,
+                    when: 'Среда 19 августа, 19:00',
+                    where: 'Невский проспет 63, магазин Унция'
+                })
+
+        section.section.bonus-card.indent-b--6xl
+            .container
+                .bonus-card__row
+                    .bonus-card__left
+                        h2.h1.bonus-card__title Бонусная карта
+                        p.h3.bonus-card__text Получайте скидки, бонусы и многое другое с бонусной картой Унция
+                    .bonus-card__cards
+                        .bonus-card__sample
+                            img(src="../images/content/bonus-card-1.png")
+                        .bonus-card__sample
+                            img(src="../images/content/bonus-card-2.png")
+                        .bonus-card__sample
+                            img(src="../images/content/bonus-card-3.png")
+                    .bonus-card__right
+                        button.button.button--view--dark Получить карту
+
+        section.section.section--light-gray.index-ingredients.indent-b--6xl
+            .container
+                .section__header.index-ingredients__title
+                    h2.h1 Выбор чая по ингредиентам
+                p.index-ingredients__desc.h3 Выберите чайную основу — купаж на основе черного чая, зеленого чая или без чая — травяные и фруктовые сборы. Ищите нужный ингредиент в облаке и переходите в каталог на подборку чаев с вашими ингредиентами.
+                ul.index-ingredients__list
+                    li.index-ingredients__item
+                        .icon-plus.icon-plus--layout--vertical
+                            .icon-plus__icon
+                                .index-ingredients__image
+                                    img(src="../images/static/tea-black.png")
+                            .icon-plus__block.indent-t--s
+                                p.h3 Чёрный чай
+                    li.index-ingredients__item
+                        .icon-plus.icon-plus--layout--vertical
+                            .icon-plus__icon
+                                .index-ingredients__image
+                                    img(src="../images/static/tea-green.png")
+                            .icon-plus__block.indent-t--s
+                                p.h3 Зеленый чай
+                    li.index-ingredients__item
+                        .icon-plus.icon-plus--layout--vertical
+                            .icon-plus__icon
+                                .index-ingredients__image
+                                    img(src="../images/static/tea-fruit.png")
+                            .icon-plus__block.indent-t--s
+                                .index-ingredients__type
+                                    p.h3 Травяной и фруктовый
+        section.section.index-business.indent-b--6xl
+            .container
+                .index-business__block-top
+                    .index-business__content
+                        h2.h1.index-business__title.indent-b--s Открой свой магазин <br>Унция
+                        p.h3 Прочитайте про условия франчайзинга на&nbsp;портале про чайный бизнес...
+                    .index-business__image
+                        img(src="../images/content/franchise.jpg")
+                .index-business__block-bottom
+                    .index-business__collect
+                        h3.h2.index-business__subtitle Корпоративные подарки с Вашим логотипом
+                        img(src="../images/content/collect.jpg")
+                        .index-business__cta
+                            h3.h3.index-business__cta-title Соберем и&nbsp;доставим за&nbsp;день
+                            button.button.button--view--underlink Подробнее
+
+        section.section.index-articles
+            .container
+                .section__header.indent-b--2xl
+                    h2.h1 Статьи и новости
+                .index-articles__content
+                    .index-articles__article.article-card.article-card--index
+                        a.link.indent-b--l(href="articles.html") Все статьи
+                        .article-card__image
+                            img(src="../images/content/article.jpg")
+                        .article-card__title.h2 Итальянская винодельня &laquo;Умани Ронки&raquo; встала на&nbsp;стражу интересов автохтонного сорта винограда Пекорино
+                        .button--view--link.indent-h--a Подробнее
+                    .index-articles__list.news
+                        a.link.indent-b--l Все новости
+                        ul.news__list
+                            li.news__item
+                                .news__title.h2 Особая экономическая зона «Унции».
+                                .news__desc Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                .news__date.link-2 Сегодня
+                            li.news__item
+                                .news__title.h2 Особая экономическая зона «Унции».
+                                .news__desc Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                .news__date.link-2 12 апреля '19
+                            li.news__item
+                                .news__title.h2 Особая экономическая зона «Унции».
+                                .news__desc Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                .news__date.link-2 12 апреля '19

@@ -1,0 +1,196 @@
+@import '../mixins';
+.button {
+    border: 0;
+    background: none;
+    white-space: nowrap;
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+    &--buy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #543019;
+        width: 90px;
+        height: 58px;
+        & path {
+            fill: #fff;
+        }
+        @include md-block {
+            height: 47px;
+            background: #F4F4F4;
+            & path {
+                fill: #543019
+            }
+        }
+    }
+    &--view {
+        &--icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &--round-icon {
+            background-color: #543019;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &--dark {
+            height: 60px;
+            display: inline-block;
+            padding: 0 30px;
+            background-color: #6E3F21;
+            @include view-link();
+            line-height: 60px;
+            color: #fff;
+            &-x2 {
+                background-color: #543019
+            }
+        }
+        &--white {
+            height: 60px;
+            padding: 0 60px;
+            background-color: #fff;
+            @include view-link();
+            line-height: 60px;
+            color: $color-base-2;
+        }
+        &--link {
+            display: block;
+            border: 0;
+            height: 46px;
+            padding: 0 50px;
+            background-color: transparent;
+            @include view-link();
+            line-height: 46px;
+            color: #543019;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color .2s ease-in-out .1s;
+            cursor: pointer;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                background-color: #543019;
+                transform: translateY(calc(100% - 2px));
+                will-change: transform;
+                transition: transform .4s cubic-bezier(0, 0, 0.12, 1);
+                z-index: -1;
+            }
+            &:hover {
+                color: #fff;
+                &:after {
+                    transform: translateY(0);
+                }
+            }
+        }
+        &--link-narrow {
+            display: block;
+            border: 0;
+            height: 46px;
+            padding: 0 24px;
+            background-color: transparent;
+            @include view-link();
+            line-height: 46px;
+            color: #543019;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color .2s ease-in-out .1s;
+            cursor: pointer;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                background-color: #543019;
+                transform: translateY(calc(100% - 2px));
+                will-change: transform;
+                transition: transform .4s cubic-bezier(0, 0, 0.12, 1);
+                z-index: -1;
+            }
+            &:hover {
+                color: #fff;
+                &:after {
+                    transform: translateY(0);
+                }
+            }
+        }
+        &--link2 {
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #A5A5A5;
+        }
+        &--underlink {
+            height: 60px;
+            line-height: 60px !important;
+            background-color: transparent;
+            @include view-link();
+            text-decoration: none;
+            color: #543019;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background-color: #543019;
+                transform: scale(.25, 1);
+                transform-origin: left center;
+                will-change: transform;
+                transition: transform .6s cubic-bezier(0, 0, 0.12, 1);
+            }
+            &:hover {
+                &:after {
+                    transform: scale(1, 1);
+                }
+            }
+            &-light {
+                color: #fff;
+                &:after {
+                    background-color: #fff;
+                }
+            }
+        }
+        &--icon-primary {
+            border: 0;
+            background: #F4F4F4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+        }
+        &--icon-secondary {
+            border: 0;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+        }
+    }
+}

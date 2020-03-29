@@ -1,0 +1,10 @@
+mixin taste-item(data)
+    .taste
+        .icon-plus.icon-plus--layout--vertical
+            .icon-plus__icon
+                .taste__image(class= data.imgSizeClass)
+                    img(src='../images/static/' + data.img)
+            .icon-plus__block
+                p.taste__caption.h4= data.text1
+                    |
+                    span= data.text2

@@ -1,0 +1,8 @@
+mixin plate(data)
+    .plate
+        .plate__image
+            img(src="../images/content/" + data.image)
+        .plate__content
+            h3.h2.plate__title= data.title
+            .plate__qty= data.qty
+            button.button.button--view--underlink.button--view--underlink-light.plate__link Смотреть все

@@ -1,0 +1,12 @@
+mixin menu-group(items, title)
+    .footer__menu-group
+        if title
+            .footer__menu-title
+                h2.h2= title
+        ul.footer__menu-block
+            each val in items
+                li.footer__menu-item
+                    a.footer__link(href="#")= val
+            if block
+                li.footer__product-menu-item
+                    block

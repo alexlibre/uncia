@@ -1,0 +1,11 @@
+mixin action-slide(data)
+    .action(class= data.slide ? 'action--slide':'')
+        .action__image
+            img(src="../images/content/" + data.image)
+        h3.h2.action__title= data.title
+        if data.desc
+            p.text.action__text!= data.desc
+        .action__buttons
+            button.button.button--view--link В каталог
+            button.button.button--view--link2.indent-t--s Подробнее
+    //TODO: Image align

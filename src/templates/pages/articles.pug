@@ -1,0 +1,125 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+
+block title
+    title Унция — Статьи
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Статьи')
+        h1.h1.page__title Статьи
+        .page__content
+            .container  
+                .articles
+                    .articles__inner
+                        .articles__tabs.indent-b--xl
+                            .tabs
+                                .tabs__inner
+                                    .tabs__list.tabs__list--view--centered(role='tablist' aria-label='Entertainment')
+                                        a.tabs__tab.is-active
+                                            | Все статьи
+                                        a.tabs__tab
+                                            | Титестер
+                                        a.tabs__tab
+                                            | Сэр Генри
+                                        a.tabs__tab
+                                            | Мероприятия
+                                        a.tabs__tab
+                                            | Новости
+                                        a.tabs__tab
+                                            | Чайный лист
+                    
+                        .articles__highlight
+                            .articles__first
+                                .card.card.article-preview
+                                    .card__content.card__content--vertical-align--center
+                                        .article-preview__title
+                                            h2.h1 Письмо из Янгона
+                                        .card__image
+                                            img(src="../images/content/article-1.jpg")
+                                        .article-preview__wrap
+                                            .article-preview__content
+                                                p.text Сладкий и мощный, насыщенный аромат сухой заварки. Цвет настоя белый с приятным насыщенным фруктово-цветочным вкусом и нотами розы. Цвет настоя белый с приятным насыщенным фруктово-цветочным вкусом и нотами розы
+                                                .card__content.card__content--distribute--between.indent-t--s
+                                                    .article-preview__auth.link-2 Сэр Генри Уилбридж
+                                                    .article-preview__date.link-2 Сегодня
+                            .articles__magazine
+                                .magazine-preview.card
+                                    .magazine-preview__image
+                                        img(src="../images/content/magazine.png")
+                                    .magazine-preview__desc
+                                        .magazine-preview__num 73
+                                        .magazine-preview__title.h1 Чайный лист
+                                        .magazine-preview__num2.link 73 выпуск
+                                        p.h4 Теперь и в капсулах
+
+                        .articles__grid
+                            .articles__item
+                                .article-card.card
+                                    .card__image
+                                        img(src="../images/content/art-card-1.jpg")
+                                    .article-card__title
+                                        h3.h2 Особая экономическая зона «Унции».
+                                    p.article-card__text.text Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                    .article-card__info
+                                        .article-card__auth.link-2 Сэр Генри Уилбридж
+                                        .article-card__date.link-2 Сегодня
+                            .articles__item
+                                .article-card.card
+                                    .card__image
+                                        img(src="../images/content/art-card-2.jpg")
+                                    .article-card__title
+                                        h3.h2 Письмо из Янгона
+                                    p.article-card__text.text Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                    .article-card__info
+                                        .article-card__auth.link-2 Сэр Генри Уилбридж
+                                        .article-card__date.link-2 Сегодня
+                            .articles__item
+                                .article-card.card
+                                    .card__image
+                                        img(src="../images/content/art-card-3.jpg")
+                                    .article-card__title
+                                        h3.h2 Особая экономическая зона «Унции».
+                                    p.article-card__text.text Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                    .article-card__info
+                                        .article-card__auth.link-2 Сэр Генри Уилбридж
+                                        .article-card__date.link-2 Сегодня
+                            .articles__item
+                                .article-card.card
+                                    .card__image
+                                        img(src="../images/content/art-card-2.jpg")
+                                    .article-card__title
+                                        h3.h2 Особая экономическая зона «Унции».
+                                    p.article-card__text.text Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                    .article-card__info
+                                        .article-card__auth.link-2 Сэр Генри Уилбридж
+                                        .article-card__date.link-2 Сегодня
+                            .articles__item
+                                .article-card.card
+                                    .card__image
+                                        img(src="../images/content/art-card-3.jpg")
+                                    .article-card__title
+                                        h3.h2 Особая экономическая зона «Унции».
+                                    p.article-card__text.text Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                    .article-card__info
+                                        .article-card__auth.link-2 Сэр Генри Уилбридж
+                                        .article-card__date.link-2 Сегодня
+                            .articles__item
+                                .article-card.card
+                                    .card__image
+                                        img(src="../images/content/art-card-1.jpg")
+                                    .article-card__title
+                                        h3.h2 Особая экономическая зона «Унции».
+                                    p.article-card__text.text Наступил третий четверг ноября, а, значит, праздник молодого вина Божоле Нуво начинаетс...
+                                    .article-card__info
+                                        .article-card__auth.link-2 Сэр Генри Уилбридж
+                                        .article-card__date.link-2 Сегодня
+                        button.button.button--view--link.articles__more Показать еще&nbsp;
+                            span 15&nbsp;
+                            span.articles__more-qty из 25
+                                

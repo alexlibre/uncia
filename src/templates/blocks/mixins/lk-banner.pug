@@ -1,0 +1,19 @@
+mixin lk-banner(data)
+    .lk-banner(class=data.indentClass)
+        .lk-banner__inner(class=data.viewType==='dark' ? 'lk-banner__inner_view_dark': '')
+            .lk-banner__image
+                img(src="../images/content/" + data.image)
+                .lk-banner__content
+                    if data.title
+                        .lk-banner__block-1
+                            if data.action
+                                p.lk-banner__action= data.action
+                            h2.h2!= data.title
+                            if data.actionLink
+                                a.lk-banner__action-link.indent-t--s= data.actionLink
+                    if data.subtitle || data.text
+                        .lk-banner__block-2
+                            if data.subtitle
+                                p.h3!= data.subtitle
+                            if data.text
+                                p.lk-banner__text= data.text

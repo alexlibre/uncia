@@ -1,0 +1,52 @@
+extends ../index-inner
+include ../blocks/mixins/breadcrumbs
+include ../blocks/mixins/input
+include ../blocks/mixins/checkbox-item
+
+block title
+    title Унция — Регистрация
+
+block content
+    .page
+        +breadcrumbs([
+            {
+                link: 'main.html',
+                title: 'Главная'
+            }
+        ], 'Регистрация')
+        h1.h1.page__title Регистрация
+        .page__content
+            .register
+                .container
+                    .register__inner
+                        .register__form
+                            form.form(action="/")
+                                .form__block.indent-b--2xl
+                                    +input({
+                                        type: 'email', 
+                                        placeholder: 'E-mail', 
+                                        className: 'input--width--available'
+                                    })
+                                .form__block.indent-b--l2
+                                    p.form__block-title.h3.indent-b--m Пароль
+                                    +input({
+                                        type: 'password', 
+                                        placeholder: 'Пароль', 
+                                        className: 'input--width--available indent-b--s'
+                                    })
+                                    +input(
+                                        {type: 'password', 
+                                        placeholder: 'Повторите пароль', 
+                                        className: 'input--width--available'
+                                    })
+                                .form__submit
+                                    .form__row
+                                        button.button.button--view--dark.indent-r--2xl.register__submit(type="submit") Сохранить
+                                        +checkbox-item({
+                                            label: 'Отправляя нам данную форму вы соглашаетесь с политикой конфиденциальности.',
+                                            additionalClasses: 'checkbox_align_top',
+                                            checked: true
+                                        })
+
+
+
